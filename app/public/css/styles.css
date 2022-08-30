@@ -1,0 +1,42 @@
+.ksiazka{
+    background-image: url('tlo.jpg');
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    padding: 60px;
+    border-bottom-style: solid;
+    font-family: Allura, cursive;
+}
+
+
+
+.logo{
+    text-align: center;
+    padding: 10px;
+}
+
+.tytul{
+    text-transform: uppercase;
+    font-family: Arial;
+    font-size: 30px;
+}
+
+.button{
+    background-color: whitesmoke;
+    border: 2px solid #89891578;
+    border-radius: 15px;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #89891578;
+    color: white;
+}

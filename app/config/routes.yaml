@@ -1,3 +1,7 @@
-#index:
-#    path: /
-#    controller: App\Controller\DefaultController::index
+recipe_index:
+  path: /recipe
+  controller: App\Controller\RecipeController::index
+
+category_index:
+  path: /category
+  controller: App\Controller\CategoryController::index
