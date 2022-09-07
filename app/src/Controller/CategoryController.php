@@ -1,7 +1,7 @@
 <?php
 /**
- * Category controller.
- */
+* Category controller.
+*/
 
 namespace App\Controller;
 

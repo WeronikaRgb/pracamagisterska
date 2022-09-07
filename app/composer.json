@@ -52,6 +52,7 @@
     "require-dev": {
         "dama/doctrine-test-bundle": "^7.1",
         "doctrine/doctrine-fixtures-bundle": "^3.4",
+        "escapestudios/symfony2-coding-standard": "^3.12",
         "fakerphp/faker": "^1.19",
         "phpstan/phpstan": "^1.8",
         "phpstan/phpstan-symfony": "^1.2",

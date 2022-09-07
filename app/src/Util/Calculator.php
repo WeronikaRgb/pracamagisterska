@@ -2,7 +2,6 @@
 /**
  * Calculator.
  */
-
 namespace App\Util;
 
 /**
