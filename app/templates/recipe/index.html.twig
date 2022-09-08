@@ -4,13 +4,23 @@
     {{ 'title.recipe_list'|trans }}
 {% endblock %}
 
+
+
 {% block body %}
+
+
     <h1>{{ 'title.recipe_list'|trans }}</h1>
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class="form-group row float-sm-left">
+            <a href="{{ url('recipe_create') }}" class="button">
+                {{ 'action.create_recipe'|trans }}
+            </a>
+        </div>
+    {% endif %}
+
     {% if pagination is defined and pagination.items|length %}
 
-        <div class="navigation text-center">
-            {{ knp_pagination_render(pagination) }}
-        </div>
 
         <table class="table table-striped">
             <thead>
@@ -65,11 +75,5 @@
         } %}
     {% endif %}
 
-    {% if is_granted('ROLE_ADMIN') %}
-        <div class="form-group row float-sm-left">
-            <a href="{{ url('recipe_create') }}" class="btn btn-link">
-                {{ 'action.create'|trans }}
-            </a>
-        </div>
-    {% endif %}
+
 {% endblock %}

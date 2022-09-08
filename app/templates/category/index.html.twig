@@ -6,11 +6,17 @@
 
 {% block body %}
     <h1>{{ 'title.category_list'|trans }}</h1>
+
+    {% if is_granted('ROLE_ADMIN') %}
+        <div class="form-group row float-sm-left">
+            <a href="{{ url('category_create') }}" class="button">
+                {{ 'action.create_category'|trans }}
+            </a>
+        </div>
+    {% endif %}
+
     {% if pagination is defined and pagination.items|length %}
 
-        <div class="navigation text-center">
-            {{ knp_pagination_render(pagination) }}
-        </div>
 
         <table class="table table-striped">
             <thead>
@@ -18,7 +24,7 @@
                 <th>{{ knp_pagination_sortable(pagination, 'label.id'|trans, 'category.id') }}</th>
                 <th>{{ knp_pagination_sortable(pagination, 'label.created_at'|trans, 'category.createdAt') }}</th>
                 <th>{{ knp_pagination_sortable(pagination, 'label.updated_at'|trans, 'category.updatedAt') }}</th>
-                <th>{{ knp_pagination_sortable(pagination, 'label.title'|trans, 'category.title') }}</th>
+                <th>{{ knp_pagination_sortable(pagination, 'label.name'|trans, 'category.title') }}</th>
                 <th>{{ 'label.actions'|trans }}</th>
             </tr>
             </thead>
@@ -58,11 +64,5 @@
         } %}
     {% endif %}
 
-    {% if is_granted('ROLE_ADMIN') %}
-        <div class="form-group row float-sm-left">
-            <a href="{{ url('category_create') }}" class="btn btn-link">
-                {{ 'action.create'|trans }}
-            </a>
-        </div>
-    {% endif %}
+
 {% endblock %}

@@ -18,6 +18,14 @@
                 <source>action.create</source>
                 <target>Dodaj</target>
             </trans-unit>
+      <trans-unit id="action.create_category">
+        <source>action.create_category</source>
+        <target>Utwórz nową kategorię</target>
+      </trans-unit>
+      <trans-unit id="action.create_recipe">
+        <source>action.create_recipe</source>
+        <target>Dodaj nowy przepis</target>
+      </trans-unit>
             <trans-unit id="action.delete">
                 <source>action.delete</source>
                 <target>Usuń</target>
@@ -101,6 +109,10 @@
             <trans-unit id="label.title">
                 <source>label.title</source>
                 <target>Tytuł</target>
+            </trans-unit>
+            <trans-unit id="label.name">
+                 <source>label.name</source>
+                 <target>Name</target>
             </trans-unit>
             <trans-unit id="label.updated_at">
                 <source>label.updated_at</source>
