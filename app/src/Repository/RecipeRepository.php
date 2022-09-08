@@ -21,7 +21,6 @@ use Doctrine\Persistence\ManagerRegistry;
  *
  *  @extends ServiceEntityRepository<Recipe>
  *
- * @psalm-suppress LessSpecificImplementedReturnType
  */
 class RecipeRepository extends ServiceEntityRepository
 {

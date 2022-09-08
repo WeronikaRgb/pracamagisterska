@@ -16,7 +16,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Class Recipe.
  *
- * @psalm-suppress MissingConstructor
  */
 #[ORM\Table(name: 'recipes')]
 #[ORM\Entity(repositoryClass: RecipeRepository::class)]
@@ -37,7 +36,6 @@ class Recipe
      *
      * @var DateTimeImmutable|null
      *
-     * @psalm-suppress PropertyNotSetInConstructor
      */
     #[ORM\Column(type: 'datetime_immutable')]
     #[Assert\Type(DateTimeImmutable::class)]
@@ -49,7 +47,6 @@ class Recipe
      *
      * @var DateTimeImmutable|null
      *
-     * @psalm-suppress PropertyNotSetInConstructor
      */
     #[ORM\Column(type: 'datetime_immutable')]
     #[Assert\Type(DateTimeImmutable::class)]
