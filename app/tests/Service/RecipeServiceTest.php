@@ -169,9 +169,9 @@ class RecipeServiceTest extends KernelTestCase
             ++$counter;
         }
 
-        $filters = array(
-            'category_id' => $category->getId()
-        );
+        $filters = [
+            'category_id' => $category->getId(),
+        ];
 
         // when
         $result = $this->recipeService->getPaginatedList($page, $filters);
@@ -192,14 +192,14 @@ class RecipeServiceTest extends KernelTestCase
         $this->entityManager->flush();
         $categoryId = $category->getId();
 
-        $filters = array(
+        $filters = [
             'category_id' => $categoryId,
-        );
+        ];
 
         // when
         $result = $this->recipeService->prepareFilters($filters);
 
         // then
-        $this->assertEquals($result, array('category' => $category));
+        $this->assertEquals($result, ['category' => $category]);
     }
 }

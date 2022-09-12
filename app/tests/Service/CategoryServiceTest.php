@@ -133,7 +133,6 @@ class CategoryServiceTest extends KernelTestCase
 
     /**
      * Test can be deleted when recipe exists.
-     *
      */
     public function testCanBeDeleted(): void
     {
@@ -159,7 +158,6 @@ class CategoryServiceTest extends KernelTestCase
 
     /**
      * Test can be deleted when exception.
-     *
      */
     public function testCanBeDeleted2(): void
     {

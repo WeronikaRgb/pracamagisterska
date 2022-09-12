@@ -30,11 +30,6 @@ class CategoryControllerTest extends WebTestCase
     public const TEST_ROUTE = '/category';
 
     /**
-     * Test client.
-     */
-    private KernelBrowser $httpClient;
-
-    /**
      * Set up tests.
      */
     public function setUp(): void
@@ -79,6 +74,36 @@ class CategoryControllerTest extends WebTestCase
     }
 
     /**
+     * Test show single category.
+     *
+     * @throws ContainerExceptionInterface|NotFoundExceptionInterface|ORMException|OptimisticLockException
+     */
+    public function testShowCategory(): void
+    {
+        // given
+        $adminUser = $this->createUser([UserRole::ROLE_ADMIN->value, UserRole::ROLE_USER->value]);
+        $this->httpClient->loginUser($adminUser);
+
+        $expectedCategory = new Category();
+        $expectedCategory->setTitle('Test category');
+        $categoryRepository = static::getContainer()->get(CategoryRepository::class);
+        $categoryRepository->save($expectedCategory);
+
+        // when
+        $this->httpClient->request('GET', self::TEST_ROUTE.'/'.$expectedCategory->getId());
+        $result = $this->httpClient->getResponse();
+
+        // then
+        $this->assertEquals(200, $result->getStatusCode());
+        $this->assertSelectorTextContains('html h1', '#'.$expectedCategory->getId());
+    }
+
+    /**
+     * Test client.
+     */
+    private KernelBrowser $httpClient;
+
+    /**
      * Create user.
      *
      * @param array $roles User roles
@@ -103,31 +128,5 @@ class CategoryControllerTest extends WebTestCase
         $userRepository->save($user);
 
         return $user;
-    }
-
-    /**
-     * Test show single category.
-     *
-     * @throws ContainerExceptionInterface|NotFoundExceptionInterface|ORMException|OptimisticLockException
-     */
-    public function testShowCategory(): void
-    {
-        // given
-        $adminUser = $this->createUser([UserRole::ROLE_ADMIN->value, UserRole::ROLE_USER->value]);
-        $this->httpClient->loginUser($adminUser);
-
-        $expectedCategory = new Category();
-        $expectedCategory->setTitle('Test category');
-        $categoryRepository = static::getContainer()->get(CategoryRepository::class);
-        $categoryRepository->save($expectedCategory);
-
-        // when
-        $this->httpClient->request('GET', self::TEST_ROUTE.'/'.$expectedCategory->getId());
-        $result = $this->httpClient->getResponse();
-
-        // then
-        $this->assertEquals(200, $result->getStatusCode());
-        $this->assertSelectorTextContains('html h1', '#'.$expectedCategory->getId());
-
     }
 }

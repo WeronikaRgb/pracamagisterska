@@ -5,11 +5,12 @@
 
 namespace Controller;
 
-use App\Entity\Enum\UserRole;
 use App\Entity\Recipe;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-
+/**
+ * Class RecipeControllerTest.
+ */
 class RecipeControllerTest extends WebTestCase
 {
     /**

@@ -20,7 +20,6 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Recipe[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  *
  *  @extends ServiceEntityRepository<Recipe>
- *
  */
 class RecipeRepository extends ServiceEntityRepository
 {

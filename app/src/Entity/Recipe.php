@@ -15,7 +15,6 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Class Recipe.
- *
  */
 #[ORM\Table(name: 'recipes')]
 #[ORM\Entity(repositoryClass: RecipeRepository::class)]
@@ -23,8 +22,6 @@ class Recipe
 {
     /**
      * Primary key.
-     *
-     * @var int|null
      */
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -33,9 +30,6 @@ class Recipe
 
     /**
      * Created at.
-     *
-     * @var DateTimeImmutable|null
-     *
      */
     #[ORM\Column(type: 'datetime_immutable')]
     #[Assert\Type(DateTimeImmutable::class)]
@@ -44,9 +38,6 @@ class Recipe
 
     /**
      * Updated at.
-     *
-     * @var DateTimeImmutable|null
-     *
      */
     #[ORM\Column(type: 'datetime_immutable')]
     #[Assert\Type(DateTimeImmutable::class)]
@@ -55,8 +46,6 @@ class Recipe
 
     /**
      * Title.
-     *
-     * @var string|null
      */
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\Type('string')]
@@ -64,12 +53,8 @@ class Recipe
     #[Assert\Length(min: 3, max: 64)]
     private ?string $title = null;
 
-
-
     /**
      * Description.
-     *
-     * @var string|null
      */
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\Type('string')]
@@ -79,8 +64,6 @@ class Recipe
 
     /**
      * Category.
-     *
-     * @var Category|null
      */
     #[ORM\ManyToOne(targetEntity: Category::class)]
     #[ORM\JoinColumn(nullable: false)]
@@ -89,8 +72,6 @@ class Recipe
 
     /**
      * Slug.
-     *
-     * @var string|null
      */
     #[ORM\Column(type: 'string', length: 64)]
     #[Assert\Type('string')]

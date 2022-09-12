@@ -17,8 +17,6 @@ class Comment
 {
     /**
      * Primary key.
-     *
-     * @var int|null
      */
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -27,8 +25,6 @@ class Comment
 
     /**
      * Content.
-     *
-     * @var string|null
      */
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\Type('string')]
@@ -38,8 +34,6 @@ class Comment
 
     /**
      * Email.
-     *
-     * @var string|null
      */
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\NotBlank]
@@ -48,8 +42,6 @@ class Comment
 
     /**
      * Nick.
-     *
-     * @var string|null
      */
     #[ORM\Column(type: 'string', length: 255)]
     #[Assert\NotBlank]
@@ -58,8 +50,6 @@ class Comment
 
     /**
      * Recipe.
-     *
-     * @var Recipe|null
      */
     #[ORM\ManyToOne(targetEntity: Recipe::class, inversedBy: 'comments')]
     #[ORM\JoinColumn(nullable: false)]

@@ -19,7 +19,6 @@ use Doctrine\Persistence\ManagerRegistry;
  * @method Category[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  *
  *  @extends ServiceEntityRepository<Category>
- *
  */
 class CategoryRepository extends ServiceEntityRepository
 {

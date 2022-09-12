@@ -195,8 +195,6 @@ class RecipeController extends AbstractController
      * @param Request $request HTTP request
      *
      * @return array<string, int> Array of filters
-     *
-     * @psalm-return array{category_id: int}
      */
     private function getFilters(Request $request): array
     {

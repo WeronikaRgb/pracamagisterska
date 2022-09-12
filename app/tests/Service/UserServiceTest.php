@@ -2,6 +2,7 @@
 /**
  * User service tests.
  */
+
 namespace Service;
 
 use App\Entity\User;
@@ -13,14 +14,12 @@ use Doctrine\ORM\ORMException;
 use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
-use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * Class UserServiceTest.
  */
 class UserServiceTest extends KernelTestCase
 {
-
     /**
      * User repository.
      */

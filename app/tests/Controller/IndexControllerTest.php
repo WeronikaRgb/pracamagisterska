@@ -14,8 +14,6 @@ use Psr\Container\ContainerExceptionInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use Symfony\Bundle\FrameworkBundle\KernelBrowser;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
-use Doctrine\ORM\EntityManagerInterface;
-
 
 /**
  * Class IndexControllerTest.
@@ -42,7 +40,6 @@ class IndexControllerTest extends WebTestCase
         $this->httpClient = static::createClient();
         $container = static::getContainer();
         $this->entityManager = $container->get('doctrine.orm.entity_manager');
-
     }
 
     /**
@@ -82,6 +79,14 @@ class IndexControllerTest extends WebTestCase
         // then
         $this->assertEquals($expectedStatusCode, $resultStatusCode);
     }
+
+    /**
+     * Create user.
+     *
+     * @param array $roles User roles
+     *
+     * @return User User entity
+     */
     private function createUser(array $roles): User
     {
         $passwordHasher = static::getContainer()->get('security.password_hasher');
@@ -100,16 +105,16 @@ class IndexControllerTest extends WebTestCase
         return $user;
     }
 
+    /**
+     * Remove user.
+     */
     private function removeUser(): void
     {
-
         $userRepository = static::getContainer()->get(UserRepository::class);
-        $entity = $userRepository->findOneBy(array('email' => 'test2@example.com'));
+        $entity = $userRepository->findOneBy(['email' => 'test2@example.com']);
 
-
-        if ($entity != null){
+        if (null != $entity) {
             $userRepository->remove($entity);
         }
-
     }
 }
