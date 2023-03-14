@@ -1,6 +1,6 @@
 <?php
 /**
- * Index controller.
+ * Biblio controller.
  */
 
 namespace App\Controller;
@@ -10,10 +10,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Class IndexController.
+ * Class BiblioController.
  */
-#[Route('/')]
-class IndexController extends AbstractController
+class BiblioController extends AbstractController
 {
     /**
      * Index action.
@@ -23,7 +22,8 @@ class IndexController extends AbstractController
     #[Route(name: 'index', methods: 'GET')]
     public function index(): Response
     {
-        return $this->render('main/main.html.twig');
+        return $this->render('main/biblio.html.twig');
 
     }
+
 }

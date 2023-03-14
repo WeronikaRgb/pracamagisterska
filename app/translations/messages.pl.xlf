@@ -22,9 +22,9 @@
         <source>action.create_category</source>
         <target>Utwórz nową kategorię</target>
       </trans-unit>
-      <trans-unit id="action.create_recipe">
-        <source>action.create_recipe</source>
-        <target>Dodaj nowy przepis</target>
+      <trans-unit id="action.create_post">
+        <source>action.create_post</source>
+        <target>Dodaj nowy post</target>
       </trans-unit>
             <trans-unit id="action.delete">
                 <source>action.delete</source>
@@ -36,15 +36,15 @@
             </trans-unit>
             <trans-unit id="action.login">
                 <source>action.login</source>
-                <target>Logowanie</target>
+                <target>Zaloguj</target>
             </trans-unit>
             <trans-unit id="action.logout">
                 <source>action.logout</source>
                 <target>Wyloguj</target>
             </trans-unit>
-            <trans-unit id="action.recipes_list">
-                <source>action.recipes_list</source>
-                <target>Lista przepisów tej kategorii</target>
+            <trans-unit id="action.posts_list">
+                <source>action.posts_list</source>
+                <target>Lista postów tej kategorii</target>
             </trans-unit>
             <trans-unit id="action.save">
                 <source>action.save</source>
@@ -118,9 +118,9 @@
                 <source>label.updated_at</source>
                 <target>Data ostatniej aktualizacji</target>
             </trans-unit>
-            <trans-unit id="message.category_contains_recipes">
-                <source>message.category_contains_recipes</source>
-                <target>Kategoria zawiera przepisy.</target>
+            <trans-unit id="message.category_contains_posts">
+                <source>message.category_contains_posts</source>
+                <target>Kategoria zawiera posty.</target>
             </trans-unit>
             <trans-unit id="message.category_not_found">
                 <source>message.category_not_found</source>
@@ -146,9 +146,9 @@
                 <source>message.form_error</source>
                 <target>Błąd formularza</target>
             </trans-unit>
-            <trans-unit id="message.recipe_not_found">
-                <source>message.recipe_not_found</source>
-                <target>Przepis nie znaleziony.</target>
+            <trans-unit id="message.post_not_found">
+                <source>message.post_not_found</source>
+                <target>Post nie znaleziony.</target>
             </trans-unit>
             <trans-unit id="title.category_list">
                 <source>title.category_list</source>
@@ -170,9 +170,9 @@
                 <source>title.category_edit</source>
                 <target>Edytuj kategorię #%id%</target>
             </trans-unit>
-            <trans-unit id="title.category_recipes">
-                <source>title.category_recipes</source>
-                <target>Przepisy dla kategorii</target>
+            <trans-unit id="title.category_posts">
+                <source>title.category_posts</source>
+                <target>Posty dla kategorii</target>
             </trans-unit>
             <trans-unit id="title.change_data">
                 <source>title.change_data</source>
@@ -192,32 +192,48 @@
             </trans-unit>
             <trans-unit id="title.login">
                 <source>title.login</source>
-                <target>Zaloguj się</target>
+                <target>Logowanie</target>
             </trans-unit>
-            <trans-unit id="title.recipe_list">
-                <source>title.recipe_list</source>
-                <target>Przepisy</target>
+            <trans-unit id="title.post_list">
+                <source>title.post_list</source>
+                <target>Forum</target>
             </trans-unit>
-            <trans-unit id="title.recipe_create">
-                <source>title.recipe_create</source>
-                <target>Dodaj przepis</target>
+            <trans-unit id="title.post_create">
+                <source>title.post_create</source>
+                <target>Dodaj post</target>
             </trans-unit>
-            <trans-unit id="title.recipe_details">
-                <source>title.recipe_details</source>
-                <target>Szczegóły przepisu #%id%</target>
+            <trans-unit id="title.post_details">
+                <source>title.post_details</source>
+                <target>Szczegóły posta #%id%</target>
             </trans-unit>
-            <trans-unit id="title.recipe_delete">
-                <source>title.recipe_delete</source>
-                <target>Usuń przepis #%id%</target>
+            <trans-unit id="title.post_delete">
+                <source>title.post_delete</source>
+                <target>Usuń post #%id%</target>
             </trans-unit>
-            <trans-unit id="title.recipe_edit">
-                <source>title.recipe_edit</source>
-                <target>Edytuj przepis #%id%</target>
+            <trans-unit id="title.post_edit">
+                <source>title.post_edit</source>
+                <target>Edytuj post #%id%</target>
             </trans-unit>
             <trans-unit id="title.user_edit">
                 <source>title.user_edit</source>
                 <target>Edytuj dane użytkownika</target>
             </trans-unit>
+            <trans-unit id="main_page">
+              <source>main_page</source>
+              <target>Strona Główna</target>
+            </trans-unit>
+            <trans-unit id="biblio">
+              <source>biblio</source>
+              <target>Bibliografia</target>
+            </trans-unit>
+            <trans-unit id="info">
+              <source>info</source>
+              <target>Informacja</target>
+            </trans-unit>
+      <trans-unit id="title.event_list">
+        <source>title.event_list</source>
+        <target>Wydarzenia</target>
+      </trans-unit>
         </body>
     </file>
 </xliff>

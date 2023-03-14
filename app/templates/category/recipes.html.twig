@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    {{ 'title.category_recipes'|trans({'%id%': category.id|default('')}) }}
+    {{ 'title.category_posts'|trans({'%id%': category.id|default('')}) }}
 {% endblock %}
 
 {% block body %}
-    <h1>{{ 'title.category_recipes'|trans({'%id%': category.id|default('')}) }}</h1>
+    <h1>{{ 'title.category_posts'|trans({'%id%': category.id|default('')}) }}</h1>
     <h2>{{ category.title }}</h2>
-    {% if recipes is defined and recipes|length %}
+    {% if posts is defined and posts|length %}
 
         <table class="table table-striped">
             <thead>
@@ -22,27 +22,27 @@
             </tr>
             </thead>
             <tbody>
-            {% for recipe in recipes %}
+            {% for post in posts %}
                 <tr>
-                    <td>{{ recipe.id }}</td>
-                    <td>{{ recipe.createdAt|format_date('long') }}</td>
-                    <td>{{ recipe.updatedAt|format_date('long') }}</td>
-                    <td>{{ recipe.title }}</td>
-                    <td>{{ recipe.ingredients }}</td>
-                    <td>{{ recipe.description }}</td>
+                    <td>{{ post.id }}</td>
+                    <td>{{ post.createdAt|format_date('long') }}</td>
+                    <td>{{ post.updatedAt|format_date('long') }}</td>
+                    <td>{{ post.title }}</td>
+                    <td>{{ post.ingredients }}</td>
+                    <td>{{ post.description }}</td>
                     <td>
-                        <a href="{{ url('recipe_show', {id: recipe.id}) }}" title="{{ 'action.show'|trans }}">
+                        <a href="{{ url('post_show', {id: post.id}) }}" title="{{ 'action.show'|trans }}">
                             {{ 'action.show'|trans }}
                         </a>
                         {% if is_granted('ROLE_ADMIN') %}
-                            <a href="{{ url('recipe_edit', {id: recipe.id}) }}" title="{{ 'action.edit'|trans }}">
+                            <a href="{{ url('post_edit', {id: post.id}) }}" title="{{ 'action.edit'|trans }}">
                                 {{ 'action.edit'|trans }}
                             </a>
-                            <a href="{{ url('recipe_delete', {id: recipe.id}) }}" title="{{ 'action.delete'|trans }}">
+                            <a href="{{ url('post_delete', {id: post.id}) }}" title="{{ 'action.delete'|trans }}">
                                 {{ 'action.delete'|trans }}
                             </a>
                         {% endif %}
-                        <a href="{{ url('comment_create', {id: recipe.id}) }}" title="{{ 'action.comment'|trans }}">
+                        <a href="{{ url('comment_create', {id: post.id}) }}" title="{{ 'action.comment'|trans }}">
                             {{ 'action.comment'|trans }}
                         </a>
                     </td>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Index controller.
+ * Event controller.
  */
 
 namespace App\Controller;
@@ -10,10 +10,9 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Class IndexController.
+ * Class EventController.
  */
-#[Route('/')]
-class IndexController extends AbstractController
+class EventController extends AbstractController
 {
     /**
      * Index action.
@@ -23,7 +22,8 @@ class IndexController extends AbstractController
     #[Route(name: 'index', methods: 'GET')]
     public function index(): Response
     {
-        return $this->render('main/main.html.twig');
+        return $this->render('event/event.html.twig');
 
     }
+
 }

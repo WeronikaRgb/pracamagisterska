@@ -1,7 +1,23 @@
-recipe_index:
-  path: /recipe
-  controller: App\Controller\RecipeController::index
+post_index:
+  path: /post
+  controller: App\Controller\PostController::index
 
 category_index:
   path: /category
   controller: App\Controller\CategoryController::index
+
+main_index:
+  path: /main
+  controller: App\Controller\IndexController::index
+
+biblio_index:
+  path: /biblio
+  controller: App\Controller\BiblioController::index
+
+info_index:
+  path: /info
+  controller: App\Controller\InfoController::index
+
+event_index:
+  path: /event
+  controller: App\Controller\EventController::index

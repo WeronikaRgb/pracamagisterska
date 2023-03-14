@@ -49,11 +49,11 @@ class Comment
     private ?string $nick;
 
     /**
-     * Recipe.
+     * Post.
      */
-    #[ORM\ManyToOne(targetEntity: Recipe::class, inversedBy: 'comments')]
+    #[ORM\ManyToOne(targetEntity: Post::class, inversedBy: 'comments')]
     #[ORM\JoinColumn(nullable: false)]
-    private ?Recipe $recipe = null;
+    private ?Post $post = null;
 
     /**
      * Getter for id.
@@ -138,25 +138,25 @@ class Comment
     }
 
     /**
-     * Getter for recipe.
+     * Getter for post.
      *
-     * @return Recipe|null Recipe
+     * @return Post|null Post
      */
-    public function getRecipe(): ?Recipe
+    public function getPost(): ?Post
     {
-        return $this->recipe;
+        return $this->post;
     }
 
     /**
-     * Setter for recipe.
+     * Setter for post.
      *
-     * @param Recipe|null $recipe Recipe
+     * @param Post|null $post Post
      *
      * @return $this
      */
-    public function setRecipe(?Recipe $recipe): self
+    public function setPost(?Post $post): self
     {
-        $this->recipe = $recipe;
+        $this->post = $post;
 
         return $this;
     }

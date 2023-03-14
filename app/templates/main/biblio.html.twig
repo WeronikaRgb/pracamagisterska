@@ -2,20 +2,19 @@
 <html lang="en">
 <head>
     <title>
-        Logowanie - Metaverse serwis informacyjny
+        Bibliografia - Metaverse serwis informacyjny
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% block stylesheets %}
         <link rel="icon" type="image/x-icon" href="{{ asset('/css/pics/icon.jpg') }}">
-        <link rel="stylesheet" type="text/css" href="{{ asset('/css/login.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/biblio.css') }}">
     {% endblock %}
 </head>
 <body>
 
 
 <!-------------------------------------------------MENU---------------------------------------------->
-<!--MENU-->
 <div class="menu">
     <ul>
         <li>
@@ -28,13 +27,13 @@
                 {{ 'title.post_list'|trans }}
             </a>
         </li>
-        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            <li>
-                <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">
-                    {{ 'title.event_list'|trans }}
-                </a>
-            </li>
+        <li>
+            <a href="{{ url('category_index') }}" title="{{ 'title.category_list'|trans }}">
+                {{ 'title.category_list'|trans }}
+            </a>
+        </li>
 
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
             <li style="float:right">
                 <div> {{ app.user.email }} </div>
             </li>
@@ -47,7 +46,6 @@
                 <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
             {% else %}
                 <a href="{{ url('app_login') }}">{{ 'title.login'|trans }}</a>
-                {#                    <a href="{{ url('app_register') }}">{{ 'title.regsiter'|trans }}</a>#}
             {% endif %}
         </li>
     </ul>
@@ -55,47 +53,17 @@
 
 <!-------------------------------------------NAGŁÓWEK----------------------------------------------->
 <div class="hi">
-    <h1> LOGOWANIE  </h1>
+    <h1> BIBLIOGRAFIA  </h1>
 </div>
 
 
-{% block body %}
-    <div class="logo">
-    <form method="post">
-        {% if error %}
-            <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-        {% endif %}
+<!----------------------------------------BIBLIOGRAFIA----------------------------------------------->
+<div class="infor">
+        <p>  tutaj będą pozycje bibliograficzne</p> <br>
+        <p> 1. </p>
+        <p> 2. </p>
+        <p> 3. </p>
 
-        {% if app.user %}
-            <div class="mb-3">
-                You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-            </div>
-        {% endif %}
-
-
-        <fieldset class="form-group">
-        <label for="inputEmail">{{ 'label.email'|trans }}</label>
-        <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-        <label for="inputPassword">{{ 'label.password'|trans }}</label>
-        <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-        </fieldset>
-
-        <input type="hidden" name="_csrf_token"
-               value="{{ csrf_token('authenticate') }}"
-        >
-
-
-        <button class="ConfirmButton" type="submit">
-            {{ 'action.login'|trans }}
-        </button>
-
-    </form>
-    </div>
-{% endblock %}
-
-<!---------------------------------------MASZ JUŻ KONTO?---------------------------------------------->
-<div class="already">
-    Nie masz jeszcze swojego konta? <a href="/">Zarejestruj się</a>
 </div>
 
 

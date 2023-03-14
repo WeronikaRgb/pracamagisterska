@@ -24,8 +24,8 @@
             </a>
         </p>
 
-        <a href="{{ url('recipe_index', {'filters.category_id' : category.id}) }}" title="{{ 'action.recipes_list'|trans }}">
-            {{ 'action.recipes_list'|trans }}
+        <a href="{{ url('post_index', {'filters.category_id' : category.id}) }}" title="{{ 'action.posts_list'|trans }}">
+            {{ 'action.posts_list'|trans }}
         </a>
 
     {% else %}

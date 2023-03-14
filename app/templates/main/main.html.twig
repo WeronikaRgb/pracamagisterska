@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Metaverse - serwis informacyjny
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block stylesheets %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('/css/pics/icon.jpg') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}">
+    {% endblock %}
+</head>
+<body>
+
+
+
+<!--MENU-->
+<div class="menu">
+    <ul>
+        <li>
+            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+                {{ 'main_page'|trans }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
+                {{ 'title.post_list'|trans }}
+            </a>
+        </li>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <li>
+            <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">
+                {{ 'title.event_list'|trans }}
+            </a>
+        </li>
+
+            <li style="float:right">
+                <div> {{ app.user.email }} </div>
+            </li>
+            <li>
+                <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
+            </li>
+        {% endif %}
+            <li style="float:right">
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+                {% else %}
+                    <a href="{{ url('app_login') }}">{{ 'title.login'|trans }}</a>
+{#                    <a href="{{ url('app_register') }}">{{ 'title.regsiter'|trans }}</a>#}
+                {% endif %}
+            </li>
+    </ul>
+</div>
+
+
+<!--GRAFIKA Z NAZWĄ STRONY - METAVERSE-->
+<div class="toppage">
+</div>
+
+{#<video class="w-100" autoplay loop muted>#}
+{#  <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />#}
+{#</video>#}
+
+<div class="gradient">
+    <p class="gradient">  </p>
+</div>
+
+
+<div class="first">
+    <h3> METAVERSE </h3>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</div>
+
+<div class="whattoexpect">
+    <h3> Co znajdziesz na stronie? </h3>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</div>
+
+<div class="first">
+    <h3> METAVERSE </h3>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</div>
+
+<div class="footer">
+    <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
+    <p class="info"> PROJEKT JEST CZĘŚCIĄ PRACY MAGISTERSKIEJ </p>
+    <p class="copyright">  © 2022 Weronika Paterek </p>
+</div>
+
+</body>
+</html>

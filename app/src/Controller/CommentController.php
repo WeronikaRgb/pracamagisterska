@@ -8,7 +8,7 @@ namespace App\Controller;
 use App\Entity\Comment;
 use App\Form\Type\CommentType;
 use App\Service\CommentServiceInterface;
-use App\Service\RecipeServiceInterface;
+use App\Service\PostServiceInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Form\Extension\Core\Type\FormType;
@@ -34,22 +34,22 @@ class CommentController extends AbstractController
     private TranslatorInterface $translator;
 
     /**
-     * Recipe service.
+     * Post service.
      */
-    private RecipeServiceInterface $recipeService;
+    private PostServiceInterface $postService;
 
     /**
      * Constructor.
      *
      * @param CommentServiceInterface $commentService Comment service
      * @param TranslatorInterface     $translator     Translator
-     * @param RecipeServiceInterface  $recipeService  Recipe service
+     * @param PostServiceInterface    $postService  Post service
      */
-    public function __construct(CommentServiceInterface $commentService, TranslatorInterface $translator, RecipeServiceInterface $recipeService)
+    public function __construct(CommentServiceInterface $commentService, TranslatorInterface $translator, PostServiceInterface $postService)
     {
         $this->commentService = $commentService;
         $this->translator = $translator;
-        $this->recipeService = $recipeService;
+        $this->postService = $postService;
     }
 
     /**
@@ -100,35 +100,35 @@ class CommentController extends AbstractController
     #[Route('/create', name: 'comment_create', requirements: ['id' => '[1-9]\d*'], methods: 'GET|POST')]
     public function create(Request $request): Response
     {
-        $recipe = $this->recipeService->getById($request->get('id'));
-        if (null === $recipe) {
+        $post = $this->postService->getById($request->get('id'));
+        if (null === $post) {
             $this->addFlash(
                 'warning',
-                $this->translator->trans('message.recipe_not_found')
+                $this->translator->trans('message.post_not_found')
             );
 
-            return $this->redirectToRoute('recipe_index');
+            return $this->redirectToRoute('post_index');
         }
 
         $comment = new Comment();
-        $recipeId = $this->recipeService->getById($request->get('id'))->getId();
-        $form = $this->createForm(CommentType::class, $comment, ['action' => $this->generateUrl('comment_create', ['id' => $recipeId])]);
+        $postId = $this->postService->getById($request->get('id'))->getId();
+        $form = $this->createForm(CommentType::class, $comment, ['action' => $this->generateUrl('comment_create', ['id' => $postId])]);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $recipe = $this->recipeService->getById($request->get('id'));
-            if (null === $recipe) {
+            $post = $this->postService->getById($request->get('id'));
+            if (null === $post) {
                 $this->addFlash(
                     'warning',
-                    $this->translator->trans('message.recipe_not_found')
+                    $this->translator->trans('message.post_not_found')
                 );
 
-                return $this->redirectToRoute('recipe_index');
+                return $this->redirectToRoute('post_index');
             }
 
-            $recipe->addComment($comment);
+            $post->addComment($comment);
 
-            $comment->setRecipe($recipe);
+            $comment->setPost($post);
             $this->commentService->save($comment);
 
             $this->addFlash(
@@ -136,18 +136,18 @@ class CommentController extends AbstractController
                 $this->translator->trans('message.created_successfully')
             );
 
-            $recipeId = $recipe->getId();
+            $postId = $post->getId();
 
-            return $this->redirectToRoute('recipe_show', ['id' => $recipeId]);
+            return $this->redirectToRoute('post_show', ['id' => $postId]);
         }
 
-        $recipeId = $this->recipeService->getById($request->get('id'))->getId();
+        $postId = $this->postService->getById($request->get('id'))->getId();
 
         return $this->render(
             'comment/create.html.twig',
             [
                 'form' => $form->createView(),
-                'id' => $recipeId,
+                'id' => $postId,
             ]
         );
     }
@@ -178,9 +178,9 @@ class CommentController extends AbstractController
                 $this->translator->trans('message.deleted_successfully')
             );
 
-            $recipeId = $comment->getRecipe()->getId();
+            $postId = $comment->getPost()->getId();
 
-            return $this->redirectToRoute('recipe_show', ['id' => $recipeId]);
+            return $this->redirectToRoute('post_show', ['id' => $postId]);
         }
 
         return $this->render(

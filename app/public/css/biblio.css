@@ -44,63 +44,12 @@ li a:hover {
     padding: 60px 300px 30px 300px;
 }
 
-/*........................................... LOGOWANIE ...........................................*/
-.logo{
+/*.............................................. BIBLIOGRAFIA ............................................*/
+.infor{
     text-align: center;
+    padding: 100px;
+    font-size: 20px;
     font-family: Arial;
-    background: #ffffff;
-    padding: 20px 300px 10px;
-    border: 1px solid #dddddd;
-    margin-bottom: 20px;
-}
-
-.form-group{
-    white-space: pre-line;
-    margin-bottom: 20px;
-    border: none;
-}
-
-#inputEmail{
-    margin-bottom: 20px;
-}
-
-
-
-
-/*........................................ PRZYCISK NA KOŃCU .......................................*/
-button[type=submit]{
-    color: #120621;
-    background-color: white;
-    border-style: solid;
-    border-color: #120621;
-    padding: 16px 32px;
-    text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-}
-.ConfirmButton{
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
-button[type=submit]:focus{
-    box-shadow: 0 0 1em #120621;
-    transition: 1s;
-}
-button[type=submit]:hover{
-    color: white;
-    background-color: #120621;
-    linear-gradient(red, blue);
-    transition: 1s;
-}
-
-
-
-/*......................................... MASZ JUŻ KONTO? .......................................*/
-.already{
-    text-align: center;
-    padding: 20px;
 }
 
 /*.............................................. STOPKA ............................................*/
@@ -128,3 +77,4 @@ button[type=submit]:hover{
     padding: 5px;
     font-family: Arial;
 }
+

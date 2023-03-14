@@ -6,7 +6,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Comment;
-use App\Entity\Recipe;
+use App\Entity\Post;
 use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
 /**
@@ -35,9 +35,9 @@ class CommentFixtures extends AbstractBaseFixtures implements DependentFixtureIn
             $comment->setNick($this->faker->userName);
             $comment->setEmail($this->faker->email);
 
-            /** @var Recipe recipe */
-            $recipe = $this->getRandomReference('recipes');
-            $comment->setRecipe($recipe);
+            /** @var Post post */
+            $post = $this->getRandomReference('posts');
+            $comment->setPost($post);
 
             return $comment;
         });
@@ -55,6 +55,6 @@ class CommentFixtures extends AbstractBaseFixtures implements DependentFixtureIn
      */
     public function getDependencies(): array
     {
-        return [RecipeFixtures::class];
+        return [PostFixtures::class];
     }
 }

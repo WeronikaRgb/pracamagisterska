@@ -1,0 +1,101 @@
+* {
+    /*background-color: #120621;*/
+    margin:0;
+    padding:0;
+}
+
+/*.......................................... MENU ...............................................*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: Arial;
+    position: fixed;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #120621;
+    transition: 0.4s background-color, text-shadow;
+    text-shadow: 0 0 0.2em #3990A8, 0 0 0.2em #3990A8, 0 0 0.2em #3990A8;
+}
+
+
+/*.............................. GRAFIKA Z NAZWĄ STRONY - METAVERSE ...............................*/
+.toppage{
+    height: 400px;
+    padding-top: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("pics/mainpage.jpg");
+}
+
+.gradient{
+    height: 50px;
+    background: rgb(57, 144, 168);
+    background: linear-gradient(180deg, rgba(57,144,168,1) 0%, rgba(57,144,168,1) 0%, rgba(245,245,245,1) 100%);
+}
+
+
+.first{
+    height: 100%;
+    text-align: justify;
+    font-family: Arial;
+    padding: 30px 300px 60px 300px;
+    background-color: #f5f5f5; }
+
+
+.whattoexpect{
+    height: 100%;
+    text-align: justify;
+    font-family: Arial;
+    padding: 30px 300px 60px 300px;
+    background-color: #120621;
+    color: whitesmoke;
+}
+
+/*............................................ STOPKA .........................................*/
+.footer{
+    padding: 20px;
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    color: #cccccc;
+}
+
+.footernav a{
+    text-decoration: none;
+    color: grey;
+    font-family: Arial;
+    padding: 5px;
+}
+
+.info{
+    padding: 20px;
+    font-family: Arial;
+}
+
+.copyright{
+    padding: 5px;
+    font-family: Arial;
+}
+
+
+
+
+

@@ -22,9 +22,9 @@
         <source>action.create_category</source>
         <target>Create Category</target>
       </trans-unit>
-      <trans-unit id="action.create_recipe">
-        <source>action.create_recipe</source>
-        <target>Create Recipe</target>
+      <trans-unit id="action.create_post">
+        <source>action.create_post</source>
+        <target>Create Post</target>
       </trans-unit>
       <trans-unit id="action.delete">
         <source>action.delete</source>
@@ -42,9 +42,9 @@
         <source>action.logout</source>
         <target>Logout</target>
       </trans-unit>
-      <trans-unit id="action.recipes_list">
-        <source>action.recipes_list</source>
-        <target>Recipes list</target>
+      <trans-unit id="action.posts_list">
+        <source>action.posts_list</source>
+        <target>Posts list</target>
       </trans-unit>
       <trans-unit id="action.save">
         <source>action.save</source>
@@ -126,9 +126,9 @@
         <source>message.form_error</source>
         <target>Form error</target>
       </trans-unit>
-      <trans-unit id="message.recipe_not_found">
-        <source>message.recipe_not_found</source>
-        <target>Recipe not found.</target>
+      <trans-unit id="message.post_not_found">
+        <source>message.post_not_found</source>
+        <target>Post not found.</target>
       </trans-unit>
       <trans-unit id="message.created_successfully">
         <source>message.created_successfully</source>
@@ -146,9 +146,9 @@
         <source>message.category_not_found</source>
         <target>Category not found.</target>
       </trans-unit>
-      <trans-unit id="message.category_contains_recipes">
-        <source>message.category_contains_recipes</source>
-        <target>Category contains recipes.</target>
+      <trans-unit id="message.category_contains_posts">
+        <source>message.category_contains_posts</source>
+        <target>Category contains posts.</target>
       </trans-unit>
       <trans-unit id="title.category_list">
         <source>title.category_list</source>
@@ -170,9 +170,9 @@
         <source>title.category_edit</source>
         <target>Edit category #%id%</target>
       </trans-unit>
-      <trans-unit id="title.category_recipes">
-        <source>title.category_recipes</source>
-        <target>Recipes for category</target>
+      <trans-unit id="title.category_posts">
+        <source>title.category_posts</source>
+        <target>Posts for category</target>
       </trans-unit>
       <trans-unit id="title.change_data">
         <source>title.change_data</source>
@@ -194,29 +194,45 @@
         <source>title.login</source>
         <target>Sign in</target>
       </trans-unit>
-      <trans-unit id="title.recipe_list">
-        <source>title.recipe_list</source>
-        <target>Recipes list</target>
+      <trans-unit id="title.post_list">
+        <source>title.post_list</source>
+        <target>Forum</target>
       </trans-unit>
-      <trans-unit id="title.recipe_create">
-        <source>title.recipe_create</source>
-        <target>Create recipe</target>
+      <trans-unit id="title.post_create">
+        <source>title.post_create</source>
+        <target>Create post</target>
       </trans-unit>
-      <trans-unit id="title.recipe_details">
-        <source>title.recipe_details</source>
-        <target>Recipe details #%id%</target>
+      <trans-unit id="title.post_details">
+        <source>title.post_details</source>
+        <target>Post details #%id%</target>
       </trans-unit>
-      <trans-unit id="title.recipe_delete">
-        <source>title.recipe_delete</source>
-        <target>Delete recipe #%id%</target>
+      <trans-unit id="title.post_delete">
+        <source>title.post_delete</source>
+        <target>Delete post #%id%</target>
       </trans-unit>
-      <trans-unit id="title.recipe_edit">
-        <source>title.recipe_edit</source>
-        <target>Edit recipe #%id%</target>
+      <trans-unit id="title.post_edit">
+        <source>title.post_edit</source>
+        <target>Edit post #%id%</target>
       </trans-unit>
       <trans-unit id="title.user_edit">
         <source>title.user_edit</source>
         <target>Edit user data</target>
+      </trans-unit>
+      <trans-unit id="main_page">
+        <source>main_page</source>
+        <target>Main Page</target>
+      </trans-unit>
+      <trans-unit id="biblio">
+        <source>biblio</source>
+        <target>Bibliography</target>
+      </trans-unit>
+      <trans-unit id="info">
+        <source>info</source>
+        <target>Information</target>
+      </trans-unit>
+      <trans-unit id="title.event_list">
+        <source>title.event_list</source>
+        <target>Events</target>
       </trans-unit>
     </body>
   </file>

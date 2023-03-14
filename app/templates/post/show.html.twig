@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Forum - Metaverse serwis informacyjny
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block stylesheets %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('/css/pics/icon.jpg') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/post/postshow.css') }}">
+    {% endblock %}
+</head>
+<body>
+
+
+<!-------------------------------------------------MENU---------------------------------------------->
+<div class="menu">
+    <ul>
+        <li>
+            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+                {{ 'main_page'|trans }}
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
+                {{ 'title.post_list'|trans }}
+            </a>
+        </li>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <li>
+                <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">
+                    {{ 'title.event_list'|trans }}
+                </a>
+            </li>
+
+            <li style="float:right">
+                <div> {{ app.user.email }} </div>
+            </li>
+            <li>
+                <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
+            </li>
+        {% endif %}
+        <li style="float:right">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+            {% else %}
+                <a href="{{ url('app_login') }}">{{ 'title.login'|trans }}</a>
+                {#                    <a href="{{ url('app_register') }}">{{ 'title.regsiter'|trans }}</a>#}
+            {% endif %}
+        </li>
+    </ul>
+</div>
+
+<!-------------------------------------------NAGŁÓWEK----------------------------------------------->
+<div class="hi">
+    <h1> {{ post.title }} </h1>
+</div>
+
+
+{% block body %}
+    {% if post is defined and post|length %}
+        <dl class="post">
+            <dt class="data">{{ 'label.created_at'|trans }}: {{ post.createdAt|format_date('long') }}</dt>
+{#            <dt class="autor">{{'Autor:'|trans}}: {{ post.author }}</dt>#}
+            <dt class="tytulposta">{{ 'label.title'|trans }}: {{ post.title }}</dt>
+            <dd class="trescposta">{{ post.description }}</dd>
+            <dt class="kategoriaposta">{{ 'label.category'|trans }}: {{ post.category.title }}</dt>
+        </dl>
+
+        <p class="pasek">
+            <a class="back" href="{{ url('post_index') }}" title="{{ 'action.back'|trans }}">
+                {{ 'action.back'|trans }}
+            </a>
+        </p>
+
+        {% if post.comments is defined and post.comments|length %}
+            <h4 class="komentarze">{{ 'label.comments'|trans }}</h4>
+            <table class="tabelka">
+                <thead class="thead">
+                <tr>
+                    <th scope="col">{{ 'label.nick'|trans }}</th>
+                    <th scope="col">{{ 'label.email'|trans }}</th>
+                    <th scope="col">{{ 'label.content'|trans }}</th>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <th>{{ 'label.actions'|trans }}</th>
+                    {% endif %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for comment in post.comments %}
+                    <tr class="komcie">
+                        <td>{{ comment.nick }}</td>
+                        <td>{{ comment.email }}</td>
+                        <td>{{ comment.content }}</td>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <td>
+                                <a href="{{ url('comment_delete', {id: comment.id}) }}"
+                                   title="{{ 'action.delete'|trans }}">
+                                    {{ 'action.delete'|trans }}
+                                </a>
+                            </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
+
+
+    {% else %}
+        {% include 'default/_single_alert_message.html.twig' with {
+            type: 'warning',
+            message: 'message.post_not_found'|trans
+        } %}
+    {% endif %}
+{% endblock %}
+
+<!---------------------------------------------STOPKA------------------------------------------------->
+<div class="footer">
+    <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
+    <p class="info"> PROJEKT JEST CZĘŚCIĄ PRACY MAGISTERSKIEJ </p>
+    <p class="copyright">  © 2022 Weronika Paterek </p>
+</div>
+
+</body>
+</html>
