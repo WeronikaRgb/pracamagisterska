@@ -21,3 +21,15 @@ info_index:
 event_index:
   path: /event
   controller: App\Controller\EventController::index
+
+kids_index:
+  path: /kids
+  controller: App\Controller\KidsController::index
+
+registration_register:
+  path: /register
+  controller: App\Controller\RegistrationController::index
+
+start_index:
+  path: /start
+  controller: App\Controller\StartController::index

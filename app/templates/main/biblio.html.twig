@@ -14,28 +14,38 @@
 <body>
 
 
-<!-------------------------------------------------MENU---------------------------------------------->
+<!---------------------------------------MENU------------------------------------------------------->
 <div class="menu">
     <ul>
         <li>
             <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
-                {{ 'main_page'|trans }}
+                METAVERSE - SERWIS INFORMACYJNY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+                STRONA GŁÓWNA
             </a>
         </li>
         <li>
             <a href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
-                {{ 'title.post_list'|trans }}
+                FORUM
             </a>
         </li>
         <li>
-            <a href="{{ url('category_index') }}" title="{{ 'title.category_list'|trans }}">
-                {{ 'title.category_list'|trans }}
+            <a href="{{ url('kids_index') }}" title="{{ 'title.kids_list'|trans }}">
+                STREFA DZIECKA
             </a>
         </li>
-
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {#        <li>#}
+            {#            <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">#}
+            {#                WYDARZENIA#}
+            {#            </a>#}
+            {#        </li>#}
+
             <li style="float:right">
-                <div> {{ app.user.email }} </div>
+                <div class="username"> {{ app.user.email }} </div>
             </li>
             <li>
                 <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
@@ -45,7 +55,14 @@
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
             {% else %}
-                <a href="{{ url('app_login') }}">{{ 'title.login'|trans }}</a>
+                <a href="{{ url('app_login') }}">LOGOWANIE</a>
+            {% endif %}
+        </li>
+        <li style="float:right">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+            {% else %}
+                <a href="{{ url('registration_register') }}">REJESTRACJA</a>
             {% endif %}
         </li>
     </ul>

@@ -1,0 +1,157 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+@font-face {
+    font-family: 'destrod';
+    src: url('/destrod/destrod.otf');
+}
+
+/*.............................. GRAFIKA Z NAZWĄ STRONY - METAVERSE ...............................*/
+.toppage{
+    height: 460px;
+    color: white;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("pics/obecne.png");
+}
+.napis{
+    font-size: 90px;
+    text-align: center;
+    padding-top: 80px;
+    letter-spacing: 5px;
+    font-family: Arial, sans serif;
+    text-shadow:
+            0 0 7px #fff,
+            0 0 10px #fff,
+            0 0 21px #fff,
+            0 0 42px #f09,
+            0 0 82px #f09,
+            0 0 92px #f09,
+            0 0 102px #f09,
+            0 0 151px #f09;
+    animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+
+.neon{
+    font-size: 50px;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    color: #fff;
+    font-family: Arial;
+
+}
+
+.neon a{
+    text-decoration: none;
+    color: #fff;
+}
+
+@keyframes pulsate {
+
+    100% {
+
+        text-shadow: 0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px #f09,
+        0 0 80px #f09,
+        0 0 90px #f09,
+        0 0 100px #f09,
+        0 0 150px #f09;
+
+    }
+    0% {
+
+        text-shadow: 0 0 4px #fff,
+        0 0 10px #fff,
+        0 0 18px #fff,
+        0 0 38px #f09,
+        0 0 73px #f09,
+        0 0 80px #f09,
+        0 0 94px #f09,
+        0 0 140px #f09;
+
+    }
+}
+
+
+
+
+/*.............................. QUOTE ...............................*/
+.quote{
+    color: whitesmoke;
+    font-size: 25px;
+    line-height: 130%;
+    background-color: black;
+    padding-right: 300px;
+    padding-left: 300px;
+    font-family: Arial, sans-serif;
+
+}
+.name{
+    padding-top: 15px;
+    text-align: right;
+    color: whitesmoke;
+    font-size: 20px;
+    background-color: black;
+    padding-right: 300px;
+    padding-left: 300px;
+    padding-bottom: 30px;
+    font-family: Arial;
+}
+
+
+/*.............................. ENTER BUTTON ...............................*/
+.enterbutton{
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: #fff;
+}
+
+.enterbutton a{
+    border: 1px solid whitesmoke;
+    text-decoration: none;
+    padding: 20px;
+    color: white;
+    text-shadow:
+            0 0 7px #fff,
+                /*0 0 10px #fff,*/
+                /*0 0 21px #fff,*/
+            0 0 42px #bc13fe;
+}
+
+
+
+/*............................................ FOOTER .........................................*/
+.footer{
+    padding: 20px;
+    height: 100%;
+    text-align: center;
+    background-color: black;
+    color: #cccccc;
+}
+.footernav a{
+    text-decoration: none;
+    color: grey;
+    font-family: Arial;
+    padding: 5px;
+}
+.info{
+    padding: 20px;
+    font-family: Arial;
+}
+.copyright{
+    padding: 5px;
+    font-family: Arial;
+}
+

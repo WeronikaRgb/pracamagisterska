@@ -19,7 +19,7 @@ class BiblioController extends AbstractController
      *
      * @return Response HTTP response
      */
-    #[Route(name: 'index', methods: 'GET')]
+    #[Route('/biblio')]
     public function index(): Response
     {
         return $this->render('main/biblio.html.twig');

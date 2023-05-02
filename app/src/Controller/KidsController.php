@@ -1,6 +1,6 @@
 <?php
 /**
- * Info controller.
+ * Kids controller.
  */
 
 namespace App\Controller;
@@ -10,19 +10,19 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * Class InfoController.
+ * Class EventController.
  */
-class InfoController extends AbstractController
+class KidsController extends AbstractController
 {
     /**
      * Index action.
      *
      * @return Response HTTP response
      */
-    #[Route('/info')]
+    #[Route('/kids')]
     public function index(): Response
     {
-        return $this->render('main/info.html.twig');
+        return $this->render('kids/index.html.twig');
 
     }
 

@@ -13,29 +13,38 @@
 </head>
 <body>
 
-
-<!-------------------------------------------------MENU---------------------------------------------->
+<!---------------------------------------MENU------------------------------------------------------->
 <div class="menu">
     <ul>
         <li>
             <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
-                {{ 'main_page'|trans }}
+                METAVERSE - SERWIS INFORMACYJNY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+                STRONA GŁÓWNA
             </a>
         </li>
         <li>
             <a href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
-                {{ 'title.post_list'|trans }}
+                FORUM
             </a>
         </li>
         <li>
-            <a href="{{ url('category_index') }}" title="{{ 'title.category_list'|trans }}">
-                {{ 'title.category_list'|trans }}
+            <a href="{{ url('kids_index') }}" title="{{ 'title.kids_list'|trans }}">
+                STREFA DZIECKA
             </a>
         </li>
-
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            {#        <li>#}
+            {#            <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">#}
+            {#                WYDARZENIA#}
+            {#            </a>#}
+            {#        </li>#}
+
             <li style="float:right">
-                <div> {{ app.user.email }} </div>
+                <div class="username"> {{ app.user.email }} </div>
             </li>
             <li>
                 <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
@@ -45,7 +54,14 @@
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
             {% else %}
-                <a href="{{ url('app_login') }}">{{ 'title.login'|trans }}</a>
+                <a href="{{ url('app_login') }}">LOGOWANIE</a>
+            {% endif %}
+        </li>
+        <li style="float:right">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+            {% else %}
+                <a href="{{ url('registration_register') }}">REJESTRACJA</a>
             {% endif %}
         </li>
     </ul>
@@ -53,47 +69,33 @@
 
 <!-------------------------------------------NAGŁÓWEK----------------------------------------------->
 <div class="hi">
-    <h1> LOGOWANIE  </h1>
+    <h1> REJESTRACJA  </h1>
 </div>
 
 
 {% block body %}
-    <div class="logo">
-        <form method="post">
-            {% if error %}
-                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-            {% endif %}
 
-            {% if app.user %}
-                <div class="mb-3">
-                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
-                </div>
-            {% endif %}
-
-
-            <fieldset class="form-group">
-                <label for="inputEmail">{{ 'label.email'|trans }}</label>
-                <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" autocomplete="email" required autofocus>
-                <label for="inputPassword">{{ 'label.password'|trans }}</label>
-                <input type="password" name="password" id="inputPassword" class="form-control" autocomplete="current-password" required>
-            </fieldset>
-
-            <input type="hidden" name="_csrf_token"
-                   value="{{ csrf_token('authenticate') }}"
-            >
-
-
-            <button class="ConfirmButton" type="submit">
-                {{ 'action.login'|trans }}
-            </button>
-
-        </form>
-    </div>
+<div class="logo">
+    <form method="post">
+        <fieldset class="form-group">
+    {{ form_start(registrationForm) }}
+    {{ form_row(registrationForm.email) }}
+    {{ form_row(registrationForm.plainPassword, {
+        label: 'Password'
+    }) }}
+    {#    {{ form_row(registrationForm.agreeTerms) }} #}
+        </fieldset>
+    <button class="ConfirmButton" type="submit">
+        {{ 'title.sign_up'|trans }}
+    </button>
+    {{ form_end(registrationForm) }}
 {% endblock %}
 
+    </form>
+</div>
 <!---------------------------------------MASZ JUŻ KONTO?---------------------------------------------->
 <div class="already">
-    Nie masz jeszcze swojego konta? <a href="/">Zarejestruj się</a>
+    Masz już swoje konto? <a href="{{ url('app_login') }}">Zaloguj się</a>
 </div>
 
 

@@ -9,34 +9,45 @@
     {% block stylesheets %}
         <link rel="icon" type="image/x-icon" href="{{ asset('/css/pics/icon.jpg') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/main.css') }}">
+
     {% endblock %}
 </head>
 <body>
 
 
 
-<!--MENU-->
+<!---------------------------------------MENU------------------------------------------------------->
 <div class="menu">
     <ul>
         <li>
             <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
-                {{ 'main_page'|trans }}
+                METAVERSE - SERWIS INFORMACYJNY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+                STRONA GŁÓWNA
             </a>
         </li>
         <li>
             <a href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
-                {{ 'title.post_list'|trans }}
+                FORUM
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('kids_index') }}" title="{{ 'title.kids_list'|trans }}">
+                STREFA DZIECKA
             </a>
         </li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-        <li>
-            <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">
-                {{ 'title.event_list'|trans }}
-            </a>
-        </li>
+{#        <li>#}
+{#            <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">#}
+{#                WYDARZENIA#}
+{#            </a>#}
+{#        </li>#}
 
             <li style="float:right">
-                <div> {{ app.user.email }} </div>
+                <div class="username"> {{ app.user.email }} </div>
             </li>
             <li>
                 <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
@@ -46,41 +57,87 @@
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
                 {% else %}
-                    <a href="{{ url('app_login') }}">{{ 'title.login'|trans }}</a>
-{#                    <a href="{{ url('app_register') }}">{{ 'title.regsiter'|trans }}</a>#}
+                    <a href="{{ url('app_login') }}">LOGOWANIE</a>
                 {% endif %}
             </li>
+        <li style="float:right">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+            {% else %}
+                <a href="{{ url('registration_register') }}">REJESTRACJA</a>
+            {% endif %}
+        </li>
     </ul>
 </div>
 
 
-<!--GRAFIKA Z NAZWĄ STRONY - METAVERSE-->
+<!----------------------------GRAFIKA Z NAZWĄ STRONY - METAVERSE------------------------------------->
 <div class="toppage">
-</div>
-
-{#<video class="w-100" autoplay loop muted>#}
-{#  <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />#}
-{#</video>#}
-
-<div class="gradient">
-    <p class="gradient">  </p>
+    <p class="napis"> METAVERSE </p>
+    <p class="serwis"> Serwis informacyjny </p>
 </div>
 
 
-<div class="first">
-    <h3> METAVERSE </h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-</div>
 
+
+
+<!--------------------------------------- ABOUT PAGE ------------------------------------------------------->
 <div class="whattoexpect">
-    <h3> Co znajdziesz na stronie? </h3>
+    <h3> CO ZNAJDZIESZ NA STRONIE? </h3>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 </div>
 
-<div class="first">
-    <h3> METAVERSE </h3>
+
+<div class="firstparagraph">
+    <h3> STREFA DLA DZIECI </h3>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 </div>
+
+<!--------------------------------------- CZTERY CONTAINERY ------------------------------------------------------->
+<div class="secondparagraph">
+    <h3> GENEZA I HISTORIA METAVERSE </h3>
+
+    <div class="container">
+        <h3> Definicja i etymologia </h3>
+        <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
+        <p>Zobacz</p>
+    </div>
+
+    <div class="container">
+        <h3>  Geneza i historia </h3>
+        <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
+        <p>Zobacz</p>
+    </div>
+
+    <div class="container">
+        <h3> Technologie </h3>
+        <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
+        <p>Zobacz</p>
+    </div>
+
+    <div class="container">
+        <h3> Zastosowania </h3>
+        <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
+        <p>Zobacz</p>
+    </div>
+</div>
+
+<div>
+    <h3> TECHNOLOGIE </h3>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</div>
+
+<div>
+    <h3> TECHNOLOGIE </h3>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</div>
+
+<div>
+    <h3> FORUM </h3>
+    Lorem Ipsum ,is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    <p class="forumbutton">Forum </p>
+</div>
+
 
 <div class="footer">
     <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
