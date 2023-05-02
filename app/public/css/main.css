@@ -1,6 +1,7 @@
 * {
     margin:0;
     padding:0;
+    font-family: Arial, sans-serif;
 }
 
 /*.......................................... MENU ...............................................*/
@@ -9,7 +10,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #17181a;
     font-family: Arial;
     position: fixed;
     width: 100%;
@@ -36,27 +37,63 @@ li a {
 
 /*.............................. TOPPAGE ...............................*/
 .toppage{
-    height: 300px;
+    height: 550px;
     color: white;
-    text-align: center;
+    text-align: left;
+    /*padding-top: 60px;*/
+    /*background-color: #17181a;*/
+    background-image: url("pics/telko.png");
+    font-family: Arial, sans-serif;
+    padding-left: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.tekst{
+    padding-top: 100px;
+}
+.login a{
+    border: 1px solid white;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    margin: 5px;
+    float: left;
+}
+.register a{
+    border: 1px solid purple;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: purple;
+    margin: 5px;
+    float: left;
+
+}
+
+.serwis{
     padding-top: 60px;
-    background-color: black;
+    padding-bottom: 20px;
+    font-size: 25px;
 }
 
 .napis{
-    font-size: 40px;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
     text-align: left;
     letter-spacing: 5px;
+    font-size: 55px;
+    padding-bottom: 30px;
+
 }
 
 /*.............................. ABOUT PAGE ...............................*/
 .whattoexpect{
-    line-height: 140%;
+    line-height: 160%;
     text-align: justify;
     font-family: Arial;
-    padding: 10px 300px 60px 300px;
+    padding: 10px 600px 60px 200px;
     background-color: whitesmoke;
+
 }
 
 /*.............................. FIRST PARAGRAPH ...............................*/
@@ -69,30 +106,102 @@ li a {
 }
 
 /*.............................. SECOND PARAGRAPH ...............................*/
-
 .secondparagraph{
-    /*text-align: justify;*/
     color: black;
-    background-color: blueviolet;
-    font-family: Arial;
+    background-color: white;
+    font-family: Arial, sans-serif;
+    padding: 0 30px 30px 30px;
     /*padding: 30px 300px 60px 300px;*/
     /*line-height: 140%;*/
 
 }
-
-/*............................................ CZTERY CONTAINERY .........................................*/
 .container{
-    display: inline;
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     width: 20%;
-    padding: 20px;
-    color: yellow;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px 5px grey;
+    border-radius: 10px;
+    /*line-height: 2;*/
+    height: 200px;
+    margin: 15px;
+    display: inline-block;
+    line-height: 150%;
+}
+.kontenery{
+    display: flex;
+    margin: auto;
+    /*background-color: #bc13fe;*/
+    width: 100%;
+}
+.dowiedz{
+    padding: 30px;
+}
+.zobacz1 a{
+    text-decoration: none;
+    color: cyan;
+    font-family: Arial, bold, sans-serif;
+    border: solid cyan 1px;
+    padding: 5px;
+}
+.zobacz1 a:hover{
+    background-color: cyan;
+    color: white;
+    transition-duration: 1s;
+}
+.zobacz2 a{
+    text-decoration: none;
+    color: deeppink;
+    font-family: Arial, bold, sans-serif;
+    border: solid deeppink 1px;
+    padding: 5px;
+}
+.zobacz2 a:hover{
+    background-color: deeppink;
+    color: white;
+    transition-duration: 1s;
+}
+.zobacz3 a{
+    text-decoration: none;
+    color: blueviolet;
+    font-family: Arial, bold, sans-serif;
+    border: solid blueviolet 1px;
+    padding: 5px;
+}
+.zobacz3 a:hover{
+    background-color: blueviolet;
+    color: white;
+    transition-duration: 1s;
+}
+.zobacz4 a{
+    text-decoration: none;
+    color: purple;
+    font-family: Arial, bold, sans-serif;
+    border: solid purple 1px;
+    padding: 5px;
+}
+.zobacz4 a:hover{
+    background-color: purple;
+    color: white;
+    transition-duration: 1s;
+}
+.containerh{
+    font-size: 20px;
 }
 
-
-
 /*............................................ FORUM .........................................*/
-
+.forum{
+    background-color: whitesmoke;
+    padding: 40px 400px 40px 400px;
+    line-height: 2;
+}
+.goto a{
+    font-weight: bold;
+    color: black;
+}
 .forumbutton{
     padding: 20px;
     font-family: Arial, sans-serif;
@@ -114,6 +223,46 @@ li a {
                 /*0 0 21px #fff,*/
             0 0 42px #bc13fe;
 }
+
+
+/*............................................ KIDSY .........................................*/
+
+.kids{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("pics/dziecko.png");
+    /*height: 400px;*/
+    color: white;
+    text-align: center;
+    padding: 50px 400px 50px 400px;
+    line-height: 2.5;
+}
+.gotokids a{
+    text-decoration: none;
+    color: white;
+    border: solid 1px white;
+    padding: 10px;
+}
+.gotokids a:hover{
+    color: purple;
+    background-color: white;
+    transition-duration: 1s;
+}
+.strefakid{
+font-weight: bold;
+    font-size: 50px;
+}
+
+
+/*............................................ LAST .........................................*/
+
+.thirdparagraph{
+    background-color: whitesmoke;
+    padding: 40px 400px 40px 400px;
+    line-height: 2;
+}
+
 
 
 /*............................................ FOOTER .........................................*/

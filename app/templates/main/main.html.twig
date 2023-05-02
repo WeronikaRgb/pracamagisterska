@@ -73,8 +73,13 @@
 
 <!----------------------------GRAFIKA Z NAZWĄ STRONY - METAVERSE------------------------------------->
 <div class="toppage">
-    <p class="napis"> METAVERSE </p>
-    <p class="serwis"> Serwis informacyjny </p>
+    <div class="tekst">
+        <p class="serwis"> Serwis informacyjny o tematyce </p>
+        <p class="napis"> METAVERSE </p>
+
+        <p class="login"> <a href="{{ url('app_login') }}"> Logowanie </a> </p>
+        <p class="register"> <a href="{{ url('registration_register') }}"> Rejestracja </a> </p>
+    </div>
 </div>
 
 
@@ -84,60 +89,55 @@
 <!--------------------------------------- ABOUT PAGE ------------------------------------------------------->
 <div class="whattoexpect">
     <h3> CO ZNAJDZIESZ NA STRONIE? </h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-</div>
-
-
-<div class="firstparagraph">
-    <h3> STREFA DLA DZIECI </h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    <br>
+    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum </p>
 </div>
 
 <!--------------------------------------- CZTERY CONTAINERY ------------------------------------------------------->
 <div class="secondparagraph">
-    <h3> GENEZA I HISTORIA METAVERSE </h3>
-
-    <div class="container">
-        <h3> Definicja i etymologia </h3>
-        <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
-        <p>Zobacz</p>
-    </div>
-
-    <div class="container">
-        <h3>  Geneza i historia </h3>
-        <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
-        <p>Zobacz</p>
-    </div>
-
-    <div class="container">
-        <h3> Technologie </h3>
-        <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
-        <p>Zobacz</p>
-    </div>
-
-    <div class="container">
-        <h3> Zastosowania </h3>
-        <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
-        <p>Zobacz</p>
+    <h3 class="dowiedz"> DOWIEDZ SIĘ CZEGOŚ O METAVERSE </h3>
+    <div class="kontenery">
+        <div class="container">
+    {#        <img src="../../public/css/pics/1.png" alt="..." width="50" height="50">#}
+            <h3 class="containerh"> Definicja i etymologia </h3> <br>
+            <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
+            <br> <p class="zobacz1"> <a href="#"> ZOBACZ </a> </p>
+        </div>
+        <div class="container">
+            <h3 class="containerh">  Geneza i historia </h3> <br>
+            <p> W tej części odkryjesz historię Metaverse oraz poznasz istniejące już protometawersa. </p>
+            <br>  <p class="zobacz2"> <a href="#"> ZOBACZ </a> </p>
+        </div>
+        <div class="container">
+            <h3 class="containerh"> Technologie </h3><br>
+            <p>Znajdziesz tutaj opis technologii związanych z Metaverse, takich jak np. VR.</p>
+            <br>  <p class="zobacz3"> <a href="#"> ZOBACZ </a> </p>
+        </div>
+        <div class="container">
+            <h3 class="containerh"> Zastosowania </h3><br>
+            <p> W tej części poznasz zastosowania Metaverse i dziedziny jego potencjału wykorzystania. </p>
+            <br>  <p class="zobacz4"> <a href="#"> ZOBACZ </a> </p>
+        </div>
     </div>
 </div>
 
-<div>
-    <h3> TECHNOLOGIE </h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-</div>
-
-<div>
-    <h3> TECHNOLOGIE </h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-</div>
-
-<div>
+<div class="forum">
     <h3> FORUM </h3>
-    Lorem Ipsum ,is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-    <p class="forumbutton">Forum </p>
+   <p> Dołącz do grona użytkowników forum poświęconego tematyce Metaverse! To miejsce stworzone dla osób zainteresowanych przyszłością wirtualnej rzeczywistości oraz jej rozwijającymi się trendami, w tym Metaverse! Nasza społeczność skupia się na wymianie wiedzy i doświadczeń pomiędzy użytkownikami na tematy takie jak wirtualne światy, rozszerzona rzeczywistość, sztuczna inteligencja, blockchain, czy kryptowaluty.
+     Dyskusje na forum są bardzo zróżnicowane i interesujące. Dołączając do społeczności, masz możliwość nawiązania kontaktu z innymi entuzjastami Metaverse, poznania nowych ludzi oraz rozwijania swojej wiedzy. Mile widziany jest tutaj aktywny udział w dyskusjach i dzielenie się swoimi spostrzeżeniami.</p>
+    <p class="goto"> <a href="{{ url('post_index') }}"> Przejdź do forum </a> </p>
 </div>
 
+<div class="kids">
+    <p> Dla najmłodszych pasjonatów Metaverse </p>
+    <h3 class="strefakid"> Strefa dla dzieci </h3>
+     <p class="gotokids"> <a href="{{ url('kids_index') }}"> WEJDŹ </a> </p>
+</div>
+
+<div class="thirdparagraph">
+    <h3> INFORMACJE </h3>
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+</div>
 
 <div class="footer">
     <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
