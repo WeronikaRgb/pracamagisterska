@@ -20,49 +20,45 @@
 <div class="menu">
     <ul>
         <li>
-            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+            <a href="{{ url('start_index') }}">
                 METAVERSE - SERWIS INFORMACYJNY
             </a>
         </li>
         <li>
-            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+            <a href="{{ url('main_index') }}" >
                 STRONA GŁÓWNA
             </a>
         </li>
         <li>
-            <a href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
+            <a href="{{ url('theory_index') }}" >
+                BAZA WIEDZY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('post_index') }}">
                 FORUM
             </a>
         </li>
         <li>
-            <a href="{{ url('kids_index') }}" title="{{ 'title.kids_list'|trans }}">
+            <a href="{{ url('kids_index') }}">
                 STREFA DZIECKA
             </a>
         </li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-{#        <li>#}
-{#            <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">#}
-{#                WYDARZENIA#}
-{#            </a>#}
-{#        </li>#}
-
-            <li style="float:right">
-                <div class="username"> {{ app.user.email }} </div>
-            </li>
             <li>
                 <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
             </li>
         {% endif %}
-            <li style="float:right">
-                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
-                {% else %}
-                    <a href="{{ url('app_login') }}">LOGOWANIE</a>
-                {% endif %}
-            </li>
         <li style="float:right">
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+            {% else %}
+                <a href="{{ url('app_login') }}">LOGOWANIE</a>
+            {% endif %}
+        </li>
+        <li style="float:right">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
             {% else %}
                 <a href="{{ url('registration_register') }}">REJESTRACJA</a>
             {% endif %}
@@ -88,9 +84,10 @@
 
 <!--------------------------------------- ABOUT PAGE ------------------------------------------------------->
 <div class="whattoexpect">
-    <h3> CO ZNAJDZIESZ NA STRONIE? </h3>
+    <h3> Witaj na stronie internetowej poświęconej Metaverse! </h3>
     <br>
-    <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum </p>
+    <p> Dobrze Cię widzieć. Dzięki tej stronie dowiesz się podstawowych informacji na temat Metaverse oraz powiązanych z nim technologii. W tym miejscu będziesz mieć okazję poznać nowe trendy i nowinki mające wpływ na rozwój Metaverse.
+        Eksploruj, badaj i sprawdzaj, a na koniec pozostaw swoje sugestie w komentarzach i na forum. Udanej wizyty!</p>
 </div>
 
 <!--------------------------------------- CZTERY CONTAINERY ------------------------------------------------------->
@@ -101,30 +98,42 @@
     {#        <img src="../../public/css/pics/1.png" alt="..." width="50" height="50">#}
             <h3 class="containerh"> Definicja i etymologia </h3> <br>
             <p>Znajdziesz tutaj wyjaśnienie i omówienie terminu Metaverse pod względem pochodzenia nazwy.</p>
-            <br> <p class="zobacz1"> <a href="#"> ZOBACZ </a> </p>
+            <br>
+            <p class="zobacz1">
+            <a href="{{ url('theory_index') }}#definicja"> ZOBACZ </a>
+            </p>
         </div>
         <div class="container">
             <h3 class="containerh">  Geneza i historia </h3> <br>
             <p> W tej części odkryjesz historię Metaverse oraz poznasz istniejące już protometawersa. </p>
-            <br>  <p class="zobacz2"> <a href="#"> ZOBACZ </a> </p>
+            <br>
+            <p class="zobacz2">
+                <a href="{{ url('theory_index') }}#geneza"> ZOBACZ </a>
+            </p>
         </div>
         <div class="container">
             <h3 class="containerh"> Technologie </h3><br>
             <p>Znajdziesz tutaj opis technologii związanych z Metaverse, takich jak np. VR.</p>
-            <br>  <p class="zobacz3"> <a href="#"> ZOBACZ </a> </p>
+            <br>
+            <p class="zobacz3">
+                <a href="{{ url('theory_index') }}#technologie"> ZOBACZ </a>
+            </p>
         </div>
         <div class="container">
             <h3 class="containerh"> Zastosowania </h3><br>
             <p> W tej części poznasz zastosowania Metaverse i dziedziny jego potencjału wykorzystania. </p>
-            <br>  <p class="zobacz4"> <a href="#"> ZOBACZ </a> </p>
+            <br>
+            <p class="zobacz4">
+                <a href="{{ url('theory_index') }}#zastosowania"> ZOBACZ </a>
+            </p>
         </div>
     </div>
 </div>
 
 <div class="forum">
     <h3> FORUM </h3>
-   <p> Dołącz do grona użytkowników forum poświęconego tematyce Metaverse! To miejsce stworzone dla osób zainteresowanych przyszłością wirtualnej rzeczywistości oraz jej rozwijającymi się trendami, w tym Metaverse! Nasza społeczność skupia się na wymianie wiedzy i doświadczeń pomiędzy użytkownikami na tematy takie jak wirtualne światy, rozszerzona rzeczywistość, sztuczna inteligencja, blockchain, czy kryptowaluty.
-     Dyskusje na forum są bardzo zróżnicowane i interesujące. Dołączając do społeczności, masz możliwość nawiązania kontaktu z innymi entuzjastami Metaverse, poznania nowych ludzi oraz rozwijania swojej wiedzy. Mile widziany jest tutaj aktywny udział w dyskusjach i dzielenie się swoimi spostrzeżeniami.</p>
+   <p> Dołącz do grona użytkowników forum poświęconego tematyce Metaverse! Nasza społeczność skupia się na wymianie wiedzy i doświadczeń pomiędzy użytkownikami na tematy takie jak wirtualne światy, rozszerzona rzeczywistość, sztuczna inteligencja, blockchain, czy kryptowaluty.
+     Dołączając do społeczności, masz możliwość nawiązania kontaktu z innymi entuzjastami Metaverse, poznania nowych ludzi oraz rozwijania swojej wiedzy. Mile widziany jest tutaj aktywny udział w dyskusjach i dzielenie się swoimi spostrzeżeniami.</p>
     <p class="goto"> <a href="{{ url('post_index') }}"> Przejdź do forum </a> </p>
 </div>
 
@@ -136,13 +145,13 @@
 
 <div class="thirdparagraph">
     <h3> INFORMACJE </h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    Serwis informacyjny jest częscią projektową pracy magisterskiej. Wszelkie niezbędne informacje z tym związane możesz uzyskać na podstronach <a href="{{ url('biblio_index') }}"> Bibliografia </a> oraz <a href="{{ url('info_index') }}"> Informacje</a>.
 </div>
 
 <div class="footer">
     <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
     <p class="info"> PROJEKT JEST CZĘŚCIĄ PRACY MAGISTERSKIEJ </p>
-    <p class="copyright">  © 2022 Weronika Paterek </p>
+    <p class="copyright">  © 2023 Weronika Paterek </p>
 </div>
 
 </body>

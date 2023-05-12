@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Baza wiedzy - serwis informacyjny Metaverse
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block stylesheets %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="icon" type="image/x-icon" href="{{ asset('/css/pics/icon.jpg') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/theory.css') }}">
+    {% endblock %}
+</head>
+<body>
+
+<!---------------------------------------MENU------------------------------------------------------->
+<div class="menu">
+    <ul>
+        <li>
+            <a href="{{ url('start_index') }}">
+                METAVERSE - SERWIS INFORMACYJNY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('main_index') }}" >
+                STRONA GŁÓWNA
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('theory_index') }}" >
+                BAZA WIEDZY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('post_index') }}">
+                FORUM
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('kids_index') }}">
+                STREFA DZIECKA
+            </a>
+        </li>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <li>
+                <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
+            </li>
+        {% endif %}
+        <li style="float:right">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+            {% else %}
+                <a href="{{ url('app_login') }}">LOGOWANIE</a>
+            {% endif %}
+        </li>
+        <li style="float:right">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+            {% else %}
+                <a href="{{ url('registration_register') }}">REJESTRACJA</a>
+            {% endif %}
+        </li>
+    </ul>
+</div>
+
+<!---------------------------- NAZWA PODSTRONY ------------------------------------->
+<div class="hi">
+    <h1> BAZA WIEDZY  </h1>
+</div>
+
+
+<div id="panel">
+    <div id="title"> </div>
+    <div id="content">
+        <a class="check" href="#">Definicja Metaverse </a> <br>
+        <a class="check" href="#"> Etymologia Metaverse </a> <br>
+        <a class="check" href="#"> Wirtualna rzeczywistość w dziełach literackich </a> <br>
+        <a class="check" href="#"> Dalsze cele </a>
+    </div>
+</div>
+
+
+<!--------------------------------------- DEFINICJA I ETYMOLOGIA ------------------------------------------------------->
+<p> <a id="definicja" class="zakladka"> DEFINICJA I ETYMOLOGIA </a><p>
+
+<div class="definition">
+    <p> Definicja </p>
+    Metaverse to wirtualny świat, który łączy w sobie cechy immersyjności, interaktywności, ciągłości oraz decentralizacji. Jest to przestrzeń cyfrowa, która pozwala użytkownikom na tworzenie, eksplorowanie oraz interakcję z wirtualnymi obiektami i innymi użytkownikami w czasie rzeczywistym. W Metaverse użytkownicy mają możliwość wcielenia się w postacie, komunikowania się za pomocą avatarów oraz realizowania różnorodnych zadań.
+    Dzięki ciągłemu rozwojowi technologicznemu i rosnącej popularności, Metaverse staje się coraz bardziej realistyczny, co może zapowiadać rewolucję w sposobie, w jaki ludzie będą korzystać z internetu.
+    <br> <br>
+    <p> Etymologia </p>
+    Słowo „metaverse ” powstało z połączenia dwóch słów: „meta” oraz „universe”. „Meta” jest prefiksem pochodzącym z języka greckiego, który oznacza "poza" lub "ponad". „Universe” to odnoszące się do wszechświata angielskie słowo, które swoje podstawy ma w łacińskim słowie „universum” (unus „jeden” oraz versus „przekształcać”).
+    </div>
+
+<p> <a id="geneza" class="zakladka"> GENEZA I HISTORIA </a></p>
+    <div class="geneza">
+        <p class="naglowek"> Wirtualna rzeczywistość w dziełach literackich </p>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text"> Snow Crash (Stephenson N.)</h5>
+                        <p>Słowo „metaverse” zostało po raz pierwszy użyte w powieści pt. „Snow Crash” . Zamieć (inny tyt. Śnieżyca, tytuł oryg. Snow Crash) to powieść fantastyczno-naukowa autorstwa Neala Stephensona, opublikowana po raz pierwszy w 1992 roku w Stanach Zjednoczonych.
+                            Opowiada ona historię Hira Protagonisty, mieszkającego w Los Angeles, dostawcy pizzy i hakera, który spotyka młodą kurierkę D.U. (w angielskiej wersji Y.T. – skrót od Yours Truly), lubującą się w jeździe na deskorolce i nawiązuje z nią współpracę. Hiro otrzymuje w metawersie plik danych o tytułowej nazwie „Snow Crash”. Przyjaciel Hira Da5id, otwiera dostępny w pliku bitmapowy obrazek, który powoduje awarię jego komputera. Okazuje się, że tajemniczy wirus może wpływać nie tylko na sprzęt, ale również na umysły ludzi - w Metaverse, ale też w rzeczywistości, przez co mózg Da5ida zostaje uszkodzony w prawdziwym świecie.
+                        </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                     <div class="carousel-caption d-none d-md-block">
+                    <h5 class="text"> Pygmalion's Spectacles (Weinbaum S. G.) </h5>
+                    <p class="text">Za jednego z prekursorów idei Metaverse uwązany jest Stanley G. Weinbaum – pisarz science fiction, który w 1935 napisał opowiadanie zatytułowane „Pygmalion's Spectacles” . Opowiadanie zawiera w sobie wizję wirtualnej rzeczywistości, w której użytkownicy mogli zostać przeniesieni do świata stworzonego przez ich wyobraźnię. Narzędziem pozwalającym użytkownikom na zanurzenie się w wirtualnym świecie były okulary. Doświadczenia użytkowników w tej wirtualnej przestrzeni opierały się na zmysłach, tak jak w świecie rzeczywistym. </p>
+                </div>
+            </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text">The Veldt (Bradbury R.)</h5>
+                        <p>W 1950 roku Ray Bradbury (pisarz science fiction) napisał opowiadanie pt. „The Veldt” zawarte w jego zbiorze opowieści The Illustrated Man. W dziele autor porusza temat wirtualnych światów i rzeczywistości. Bradbury opisuje wizję przyszłości, w której dzieci mieszkające w zautomatyzowanym domu korzystają z symulacji afrykańskiego veldta (zbiorowisko wysokich traw w Afryce). Wizualizacja jest na tyle realna, że można tam min. poczuć promienie słońca na twarzy, czy usłyszeć ryk lwów. „The Veldt” można traktować jako przestrogę przed niebezpieczeństwami jakie może nieść ze sobą technologia, zwłaszcza gdy zagraża ona relacjom między rodzicami a ich dziećmi.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text">The Trouble with Bubbles(Dick P. K.)</h5>
+                        <p>Kolejnym punktem na osi dzieł literackich powiązanych z Metaverse jest rok 1953, w którym ukazało się opowiadanie Philipa K. Dicka pt. „The Trouble with Bubbles" . Historia ta opowiada o przyszłości, w której ludzie poszukują kontaktu z innymi inteligentnymi formami życia w kosmosie, jednak bez powodzenia. Jako rozwiązanie przychodzi im niezwykły produkt – plastikowa bańska, która jest w stanie odtworzyć cały wszechświat i umożliwić jej użytkownikom kontrolę nad wszelkimi zmianami związanymi z jej rozwojem. W tym wszechświecie istnieją formy życia na wzór ludzkich. </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text">The Naked Sun (Asimov I.)</h5>
+                        <p> 1957 rok to czas, w którym została opublikowana nowela Isaaca Asimova pt. „The Naked Sun ”, drugie dzieło z serii „Robot”. Główny bohater historii, detektyw Elijah Baley, zostaje wysłany na planetę Solaria, gdzie każdy z mieszkańców żyje w osobnym domu. Komunikacja między ludźmi na Solaris jest prowadzona wyłącznie za pomocą hologramów. W tym świecie ludzie mogą przeżywać wspólne doznania wyłącznie wirtualne, bez kontaktu fizycznego. Asimov przedstawia to jako sposób, w jaki technologia może wpłynąć na komunikację i relacje międzyludzkie. </p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text">Neuromancer (Gibson W.)</h5>
+                        <p> „Neuromancer ” to powieść Williama Gibsona, która została opublikowana w 1984 roku i uznawana jest za jedno z najważniejszych dzieł literatury cyberpunkowej. Stanowi ona pierwszą część tzw. Trylogii Ciągu, której kolejne tomy to Graf Zero i Mona Liza Turbo. Akcja powieści osadzona jest w przyszłości, a jej głównym bohaterem jest Henry Case, haker bez pieniędzy, zatrudniony do swojej ostatniej pracy, która doprowadza go do kontaktu z potężną sztuczną inteligencją. Powieść Gibsona porusza tematykę sztucznej inteligencji, sieci komputerowych, a także wirtualnej rzeczywistości.</p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+<div class="historia">
+    Początek Metaverse, a raczej protometaverse, część badaczy datuje na lata 50. XX wieku, zgodnie z powstaniem komputerów mainframe, w których za pomocą siedzi różnych urządzeń użytkownicy mogli przesyłać sobie cyfrowe wiadomości.
+    Inni natomiast jako początek wskazują lata 70. XX wieku, w których powstały MUD – Multi-User Dungeons, czyli tekstowe światy wirtualne, oparte na grze fabularnej Dungeons&Dragons. Dzięki poleceniom tekstowym użytkownicy mogli eksplorować świat, będący domem dla niegrywalnych magicznych postaci i potworów i podejmować w nim różne interakcje. Rozwinięciem MUD stało się Multi-User Shared Halucinations (MUSHS) oraz Multi-User Experiences (MUXS), które pozwalało użytkownikom na określenie ich ról oraz celów w zdefiniowanym przez nich świecie.
+    1986 rok, stał się istotnym w historii metawersów ze względu na pojawienie się gry online Habitat, dostępnej na Commodore 64 (komputer domowy z lat 80. XX wieku). Wirtualne środowisko tej gry w przeciwieństwie do poprzedników było przedstawione graficznie (piksele 2D). Była to też gra, w której jako pierwszej wykorzystano termin „awatar”.
+    W latach 90. XX wieku wprowadzono izomeryczne 3D, znane również jako 2.5D, ze względu na to, że sprawiały wrażenie trójwymiarowej przestrzeni wirtualnego świata, jednak umożliwiały poruszanie się w jedynie dwóch wymiarach.
+    W 1995 roku pojawiła się gra Activeworlds, w której użytkownicy mieli możliwość wspólnego modyfikowania środowiska w czasie rzeczywistym, a w 1998 roku został uruchomiony pierwszy czat głosowy, za pomocą którego użytkownicy mogli poznać swoje lokalizacje, a ich awatary poruszały ustami wraz ze słowami wypowiadanymi przez użytkowników.
+
+</div>
+
+</div>
+
+<h3> <a id="technologie" class="zakladka">TECHNOLOGIE </a></h3>
+
+<div class="use">
+
+    balblallbla
+</div>
+
+<h3> <a id="zastosowania" class="zakladka"> ZASTOSOWANIA </a> </h3>
+
+<div class="use">
+    <p> Innowacyjna technologia związana z Metaverse może zmienić sposób, w jaki ludzie żyją, pracują i podejmują interakcję ze swoim otoczeniem. Metaverse oferuje szerokie możliwości wykorzystania, począwszy od przemysłu rozrywki, przez medycynę, po rozwój nowych narzędzi biznesowych i edukacyjnych. </p>
+
+    Rozrywka
+    Opieka zdrowtona
+    Edukacja
+    Marketing i reklama
+    Biznes
+
+
+</div>
+
+
+
+
+<div class="footer">
+    <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
+    <p class="info"> PROJEKT JEST CZĘŚCIĄ PRACY MAGISTERSKIEJ </p>
+    <p class="copyright">  © 2022 Weronika Paterek </p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

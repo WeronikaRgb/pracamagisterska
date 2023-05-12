@@ -129,7 +129,11 @@
                 /*0 0 21px #fff,*/
             0 0 42px #bc13fe;
 }
-
+.enterbutton a:hover{
+    box-shadow: 0 0 7px #fff;
+    transition-duration: 1s;
+    background-color: black;
+}
 
 
 /*............................................ FOOTER .........................................*/

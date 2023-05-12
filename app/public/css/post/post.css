@@ -2,18 +2,18 @@
     /*background-color: #120621;*/
     margin:0;
     padding:0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
 
 
-/*.......................................... POWITANIE .........................................*/
+/*.................................... NAZWA PODSTRONY .........................................*/
 .hi{
     background-color: #120621;
     color: white;
-    font-family: Arial;
     text-align: center;
-    padding: 60px 300px 30px 300px;
+    padding: 100px 300px 40px 300px;
 }
+
 
 /*.......................................... MENU ...............................................*/
 .menu > ul {
@@ -21,19 +21,19 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
+    background-color: #17181a;
     font-family: Arial;
     position: fixed;
     width: 100%;
 }
 
-.menu > ul >li {
+.menu > ul > li {
     float: left;
 }
 
-.menu >ul > li a {
+.menu > ul > li a {
     display: block;
-    color: white;
+    color: darkgray;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -41,9 +41,12 @@
 
 .menu >ul > li a:hover {
     background-color: #120621;
+    color: white;
+    border-radius: 10px;
     transition: 0.4s background-color, text-shadow;
-    text-shadow: 0 0 0.2em #3990A8, 0 0 0.2em #3990A8, 0 0 0.2em #3990A8;
+    text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
 }
+
 
 /*.............................................. PAGINACJA ............................................*/
 
@@ -122,12 +125,12 @@ table th {
     border: 1px solid black;
 }
 
-/*.............................................. STOPKA ............................................*/
+/*............................................ FOOTER .........................................*/
 .footer{
     padding: 20px;
     height: 100%;
     text-align: center;
-    background-color: black;
+    background-color: #17181a;
     color: #cccccc;
 }
 
@@ -147,4 +150,6 @@ table th {
     padding: 5px;
     font-family: Arial;
 }
+
+
 

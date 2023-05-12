@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>
-        Metaverse - serwis informacyjny
+        Strefa dziecka - serwis informacyjny Metaverse
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -19,35 +19,31 @@
 <div class="menu">
     <ul>
         <li>
-            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+            <a href="{{ url('start_index') }}">
                 METAVERSE - SERWIS INFORMACYJNY
             </a>
         </li>
         <li>
-            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+            <a href="{{ url('main_index') }}" >
                 STRONA GŁÓWNA
             </a>
         </li>
         <li>
-            <a href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
+            <a href="{{ url('theory_index') }}" >
+                BAZA WIEDZY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('post_index') }}">
                 FORUM
             </a>
         </li>
         <li>
-            <a href="{{ url('kids_index') }}" title="{{ 'title.kids_list'|trans }}">
+            <a href="{{ url('kids_index') }}">
                 STREFA DZIECKA
             </a>
         </li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            {#        <li>#}
-            {#            <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">#}
-            {#                WYDARZENIA#}
-            {#            </a>#}
-            {#        </li>#}
-
-            <li style="float:right">
-                <div class="username"> {{ app.user.email }} </div>
-            </li>
             <li>
                 <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
             </li>
@@ -61,7 +57,7 @@
         </li>
         <li style="float:right">
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+
             {% else %}
                 <a href="{{ url('registration_register') }}">REJESTRACJA</a>
             {% endif %}
@@ -72,31 +68,167 @@
 
 <!--GRAFIKA Z NAZWĄ STRONY - METAVERSE-->
 <div class="toppage">
+   <p class="strefa"> STREFA DZIECKA </p>
+    <p class="neon"> SERWIS INFORMACYJNY <br> O METAVERSE </p>
 </div>
 
 
+<div id="panel">
+    <div id="title"> INFORMACJA DLA RODZICÓW  </div>
+    <div id="content">
+        Szanowni Rodzice, <br>
+        Tematyka Metaverse staje się coraz bardziej popularna i może wpłynąć na sposób, w jaki dzieci korzystają z Internetu. Metaverse to wirtualny świat, w którym ludzie mogą tworzyć, eksplorować i interaktywnie działać z innymi graczami z całego świata za pośrednictwem swoich postaci. Może obejmować gry, aplikacje i platformy społecznościowe.
+        W dzisiejszych czasach coraz więcej dzieci zaczyna korzystać z narzędzi wirtualnej rzeczywistości, dlatego ważne jest, aby zrozumieć, jak działa Metaverse i jakie potencjalne zagrożenia niesie ze sobą.
+        Pamiętajcie, że dzieci powinny korzystać z wirtualnego świata zgodnie z zasadami, które mają na celu ochronę ich prywatności i bezpieczeństwa.
+        <br>      Oto kilka wskazówek, które mogą pomóc w nadzorowaniu działania dzieci w przestrzeni Metaverse:
+   <br>     1.	Wybierzcie dla swoich dzieci odpowiednią platformę lub grę. Przeczytajcie dokładnie regulaminy oraz politykę prywatności, aby upewnić się, że spełniają one Wasze wymagania.
+        <br>      2.	Nauczcie swoje dzieci, jak chronić swoją prywatność w Internecie. Zwróćcie uwagę na to, co dzieci umieszczają w Internecie, jakie informacje udostępniają i z kim się komunikują.
+        <br>      3.	Monitorujcie aktywność swojego dziecka w Metaverse. Zwróćcie uwagę na to, z kim rozmawiają, co robią i jak spędzają swój czas w wirtualnym świecie.
+        <br>    4.	Porozmawiajcie z dzieckiem o zagrożeniach związanych z Metaverse. Wyjaśnijcie, co dziecko powinno robić, gdy napotka nieodpowiednie treści lub zachowania.
+       <br> Metaverse może być wspaniałym miejscem do nauki i zabawy, ale ważne jest, aby dzieci korzystały z niego z odpowiednią ostrożnością. Otwarta i szczera rozmowa z dzieckiem na temat Metaverse, będzie niosła ze sobą pomoc w korzystaniu z wirtualnego świata w sposób bezpieczny i odpowiedzialny.
 
+    </div>
+</div>
 
 <div class="first">
-    <h3> Serwis  </h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-</div>
+    <h3 class="welcome"> WITAJCIE DZIECIAKI! </h3>
+    <p class="welcome2">
+        Ta strona została stworzona specjalnie dla Was, abyście mogły spędzać czas w Internecie bezpiecznie i pożytecznie. Poniżej możecie odnaleźć wiele ciekawych informacji, zabaw oraz quizów, które pomogą Wam rozwijać własne zainteresowania związane z Metaverse.
+        <br>
+        Miłej zabawy!
+    </p>
 
-<div class="whattoexpect">
-    <h3> Co znajdziesz na stronie? </h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 </div>
 
 <div class="second">
-    <h3> METAVERSE </h3>
-    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+    <h3 class="safety"> NAJWAŻNIEJSZE JEST... <br> BEZPIECZEŃSTWO! </h3>
+    Metaverse, wirtualna rzeczywistość, czy Interenet to niesamowite miejsca, w których można odkyrwać wiele ciekawych rzeczy i bawić się. Jednak, tak jak w prawdziwym życiu, również i w tej przestrzeni należy zachować ostrożność i dbać o bezpieczeństwo swoje i innych.
+<br> <br>
+    <p> Informacja dla rodziców znajduje się w wysuwanej zakładce po prawej stronie. </p>
+</div>
+
+<div class="third">
+    <h3 class="remember"> PAMIĘTAJ O TYM! </h3>
+
+    <div class="circle" id="circle1">
+       <p class="never"> Nigdy nie udostępniaj swojego prawdziwego nazwiska, adresu zamieszkania, numeru telefonu ani innych ważnych informacji osobistych. Jeżeli ktoś pyta o takie informacje, nie odpowiadaj i powiedz o tym swoim rodzicom lub opiekunom.</p>
+    </div>
+
+    <div class="circle" id="circle2">
+        <p class="never">  Nie publikuj żadnych obraźliwych, agresywnych lub nieodpowiednich treści. Pamiętaj, że to, co publikujesz w sieci, może mieć konsekwencje dla Ciebie i Twojego otoczenia. Zanim coś opublikujesz, przemyśl czy treść jest odpowiednia.</p>
+    </div>
+
+    <div class="circle" id="circle3">
+        <p class="never">  Jeśli coś cię niepokoi lub czujesz się nieswojo w sieci, powiedz o tym swoim rodzicom lub opiekunom. Oni pomogą ci rozwiązać problem i pozostać bezpiecznym w internecie. Nie bój się prosić o pomoc lub poradę, gdy masz wątpliwości. </p>
+    </div>
+
+</div>
+
+<div class="metaverse">
+   <h3 class="metaverse-header"> METAVERSE </h3>
+    Metaverse to wirtualny świat, w którym można zwiedzać różne miejsca, brać udział w zabawach, grać w gry, uczyć się, rozwiązywać różne zadania, poznawać nowych przyjaciół i robić wiele innych ciekawych rzeczy. Wirtualny świat jest stworzony za pomocą komputerów i specjalnych programów, które pozwalają nam zobaczyć obrazy trójwymiarowe, dźwięki i ruchy, tak jakbyśmy byli tam naprawdę.
+</div>
+
+<div class="ciekawostki">
+    <h3 class="ciekawostki-header"> CIEKAWOSTKI </h3>
+    <p class="ciekawostki-description"> Najedź kursorem na wybrany awatar, żeby dowiedzieć się czegoś ciekawego. </p>
+
+    <div class="obrazki">
+        <div class="obrazek1">
+            {% block obrazek1 %}
+                <img src="{{ asset('css/pics/1.png') }}" alt="dziewczynka" title='W Metaverse możesz rozwijać swoją kreatywność, projektując swoje własne wirtualne przedmioty, takie jak ubrania, meble czy samochody.' style="width: 200px;height: 300px">
+            {% endblock %}
+        </div>
+        <div class="obrazek2">
+            {% block obrazek2 %}
+                <img src="{{ asset('css/pics/2.png') }}" alt="dziewczynka" title='Wirtualna rzeczywistość pozwala nauczycielom tworzyć wirtualne lekcje, które są ciekawe i zajmujące dla uczniów.' style="width: 200px;height: 300px">
+            {% endblock %}
+        </div>
+        <div class="obrazek3">
+            {% block obrazek3 %}
+                <img src="{{ asset('css/pics/3.png') }}" alt="chłopiec" title='W Metaverse możesz odwiedzać wirtualne muzea, w których możesz oglądać słynne dzieła sztuki i uczyć się o historii i kulturze w inny, ciekawy sposób.' style="width: 200px;height: 300px">
+            {% endblock %}
+        </div>
+    </div>
+</div>
+
+
+
+<div class="metaverse">
+    <h3 class="metaverse-header"> AWATAR </h3>
+    Awatar to cyfrowa postać, którą użytkownik może stworzyć i kontrolować w wirtualnym świecie. Awatar to postać, którą użytkownik sam tworzy i kontroluje. Dzięki niemu można przemierzać wirtualne przestrzenie. Awatar może mieć różne cechy, takie jak wygląd, umiejętności czy zachowanie, które użytkownik samodzielnie określa - można wybrać dla swojej postaci włosy, ubrania i inne dodatki. Awatar to takie narzędzie, które pozwala na zabawę i kontakt z innymi ludźmi w wirtualnym świecie.
+</div>
+
+
+<div class="quiz">
+    <h3 class="quiz-header"> QUIZ </h3>
+    <div class="container">
+        <form id="quiz-form">
+            <div class="question">
+                <h2 class="pytanie">Pytanie: Co należy zrobić, gdy ktoś w internecie prosi o podanie hasła? </h2>
+                <input type="radio" name="question1" value="Podać hasło.">
+                <label>A) Podać prawdziwe hasło.</label>
+                <br>
+                <input type="radio" name="question1" value="Kraków">
+                <label>B) Podać fałszywe hasło.</label>
+                <br>
+                <input type="radio" name="question1" value="Gdańsk">
+                <label>C) Nie podawać hasła oraz zgłosić sprawę rodzicowi lub opiekunowi. </label>
+                <br>
+            </div>
+            <button type="submit">Sprawdź wynik</button>
+        </form>
+        <div id="result" style="display: none;">
+            <h1>Wynik</h1>
+            <p> Poprawna odpowiedź to C. </p>
+        </div>
+    </div>
+</div>
+
+
+{#<div class="xr">#}
+{#    <h3 class="xr-header"> XR, VR, AR, MR </h3>#}
+{#    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.#}
+{#</div>#}
+
+{#<div class="minigra">#}
+{#    <h3 class="xr-header"> GRA </h3>#}
+{#    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.#}
+{#</div>#}
+
+<div class="end">
+    <h3 class="end-header"> WIĘCEJ WIEDZY </h3>
+    Brawo! Teraz znasz podstawowe informacje o Metaverse. Oto medal dla Ciebie! Jeżeli chcesz dalej zgłębiać swoją wiedzę możesz zajrzeć na podstronę <a href="{{ url('theory_index') }}"> Baza wiedzy </a> .
 </div>
 
 <div class="footer">
     <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
     <p class="info"> PROJEKT JEST CZĘŚCIĄ PRACY MAGISTERSKIEJ </p>
-    <p class="copyright">  © 2022 Weronika Paterek </p>
+    <p class="copyright">  © 2023 Weronika Paterek </p>
 </div>
 
+<script>
+    const quizForm = document.getElementById('quiz-form');
+    const resultDiv = document.getElementById('result');
+
+    quizForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const selectedOption = quizForm.querySelector('input[name=question1]:checked');
+        if(!selectedOption) {
+            resultDiv.innerHTML = 'Wybierz odpowiedź!';
+            return;
+        }
+
+        const answer = selectedOption.value;
+        if(answer === 'Nie podawać hasła oraz zgłosić sprawę rodzicowi lub opiekunowi. ') {
+            resultDiv.innerHTML = 'Poprawna odpowiedź to C.';
+        } else {
+            resultDiv.innerHTML = 'Poprawna odpowiedź to C.';
+        }
+
+        resultDiv.style.display = 'block';
+    });
+</script>
 </body>
 </html>

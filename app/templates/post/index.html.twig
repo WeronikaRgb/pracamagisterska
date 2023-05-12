@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>
-        Forum - Metaverse serwis informacyjny
+        Forum - serwis informacyjny Metaverse
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,35 +17,31 @@
 <div class="menu">
     <ul>
         <li>
-            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+            <a href="{{ url('start_index') }}">
                 METAVERSE - SERWIS INFORMACYJNY
             </a>
         </li>
         <li>
-            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+            <a href="{{ url('main_index') }}" >
                 STRONA GŁÓWNA
             </a>
         </li>
         <li>
-            <a href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
+            <a href="{{ url('theory_index') }}" >
+                BAZA WIEDZY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('post_index') }}">
                 FORUM
             </a>
         </li>
         <li>
-            <a href="{{ url('kids_index') }}" title="{{ 'title.kids_list'|trans }}">
+            <a href="{{ url('kids_index') }}">
                 STREFA DZIECKA
             </a>
         </li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            {#        <li>#}
-            {#            <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">#}
-            {#                WYDARZENIA#}
-            {#            </a>#}
-            {#        </li>#}
-
-            <li style="float:right">
-                <div class="username"> {{ app.user.email }} </div>
-            </li>
             <li>
                 <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
             </li>
@@ -59,7 +55,7 @@
         </li>
         <li style="float:right">
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+
             {% else %}
                 <a href="{{ url('registration_register') }}">REJESTRACJA</a>
             {% endif %}
@@ -69,7 +65,7 @@
 
 <!-------------------------------------------NAGŁÓWEK----------------------------------------------->
 <div class="hi">
-    <h1>  {{ 'title.post_list'|trans }} </h1>
+    <h1>  FORUM </h1>
 </div>
 
 
@@ -147,7 +143,7 @@
 <div class="footer">
     <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
     <p class="info"> PROJEKT JEST CZĘŚCIĄ PRACY MAGISTERSKIEJ </p>
-    <p class="copyright">  © 2022 Weronika Paterek </p>
+    <p class="copyright">  © 2023 Weronika Paterek </p>
 </div>
 
 </body>

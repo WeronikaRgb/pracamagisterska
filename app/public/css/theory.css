@@ -1,0 +1,179 @@
+* {
+    margin:0;
+    padding:0;
+    font-family: Arial, sans-serif;
+}
+
+/*.......................................... MENU ...............................................*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #17181a;
+    /*position: fixed;*/
+    width: 100%;
+}
+
+li {
+    float: left;
+    text-decoration: none;
+}
+
+li a {
+    display: block;
+    color: darkgray;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menu >ul > li a:hover {
+    background-color: #120621;
+    color: white;
+    border-radius: 10px;
+    transition: 0.4s background-color, text-shadow;
+    text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
+}
+
+
+/*.................................... NAZWA PODSTRONY .........................................*/
+.hi{
+    background-color: #120621;
+    color: white;
+    text-align: center;
+    padding: 100px 300px 40px 300px;
+}
+
+
+/*.................................... NAZWA PODSTRONY .........................................*/
+.use{
+    padding: 20px 300px 20px 300px;
+    line-height: 160%;
+}
+.definition{
+    padding: 20px 300px 20px 300px;
+    line-height: 160%;
+    background-color: white;
+}
+.zakladka{
+    background-color: grey;
+    padding: 10px;
+    text-align: center;
+    display: block;
+
+}
+.subtitle{
+    padding: 30px;
+}
+.geneza{
+    /*background-color: whitesmoke;*/
+    /*padding: 20px 300px 20px 300px;*/
+    line-height: 160%;
+}
+
+.literature{
+    background-color: #120621;
+    /*color: white;*/
+    width: 100%;
+    margin: auto;
+    height: 300px;
+}
+
+.book{
+border: 3px solid yellow;
+    display: inline-flex;
+    padding: 10px;
+    margin: auto;
+    width: 150px;
+}
+
+#panel {
+    position: fixed;
+    top: 100px;
+    right: -272px;
+    z-index: 99999;
+    transition: right 0.5s ease-out 0s;
+}
+
+#panel:hover {
+    right: 0;
+}
+
+#panel #content {
+    width: 260px;
+    height: 260px;
+    padding: 10px;
+    border-top: 2px solid #120621;
+    border-right: none;
+    border-bottom: 2px solid #120621;
+    border-left: 2px solid #120621;
+    z-index: 20;
+    background: whitesmoke;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+
+#panel #title {
+    width: 150px;
+    border: 2px solid #120621;
+    background: #120621;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px 5px 25px 5px;
+    text-align: center;
+    position: relative;
+    top: 140px;
+    left: -90px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+
+
+/*............................................ FOOTER .........................................*/
+.footer{
+    padding: 20px;
+    height: 100%;
+    text-align: center;
+    background-color: #17181a;
+    color: #cccccc;
+}
+
+.footernav a{
+    text-decoration: none;
+    color: grey;
+    font-family: Arial;
+    padding: 5px;
+}
+
+.info{
+    padding: 20px;
+    font-family: Arial;
+}
+
+.copyright{
+    padding: 5px;
+    font-family: Arial;
+}
+
+
+
+.carousel-item{
+    height: 350px;
+    background-color: #120621;
+}
+.text{
+    color: white;
+}
+.carousel-caption d-none d-md-block{
+    color: green;
+}
+
+.naglowek{
+    background-color: #120621;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

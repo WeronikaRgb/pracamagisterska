@@ -31,11 +31,13 @@ li a {
 li a:hover {
     background-color: #120621;
     transition: 0.4s background-color, text-shadow;
-    text-shadow: 0 0 0.2em #3990A8, 0 0 0.2em #3990A8, 0 0 0.2em #3990A8;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
 }
 
 
-/*.............................. GRAFIKA Z NAZWĄ STRONY - METAVERSE ...............................*/
+/*.............................. GRAFIKA Z NAZWĄ STRONY ...............................*/
 .toppage{
     height: 400px;
     padding-top: 60px;
@@ -44,32 +46,319 @@ li a:hover {
     background-size: cover;
     background-image: url("pics/KIDS.png");
 }
-
-
-.first{
-    height: 100%;
-    text-align: justify;
-    font-family: Arial;
-    padding: 30px 300px 60px 300px;
-    /*background-image: url("pics/meta.png");*/
-    background-color: white; }
-
-.second{
-    height: 100%;
-    text-align: justify;
-    font-family: Arial;
-    padding: 30px 300px 60px 300px;
-    /*background-image: url("pics/meta.png");*/
-    background-color: white; }
-
-.whattoexpect{
-    height: 100%;
-    text-align: justify;
-    font-family: Arial;
-    padding: 30px 300px 60px 300px;
-    background-color: #120621;
-    color: whitesmoke;
+.strefa{
+    color: white;
+    font-size: 90px;
+    font-family: Arial,sans-serif;
+    padding: 10px 600px 0 200px;
+    line-height: 100%;
 }
+.neon{
+    color: #CA1BE6;
+    padding: 0 650px 0 200px;
+    font-size: 30px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    text-shadow:
+            0 0 5px #fff,
+            /*0 0 10px #fff,*/
+            /*0 0 21px #fff,*/
+            0 0 10px #f09;
+            /*0 0 82px #f09,*/
+            /*0 0 92px #f09,*/
+            /*0 0 102px #f09,*/
+            /*0 0 151px #f09;*/
+    animation: pulsate 0.11s ease-in-out infinite alternate;
+}
+@keyframes pulsate {
+
+    100% {
+
+        text-shadow: 0 0 4px #fff,
+        0 0 11px #fff,
+        /*0 0 19px #fff,*/
+        0 0 40px #f09;
+        /*0 0 80px #f09,*/
+        /*0 0 90px #f09,*/
+        /*0 0 100px #f09,*/
+        /*0 0 150px #f09;*/
+
+    }
+    0% {
+
+        text-shadow: 0 0 4px #fff,
+        0 0 10px #fff,
+        /*0 0 18px #fff,*/
+        0 0 38px #f09;
+        /*0 0 73px #f09,*/
+        /*0 0 80px #f09,*/
+        /*0 0 94px #f09,*/
+        /*0 0 140px #f09;*/
+
+    }
+}
+
+/*.............................. KIDS 2: Introduction ...............................*/
+.first{
+    height: 350px;
+    padding: 30px 0px 60px 0px;
+    text-align: justify;
+    font-family: Arial;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("pics/KIDS2.png");
+    background-color: white; }
+.welcome{
+    color: #6A326B;
+    text-align: center;
+    font-size: 35px;
+}
+.welcome2
+{
+    padding: 30px 200px 0 600px;
+    font-size: 20px;
+    line-height: 2;
+}
+
+/*.............................. KIDS 3: Safety ...............................*/
+.second{
+    height: 400px;
+    text-align: justify;
+    font-family: Arial;
+    color: #120621;
+    font-size: 20px;
+    line-height: 2;
+    padding: 30px 300px 30px 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url("pics/KIDS3.png");
+}
+.safety{
+    color: #6A326B;
+    font-size: 35px;
+}
+
+/*.............................. KIDS 4: Safety pt.2 ...............................*/
+.third{
+    height: 100%;
+    font-family: Arial;
+    /*background-image: url("pics/KIDSREMEMBER.png");*/
+    background-color: white;
+    font-size: 15px;
+    /*line-height: 2;*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+.remember{
+    padding: 30px 300px 10px 300px;
+    color: #6A326B;
+    font-size: 35px;
+    text-align: justify;
+}
+.circle{
+    display: inline-flex;
+    border: 10px solid #b45dd0;
+    border-radius: 300px;
+    padding: 40px;
+    margin: 20px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 20px 10px #b45dd0;
+    color: white;
+}
+#circle1{
+    background-color: #6A326B;
+}
+#circle2{
+    background-color: #552b57;
+}
+#circle3{
+    background-color: #432044;
+
+}
+.never{
+    margin-top: 15px;
+}
+
+/*.............................. KIDS 5: METAVERSE ...............................*/
+.metaverse{
+    background-color: whitesmoke;
+    height: 400px;
+    font-size: 20px;
+    line-height: 2;
+    font-family: Arial, sans-serif;
+    padding: 30px 300px 10px 300px;
+    text-align: justify;
+    align-items: center;
+}
+.metaverse-header{
+    color: #6A326B;
+    font-size: 35px;
+}
+
+
+
+/*.............................. KIDS QUIZ ...............................*/
+.quiz{
+    background-color: #120621;
+    height: 400px;
+    color: white;
+    font-family: Arial,sans-serif;
+    padding: 20px 0 20px 0;
+    text-align: center;
+    font-size: 20px;
+    line-height: 2;
+}
+.quiz-header{
+    font-size: 35px;
+}
+.question {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+button {
+    /*display: block;*/
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e83bee;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+.pytanie{
+    padding: 10px;
+}
+
+
+.xr{
+    background-color: white;
+    height: 400px;
+}
+.xr-header{
+    color: #6A326B;
+    font-size: 35px;
+    font-family: Arial,sans-serif;
+}
+
+/*.............................. KIDS X: Ciekawostki ...............................*/
+
+.ciekawostki{
+    background-color: #120621;
+    height: 400px;
+    color: white;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+.ciekawostki-header{
+    color: white;
+    font-size: 35px;
+    font-family: Arial,sans-serif;
+}
+
+.ciekawostki-description{
+    padding: 10px;
+    color: whitesmoke;
+    font-family: Arial,sans-serif;
+}
+.obrazki{
+    margin: 20px;
+    display: inline-flex;
+}
+.opis {
+    display: none;
+    margin: 0;
+    padding: 0;
+}
+.obrazek1:hover .opis {
+    display: block;
+}
+
+
+
+.awatar{
+    background-color: whitesmoke;
+    height: 400px;
+}
+.minigra{
+    background-color: #120621;
+    height: 400px;
+}
+
+/*.............................. KIDS: END ...............................*/
+.end{
+    background-color: white;
+    height: 400px;
+    text-align: center;
+    background-image: url("pics/KIDSEND.png");
+    font-size: 20px;
+    line-height: 2;
+    padding: 30px 250px 30px 250px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial,sans-serif;
+
+}
+.end-header{
+    color: #6A326B;
+    font-size: 35px;
+}
+
+
+
+/*............................................ PANEL .........................................*/
+
+#panel {
+    position: fixed;
+    top: 100px;
+    right: -910px;
+    z-index: 99999;
+    transition: right 0.5s ease-out 0s;
+}
+
+#panel:hover {
+    right: 0;
+}
+
+#panel #content {
+    width: 900px;
+    height: 350px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    border-top: 2px solid #120621;
+    border-right: none;
+    border-bottom: 2px solid #120621;
+    border-left: 2px solid #120621;
+    z-index: 20;
+    background: whitesmoke;
+    position: relative;
+    border-radius: 10px 0 0 10px;
+}
+
+#panel #title {
+    width: 150px;
+    border: 2px solid #120621;
+    background: #120621;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    border-radius: 10px;
+    padding: 5px 5px 25px 5px;
+    text-align: center;
+    position: relative;
+    top: 140px;
+    left: -90px;
+    transform: rotate(-90deg);
+    z-index: 1;
+}
+
+
 
 /*............................................ STOPKA .........................................*/
 .footer{

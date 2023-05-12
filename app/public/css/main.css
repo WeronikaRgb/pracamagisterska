@@ -28,11 +28,14 @@ li a {
     text-decoration: none;
 }
 
-/*li a:hover {*/
-/*    background-color: #120621;*/
-/*    transition: 0.4s background-color, text-shadow;*/
-/*    text-shadow: 0 0 0.2em #3990A8, 0 0 0.2em #3990A8, 0 0 0.2em #3990A8;*/
-/*}*/
+.menu >ul > li a:hover {
+    background-color: #120621;
+    color: white;
+    border-radius: 10px;
+    transition: 0.4s background-color, text-shadow;
+    text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
+}
+
 
 
 /*.............................. TOPPAGE ...............................*/
@@ -60,6 +63,10 @@ li a {
     margin: 5px;
     float: left;
 }
+.login a:hover{
+    box-shadow: 0 0 7px #fff;
+    transition-duration: 0.5s;
+}
 .register a{
     border: 1px solid purple;
     padding: 10px;
@@ -68,7 +75,10 @@ li a {
     background-color: purple;
     margin: 5px;
     float: left;
-
+}
+.register a:hover{
+    box-shadow: 0 0 10px purple;
+    transition-duration: 0.5s;
 }
 
 .serwis{
@@ -89,9 +99,9 @@ li a {
 /*.............................. ABOUT PAGE ...............................*/
 .whattoexpect{
     line-height: 160%;
-    text-align: justify;
+    text-align: left;
     font-family: Arial;
-    padding: 10px 600px 60px 200px;
+    padding: 10px 600px 60px 180px;
     background-color: whitesmoke;
 
 }
@@ -107,16 +117,16 @@ li a {
 
 /*.............................. SECOND PARAGRAPH ...............................*/
 .secondparagraph{
-    color: black;
-    background-color: white;
+    color: white;
+    background-color: #120621;
     font-family: Arial, sans-serif;
     padding: 0 30px 30px 30px;
     /*padding: 30px 300px 60px 300px;*/
-    /*line-height: 140%;*/
 
 }
 .container{
     border: 1px solid whitesmoke;
+    color: black;
     width: 20%;
     padding-left: 20px;
     padding-right: 20px;
@@ -195,8 +205,8 @@ li a {
 /*............................................ FORUM .........................................*/
 .forum{
     background-color: whitesmoke;
-    padding: 40px 400px 40px 400px;
-    line-height: 2;
+    padding: 40px 320px 40px 320px;
+    line-height: 160%;
 }
 .goto a{
     font-weight: bold;
@@ -231,7 +241,7 @@ li a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("pics/dziecko.png");
+    background-image: url("pics/mainstrefa.png");
     /*height: 400px;*/
     color: white;
     text-align: center;
@@ -259,8 +269,12 @@ font-weight: bold;
 
 .thirdparagraph{
     background-color: whitesmoke;
-    padding: 40px 400px 40px 400px;
-    line-height: 2;
+    padding: 100px 350px 100px 350px;
+    line-height: 160%;
+}
+.thirdparagraph a{
+    color: black;
+    font-weight: bold;
 }
 
 
@@ -270,7 +284,7 @@ font-weight: bold;
     padding: 20px;
     height: 100%;
     text-align: center;
-    background-color: black;
+    background-color: #17181a;
     color: #cccccc;
 }
 

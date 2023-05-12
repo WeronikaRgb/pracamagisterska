@@ -11,8 +11,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: black;
-    font-family: Arial;
+    background-color: #17181a;
     position: fixed;
     width: 100%;
 }
@@ -23,25 +22,26 @@ li {
 
 li a {
     display: block;
-    color: white;
+    color: darkgray;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
 }
 
-li a:hover {
+.menu >ul > li a:hover {
     background-color: #120621;
+    color: white;
+    border-radius: 10px;
     transition: 0.4s background-color, text-shadow;
-    text-shadow: 0 0 0.2em #3990A8, 0 0 0.2em #3990A8, 0 0 0.2em #3990A8;
+    text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
 }
 
-/*.......................................... POWITANIE .........................................*/
+/*.................................... NAZWA PODSTRONY .........................................*/
 .hi{
     background-color: #120621;
     color: white;
-    font-family: Arial;
     text-align: center;
-    padding: 60px 300px 30px 300px;
+    padding: 100px 300px 40px 300px;
 }
 
 /*........................................... LOGOWANIE ...........................................*/
@@ -108,7 +108,7 @@ button[type=submit]:hover{
     padding: 20px;
     height: 100%;
     text-align: center;
-    background-color: black;
+    background-color: #17181a;
     color: #cccccc;
 }
 

@@ -176,7 +176,7 @@
             </trans-unit>
             <trans-unit id="title.change_data">
                 <source>title.change_data</source>
-                <target>Zmień dane</target>
+                <target>ZMIEŃ DANE</target>
             </trans-unit>
             <trans-unit id="title.change_password">
                 <source>title.change_password</source>

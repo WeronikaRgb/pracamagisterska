@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>
-        Bibliografia - Metaverse serwis informacyjny
+        Bibliografia - serwis informacyjny Metaverse
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -14,39 +14,36 @@
 <body>
 
 
+
 <!---------------------------------------MENU------------------------------------------------------->
 <div class="menu">
     <ul>
         <li>
-            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+            <a href="{{ url('start_index') }}">
                 METAVERSE - SERWIS INFORMACYJNY
             </a>
         </li>
         <li>
-            <a href="{{ url('main_index') }}" title="{{ 'main_page'|trans }}">
+            <a href="{{ url('main_index') }}" >
                 STRONA GŁÓWNA
             </a>
         </li>
         <li>
-            <a href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
+            <a href="{{ url('theory_index') }}" >
+                BAZA WIEDZY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('post_index') }}">
                 FORUM
             </a>
         </li>
         <li>
-            <a href="{{ url('kids_index') }}" title="{{ 'title.kids_list'|trans }}">
+            <a href="{{ url('kids_index') }}">
                 STREFA DZIECKA
             </a>
         </li>
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-            {#        <li>#}
-            {#            <a href="{{ url('event_index') }}" title="{{ 'title.event_list'|trans }}">#}
-            {#                WYDARZENIA#}
-            {#            </a>#}
-            {#        </li>#}
-
-            <li style="float:right">
-                <div class="username"> {{ app.user.email }} </div>
-            </li>
             <li>
                 <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
             </li>
@@ -60,13 +57,14 @@
         </li>
         <li style="float:right">
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+
             {% else %}
                 <a href="{{ url('registration_register') }}">REJESTRACJA</a>
             {% endif %}
         </li>
     </ul>
 </div>
+
 
 <!-------------------------------------------NAGŁÓWEK----------------------------------------------->
 <div class="hi">
@@ -76,10 +74,37 @@
 
 <!----------------------------------------BIBLIOGRAFIA----------------------------------------------->
 <div class="infor">
-        <p>  tutaj będą pozycje bibliograficzne</p> <br>
-        <p> 1. </p>
-        <p> 2. </p>
-        <p> 3. </p>
+    <p>    1.	Al-Khafaji N. J., Al Shaher M. A., Al-Khafaji M. J., Asmail A., Use buildAR to help the Alzheimer’s disease patients, The Int Conf on E-Technologies and Business on the Web (EBW2013), Bangkok, SDIWC digital library, 2013.</p>
+    <p>    2.	Asimov I., The Naked Sun, Nowy Jork, Harpercollins Publishers, 2021.</p>
+    <p>   3.	Ball M., The Metaverse: And How It Will Revolutionize Everything, Nowy Jork, Norton and Company, 2022.</p>
+    <p>   4.	Breia R., How To Enter The Metaverse - A Step-by-Step Guide, Sensorium, 2023, online: https://sensoriumxr.com/articles/how-to-enter-the-metaverse, dostęp: 04.03.2023</p>
+    <p>  5.	Dick P. K., Second Variety: Volume Two Of The Collected Stories, Londyn, Gollancz, 1999, The Trouble with Bubbles.</p>
+    <p>  6.	Dionisio J., Burns III W., Gilbert R., 3D Virtual worlds and the metaverse: Current status and future possibilities, ACM Computing Surveys, 2013, t. 45.</p>
+    <p>  7.	Fortnite - oficjalna strona, online:  https://www.fortnite.com/, dostęp: 12.03.2023</p>
+    <p>   8.	Gallagher C.,Asselstine S., Bloom D., Chercka A., Clark A., An Educator's Guide to Using Minecraft® in the Classroom: Ideas, inspiration, and student projects for teachers, San Francisco, Peachpit Pr, 2014.</p>
+    <p>   9.	Gibson W., Neuromancer, tłum. Cholewa P. W., Katowice, Książnica, 1984.</p>
+    <p>  10.	Jagneaux D., The Ultimate Roblox Book: An Unofficial Guide: Learn How to Build Your Own Worlds, Customize Your Games, and So Much More! (Unofficial Roblox), Avon, Adams Media, 2018.</p>
+    <p>  11.	Kaelin M., Playing a MMORPG is not all fun and games, you better have the right vocabulary, Tech Republic, CBS Interacitve, 2006, online (zarchiwizowane): https://archive.is/2R4L, dostęp: 10.03.2023</p>
+    <p>   12.	Lovich D., What Is The Metaverse And Why Should You Care?, Forbes, 2022, online: https://www.forbes.com/sites/deborahlovich/2022/05/11/what-is-the-metaverse-and-why-should-you-care/?sh=39620f622704, dostęp: 05.03.2023</p>
+    <p>   13.	Marshmello, „Marshmello organizuje pierwszy koncert Fortnite na żywo w Pleasant Park”, 2019,, online:  https://youtu.be/NBsCzN-jfvA, dostęp: 12.03.2023</p>
+    <p>  14.	McKinseyCompany, What is the metaverse?, 2022, online: https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-the-metaverse "What is the metaverse?", dostęp: 04.03.2023</p>
+    <p>    15.	Meta, What is the metaverse?, 2022, online: https://about.meta.com/what-is-the-metaverse/, dostęp: 03.03.2023</p>
+    <p>    16.	Metaverse, verse, meta w: Oxford Languages, online: https://languages.oup.com/google-dictionary-en/, dostęp: 05.03.2023</p>
+    <p>   17.	Minecraft - oficjalna strona, online:  https://www.minecraft.net/pl-pl, dostęp: 10.03.2023</p>
+    <p>   18.	Oku D., Non-Fungible Tokens (NFT): Exploring the Possibilities of NFTs, 2023.</p>
+    <p>   19.	Piech K., Leksykon pojęć na temat technologii blockchain i kryptowalut, Warszawa, Ministerstwo Cyfryzacji, 2016.</p>
+    <p>   20.	Roblox - oficjalna strona, online:  https://www.roblox.com/, dostęp: 12.03.2023</p>
+    <p>   21.	Rose K., Eldridge S., Chapin L., The internet of things: An overview, Reston, Internet Society, 2015.</p>
+    <p>  22.	Rymaszewski M., Wagner J.,Wallace M., Winters C., Ondrejka C., Batstone-Cunningham B., Second Life: The Official Guide, Indianapolis, Wiley, 2007.</p>
+    <p>  23.	Second Life - oficjalna strona, online: https://secondlife.com/, dostęp: 10.03.2023</p>
+    <p>   24.	Smart J., Cascio J., Paffendorf J., A Metaverse Roadmap: Pathways to the 3D Web, 2007, online: https://www.academia.edu/266307/A_Metaverse_Roadmap_Pathways_to_the_3D_Web_2007, dostęp: 03.03.2023</p>
+    <p>  25.	Stephenson N., Snow Crash, Nowy Jork, Bantam Books, 1992.</p>
+    <p>  26.	The Fortnite Team, „Fortnite i Travis Scott przedstawiają: Astronomical”, 2020, online: https://www.fortnite.com/news/astronomical, dostęp: 12.03.2023</p>
+    <p>  27.	The Fortnite Team, „Fortnite presents… The Rift Tour Featuring Ariana Grande”, 2021, online:  https://www.fortnite.com/news/fortnite-presents-the-aria-tour-featuring-ariana-grande, dostęp: 15.03.2023</p>
+    <p>   28.	Weinbaum S. G., Pygmalion's Spectacles, Whitefish, Kessinger Publishing LLC, 1935.</p>
+    <p>   29.	Wu T.C., Ho C.T., A scoping review of metaverse in emergency medicine, Australasian Emergency Care, 2022, t. 26, nr 5.</p>
+    <p>  30.	Xu M., Chen X., Kou G., A systematic review of blockchain, Financial Innovation, 2019, t. 5, nr 27.</p>
+    <p>  31.	Zheng J. M., Chan K. W., Gibson I., Virtual reality, „IEEE Potentials”, The magazine for engineering students, 1998, t. 17, nr 2, s. 20-23.</p>
 
 </div>
 
@@ -88,7 +113,7 @@
 <div class="footer">
     <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
     <p class="info"> PROJEKT JEST CZĘŚCIĄ PRACY MAGISTERSKIEJ </p>
-    <p class="copyright">  © 2022 Weronika Paterek </p>
+    <p class="copyright">  © 2023 Weronika Paterek </p>
 </div>
 
 </body>

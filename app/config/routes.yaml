@@ -33,3 +33,7 @@ registration_register:
 start_index:
   path: /start
   controller: App\Controller\StartController::index
+
+theory_index:
+  path: /theory
+  controller: App\Controller\TheoryController::index
