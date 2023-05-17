@@ -315,8 +315,8 @@ button {
 
 #panel {
     position: fixed;
-    top: 100px;
-    right: -910px;
+    top: 70px;
+    right: -925px;
     z-index: 99999;
     transition: right 0.5s ease-out 0s;
 }
@@ -352,7 +352,7 @@ button {
     padding: 5px 5px 25px 5px;
     text-align: center;
     position: relative;
-    top: 140px;
+    top: 200px;
     left: -90px;
     transform: rotate(-90deg);
     z-index: 1;

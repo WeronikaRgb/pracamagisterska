@@ -71,7 +71,7 @@ class UserController extends AbstractController
      *
      * @return Response HTTP response
      */
-    #[IsGranted('ROLE_ADMIN')]
+    #[IsGranted('ROLE_USER')]
     #[Route('/edit', name: 'user_edit', methods: 'GET|PUT')]
     public function edit(Request $request): Response
     {

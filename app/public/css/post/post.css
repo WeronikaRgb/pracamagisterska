@@ -125,6 +125,39 @@ table th {
     border: 1px solid black;
 }
 
+.c{
+    text-align: center;
+    padding: 30px;
+    background-color: white;
+
+}
+.create {
+    color: #120621;
+    background-color: white;
+    border-style: solid;
+    border-color: #120621;
+    padding: 10px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+
+
+}
+
+.create:hover{
+    color: white;
+    background-color: #120621;
+    transition: 1s;
+}
+
+.create:focus{
+    box-shadow: 0 0 1em #120621;
+    transition: 1s;
+}
+
 /*............................................ FOOTER .........................................*/
 .footer{
     padding: 20px;
@@ -152,4 +185,36 @@ table th {
 }
 
 
+.alert-danger{
+    color: red;
+    background-color: whitesmoke ;
+    border: solid 1px red;
+    padding: 5px;
+    margin: 10px;
+}
 
+.invalid-feedback{
+    color: red;
+    padding: 10px;
+}
+
+.alert-success{
+    color: green;
+    background-color: whitesmoke ;
+    border: solid 1px green;
+    padding: 5px;
+    margin: 10px;
+}
+
+
+.category{
+    text-align: center;
+    padding: 20px;
+}
+.alert-warning{
+    color: red;
+    background-color: whitesmoke ;
+    border: solid 1px red;
+    padding: 5px;
+    margin: 10px;
+}

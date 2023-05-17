@@ -1,25 +1,37 @@
-* {
+*{
     /*background-color: #120621;*/
     margin:0;
     padding:0;
-    font-family: Arial;
+    font-family: Arial, sans-serif;
 }
+
+
+/*.................................... NAZWA PODSTRONY .........................................*/
+.hi{
+    background-color: #120621;
+    color: white;
+    text-align: center;
+    padding: 100px 300px 40px 300px;
+}
+
+
 /*.......................................... MENU ...............................................*/
-ul {
+.menu > ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #17181a;
+    font-family: Arial;
     position: fixed;
     width: 100%;
 }
 
-li {
+.menu > ul > li {
     float: left;
 }
 
-li a {
+.menu > ul > li a {
     display: block;
     color: darkgray;
     text-align: center;
@@ -35,25 +47,6 @@ li a {
     text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
 }
 
-.logowanie{
-    float: right;
-}
-
-/*.................................... NAZWA PODSTRONY .........................................*/
-.hi{
-    background-color: #120621;
-    color: white;
-    text-align: center;
-    padding: 100px 300px 40px 300px;
-}
-
-/*.............................................. BIBLIOGRAFIA ............................................*/
-.infor{
-    text-align: center;
-    padding: 100px;
-    font-size: 20px;
-    font-family: Arial;
-}
 
 
 /*............................................ FOOTER .........................................*/
@@ -82,34 +75,5 @@ li a {
     font-family: Arial;
 }
 
-@media screen and (max-width: 900px) {
-    ul {
-        position: relative;
-    }
 
-    li {
-        float: none;
-    }
 
-    li a {
-        padding: 8px 12px;
-    }
-
-    .logowanie {
-        position: relative;
-        text-align: center;
-        float: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .hi {
-        padding: 50px 100px 20px 100px;
-    }
-}
-
-@media (max-width: 400px) {
-    .hi {
-        padding: 30px 50px 10px 50px;
-    }
-}

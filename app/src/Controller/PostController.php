@@ -85,7 +85,7 @@ class PostController extends AbstractController
      *
      * @return Response HTTP response
      */
-    #[IsGranted('ROLE_ADMIN')]
+    #[IsGranted('ROLE_USER')]
     #[Route('/create', name: 'post_create', methods: 'GET|POST')]
     public function create(Request $request): Response
     {

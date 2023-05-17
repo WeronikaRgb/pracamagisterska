@@ -8,6 +8,7 @@ namespace App\Entity;
 use App\Entity\Enum\UserRole;
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -20,6 +21,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 #[ORM\UniqueConstraint(name: 'email_idx', columns: ['email'])]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
+
     /**
      * Primary key.
      */
@@ -51,11 +53,6 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[Assert\NotBlank]
     private ?string $password;
 
-    /**
-     * Plain password.
-     */
-    #[Assert\NotBlank]
-    private ?string $plainPassword;
 
     /**
      * Getter for id.
@@ -66,6 +63,29 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     {
         return $this->id;
     }
+
+//    /**
+//     * Getter for age.
+//     *
+//     * @return int|null Age
+//     */
+//    public function getAge(): ?int
+//    {
+//        return $this->age;
+//    }
+
+//    /**
+//     * Setter for age.
+//     *
+//     * @return int|null Age
+//     */
+//    public function setAge(int $age): self
+//    {
+//        $this->age = $age;
+//
+//        return $this;
+//    }
+
 
     /**
      * Getter for email.
@@ -150,31 +170,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      * Setter for password.
      *
      * @param string $password User password
+     *
+     * @return void return none
      */
     public function setPassword(?string $password): void
     {
         $this->password = $password;
     }
 
-    /**
-     * Getter for plainPassword.
-     *
-     * @return string|null PlainPassword
-     */
-    public function getPlainPassword(): ?string
-    {
-        return $this->plainPassword;
-    }
-
-    /**
-     * Setter for plainPassword.
-     *
-     * @param string $plainPassword User plainPassword
-     */
-    public function setPlainPassword(?string $plainPassword): void
-    {
-        $this->plainPassword = $plainPassword;
-    }
 
     /**
      * Returning a salt is only needed, if you are not using a modern
@@ -196,5 +199,14 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
      */
     public function eraseCredentials(): void
     {
+    }
+
+
+    /**
+     * @return string|null return ojb email
+     */
+    public function __toString()
+    {
+        return $this->email;
     }
 }

@@ -128,6 +128,8 @@ class LoginFormAuthenticator extends AbstractLoginFormAuthenticator
         return new RedirectResponse($this->urlGenerator->generate(self::DEFAULT_ROUTE));
     }
 
+
+
     /**
      * Get login URL.
      *

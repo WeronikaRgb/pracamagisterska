@@ -68,16 +68,31 @@
     <h1>  FORUM </h1>
 </div>
 
+{% for type, messages in app.session.flashBag.all %}
+    {% for message in messages %}
+        {% include 'default/_single_alert_message.html.twig' %}
+    {% endfor %}
+{% endfor %}
+
 
 {% block body %}
 
     {% if is_granted('ROLE_USER') %}
-        <div class="form-group row float-sm-left">
-            <a href="{{ url('post_create') }}" class="button">
+        <div class="c">
+            <a href="{{ url('post_create') }}" class="create">
                 {{ 'action.create_post'|trans }}
             </a>
         </div>
     {% endif %}
+
+    {% if is_granted('ROLE_USER') %}
+        <div class="c">
+            <a href="{{ url('category_index') }}" class="create">
+               Kategorie
+            </a>
+        </div>
+    {% endif %}
+
 
     <div class="navigation">
         {{ knp_pagination_render(pagination) }}
@@ -105,7 +120,7 @@
                         <a href="{{ url('post_show', {id: post.id}) }}" title="{{ 'action.show'|trans }}">
                             {{ 'action.show'|trans }}
                         </a>
-                        {% if is_granted('ROLE_USER') %}
+                        {% if is_granted('ROLE_ADMIN') %}
                             <a href="{{ url('post_edit', {id: post.id}) }}" title="{{ 'action.edit'|trans }}">
                                 {{ 'action.edit'|trans }}
                          </a>

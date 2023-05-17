@@ -36,7 +36,9 @@ li a {
     text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
 }
 
-
+.logowanie{
+    float: right;
+}
 
 /*.............................. TOPPAGE ...............................*/
 .toppage{
@@ -45,7 +47,7 @@ li a {
     text-align: left;
     /*padding-top: 60px;*/
     /*background-color: #17181a;*/
-    background-image: url("pics/telko.png");
+    background-image: url("../pics/telko.png");
     font-family: Arial, sans-serif;
     padding-left: 60px;
     background-repeat: no-repeat;
@@ -241,7 +243,7 @@ li a {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("pics/mainstrefa.png");
+    background-image: url("../pics/mainstrefa.png");
     /*height: 400px;*/
     color: white;
     text-align: center;
@@ -309,3 +311,115 @@ font-weight: bold;
 /*.username{*/
 /*    color: white;*/
 /*}*/
+
+@media only screen and (max-width: 1200px) {
+    .container {
+        height: 100%;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .forum{
+        padding: 50px;
+    }
+    .whattoexpect{
+        padding: 50px;
+    }
+    .thirdparagraph{
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    ul {
+        position: relative;
+    }
+
+    li {
+        float: none;
+    }
+
+    li a {
+        padding: 8px 12px;
+        border: 1px solid whitesmoke;
+    }
+
+    .logowanie {
+        position: relative;
+        text-align: center;
+        float: none;
+    }
+    .firstparagraph{
+        padding: 10px;
+    }
+    .forum{
+        padding: 10px;
+    }
+    .thirdparagraph{
+        padding: 10px;
+    }
+    .whattoexpect{
+        padding: 10px;
+    }
+    .toppage{
+        background-color: #17181a;
+        background-image: none;
+        text-align: center;
+        padding: 20px;
+        height: 100%;
+    }
+    .napis{
+        text-align: center;
+    }
+    .toppage a{
+        text-align: center;
+        float: none;
+        display: inline-flex;
+    }
+    .tekst
+    {
+        padding-top: 10px;
+    }
+    .kids{
+        padding: 10px;
+    }
+    .container{
+        position: relative;
+    }
+    .kontenery {
+        flex-wrap: wrap;
+        text-align: center;
+        display: block;
+    }
+
+    .container {
+        width: 45%;
+        margin: 10px;
+        height: 100%;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    .kids{
+        line-height: 1.5;
+    }
+}
+
+/* Media Queries for Responsiveness */
+
+
+@media only screen and (max-width: 480px) {
+    .container {
+        width: 80%;
+        height: 100%;
+    }
+}
+
+
+
+@media only screen and (max-width: 407px) {
+    .napis{
+        font-size: 30px;
+    }
+}
+

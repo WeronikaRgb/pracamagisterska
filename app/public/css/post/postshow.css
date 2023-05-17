@@ -179,6 +179,27 @@ table th {
     padding: 10px;
 }
 
+.alert-danger{
+    color: red;
+    background-color: whitesmoke ;
+    border: solid 1px red;
+    padding: 5px;
+    margin: 10px;
+}
+
+.invalid-feedback{
+    color: red;
+    padding: 10px;
+}
+
+.alert-success{
+    color: green;
+    background-color: whitesmoke ;
+    border: solid 1px green;
+    padding: 5px;
+    margin: 10px;
+}
+
 
 .back{
     color: #120621;
@@ -189,8 +210,7 @@ table th {
     text-decoration: none;
     cursor: pointer;
     border-radius: 12px;
-
-
+    margin: 10px;
 }
 
 .back:hover{

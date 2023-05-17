@@ -11,7 +11,7 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #17181a;
-    /*position: fixed;*/
+    position: fixed;
     width: 100%;
 }
 
@@ -45,6 +45,11 @@ li a {
     padding: 100px 300px 40px 300px;
 }
 
+.kontenerek{
+    padding: 50px 200px 50px 200px;
+    line-height: 2;
+    font-size: 15px;
+}
 
 /*.................................... NAZWA PODSTRONY .........................................*/
 .use{
@@ -88,26 +93,27 @@ border: 3px solid yellow;
     width: 150px;
 }
 
+/*............................................ PANEL .........................................*/
 #panel {
     position: fixed;
-    top: 100px;
-    right: -272px;
+    top: 0px;
+    right: -285px;
     z-index: 99999;
     transition: right 0.5s ease-out 0s;
 }
-
 #panel:hover {
     right: 0;
 }
 
 #panel #content {
     width: 260px;
-    height: 260px;
+    height: 500px;
     padding: 10px;
-    border-top: 2px solid #120621;
+    font-size: 11px;
+    border-top: 2px solid #17181a;
     border-right: none;
-    border-bottom: 2px solid #120621;
-    border-left: 2px solid #120621;
+    border-bottom: 2px solid #17181a;
+    border-left: 2px solid #17181a;
     z-index: 20;
     background: whitesmoke;
     position: relative;
@@ -116,21 +122,23 @@ border: 3px solid yellow;
 
 #panel #title {
     width: 150px;
-    border: 2px solid #120621;
-    background: #120621;
+    border: 2px solid #17181a;
+    background: #17181a;
     color: #FFFFFF;
     font-weight: bold;
     border-radius: 10px;
     padding: 5px 5px 25px 5px;
     text-align: center;
     position: relative;
-    top: 140px;
+    top: 250px;
     left: -90px;
     transform: rotate(-90deg);
     z-index: 1;
 }
 
-
+.header{
+    font-weight: bold;
+}
 
 /*............................................ FOOTER .........................................*/
 .footer{
@@ -176,4 +184,31 @@ border: 3px solid yellow;
     color: white;
     padding: 10px;
     text-align: center;
+}
+
+
+@media screen and (max-width: 900px) {
+    ul {
+        position: relative;
+    }
+
+    li {
+        float: none;
+    }
+
+    li a {
+        padding: 8px 12px;
+        border: 1px solid whitesmoke;
+    }
+
+    .logowanie {
+        position: relative;
+        text-align: center;
+        float: none;
+    }
+    .kontenere{
+        width: 100%;
+        padding: 20px;
+    }
+
 }

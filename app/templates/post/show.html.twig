@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>
-        Forum - serwis informacyjny Metaverse
+        Post - serwis informacyjny Metaverse
     </title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -69,12 +69,18 @@
     <h1> {{ post.title }} </h1>
 </div>
 
+{% for type, messages in app.session.flashBag.all %}
+    {% for message in messages %}
+        {% include 'default/_single_alert_message.html.twig' %}
+    {% endfor %}
+{% endfor %}
+
 
 {% block body %}
     {% if post is defined and post|length %}
         <dl class="post">
             <dt class="data">{{ 'label.created_at'|trans }}: {{ post.createdAt|format_date('long') }}</dt>
-{#            <dt class="autor">{{'Autor:'|trans}}: {{ post.author }}</dt>#}
+            <dt class="autor">{{'Autor:'|trans}} {{ post.author.email }}</dt>
             <dt class="tytulposta">{{ 'label.title'|trans }}: {{ post.title }}</dt>
             <dd class="trescposta">{{ post.description }}</dd>
             <dt class="kategoriaposta">{{ 'label.category'|trans }}: {{ post.category.title }}</dt>
@@ -84,6 +90,11 @@
             <a class="back" href="{{ url('post_index') }}" title="{{ 'action.back'|trans }}">
                 {{ 'action.back'|trans }}
             </a>
+            {% if is_granted('ROLE_USER') %}
+                <a class="back" href="{{ url('comment_create', {id: post.id}) }}" title="{{ 'action.comment'|trans }}">
+                    {{ 'action.comment'|trans }}
+                </a>
+            {% endif %}
         </p>
 
         {% if post.comments is defined and post.comments|length %}
@@ -92,7 +103,7 @@
                 <thead class="thead">
                 <tr>
                     <th scope="col">{{ 'label.nick'|trans }}</th>
-                    <th scope="col">{{ 'label.email'|trans }}</th>
+                    <th scope="col"> Autor </th>
                     <th scope="col">{{ 'label.content'|trans }}</th>
                     {% if is_granted('ROLE_ADMIN') %}
                         <th>{{ 'label.actions'|trans }}</th>
@@ -103,7 +114,7 @@
                 {% for comment in post.comments %}
                     <tr class="komcie">
                         <td>{{ comment.nick }}</td>
-                        <td>{{ comment.email }}</td>
+                        <td> {{ comment.writer.email }} </td>
                         <td>{{ comment.content }}</td>
                         {% if is_granted('ROLE_ADMIN') %}
                             <td>

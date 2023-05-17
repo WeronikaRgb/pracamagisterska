@@ -6,6 +6,7 @@
 namespace App\Controller;
 
 use App\Entity\Comment;
+use App\Entity\User;
 use App\Form\Type\CommentType;
 use App\Service\CommentServiceInterface;
 use App\Service\PostServiceInterface;
@@ -97,6 +98,7 @@ class CommentController extends AbstractController
      *
      * @return Response HTTP response
      */
+    #[IsGranted('ROLE_USER')]
     #[Route('/create', name: 'comment_create', requirements: ['id' => '[1-9]\d*'], methods: 'GET|POST')]
     public function create(Request $request): Response
     {
@@ -110,7 +112,10 @@ class CommentController extends AbstractController
             return $this->redirectToRoute('post_index');
         }
 
+        /** @var User $user */
+        $user = $this->getUser();
         $comment = new Comment();
+        $comment->setWriter($user);
         $postId = $this->postService->getById($request->get('id'))->getId();
         $form = $this->createForm(CommentType::class, $comment, ['action' => $this->generateUrl('comment_create', ['id' => $postId])]);
         $form->handleRequest($request);

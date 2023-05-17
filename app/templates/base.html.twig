@@ -1,73 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>{% block title %} PRACKA {% endblock %}</title>
+    <title>{% block title %} PRACA MAGISTERSKA {% endblock %}</title>
     {% block stylesheets %}
-        <link
-                href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-                rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+        <link rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
                 crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="{{ asset('/css/styles.css') }}">
     {% endblock %}
 </head>
 
 
 <body>
-{#<img src="css/f.jpg" alt="Warzywa", height="80">#}
-
-<div class="ksiazka">
-    PRACKA
-</div>
-
-
-
-<header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('post_index') }}" title="{{ 'title.post_list'|trans }}">
-                        {{ 'title.post_list'|trans }}
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('category_index') }}" title="{{ 'title.category_list'|trans }}">
-                        {{ 'title.category_list'|trans }}
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                    <li class="nav-item">
-                        <div class="nav-link"> {{ app.user.email }} </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
-                    </li>
-                {% endif %}
-                <li class="nav-item active">
-                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <a class="nav-item nav-link" href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
-                    {% else %}
-                        <a class="nav-item nav-link" href="{{ url('app_login') }}">{{ 'action.login'|trans }}</a>
-                    {% endif %}
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-</header>
-
 <main role="main" class="container-fluid">
     <div class="container-fluid">
         {% include 'default/_flash_messages.html.twig' %}
         {% block body %}{% endblock %}
     </div>
 </main>
+
 {% block javascripts %}
     <script
             src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
@@ -82,5 +32,6 @@
             integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
             crossorigin="anonymous"></script>
 {% endblock %}
+
 </body>
 </html>

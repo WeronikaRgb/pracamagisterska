@@ -49,9 +49,9 @@ class PostFixtures extends AbstractBaseFixtures implements DependentFixtureInter
             $category = $this->getRandomReference('categories');
             $post->setCategory($category);
 
-            /** @var User $user */
-            $user = $this->getRandomReference('users');
-            $post->setAuthor($user);
+            /** @var User $author */
+            $author = $this->getRandomReference('users');
+            $post->setAuthor($author);
 
             return $post;
         });

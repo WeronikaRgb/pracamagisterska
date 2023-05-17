@@ -1,11 +1,12 @@
 * {
     margin:0;
     padding:0;
+
 }
 
 @font-face {
     font-family: 'destrod';
-    src: url('/destrod/destrod.otf');
+    src: url('/test/app/public/css/destrod/destrod.otf');
 }
 
 /*.............................. GRAFIKA Z NAZWĄ STRONY - METAVERSE ...............................*/
@@ -18,7 +19,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    background-image: url("pics/obecne.png");
+    background-image: url("../pics/obecne.png");
 }
 .napis{
     font-size: 90px;
@@ -157,5 +158,53 @@
 .copyright{
     padding: 5px;
     font-family: Arial;
+}
+
+/*............................................ Responsywność .........................................*/
+@media all and (max-width: 1200px) {
+    .quote{
+        padding: 50px;
+    }
+    .name{
+        padding: 50px;
+    }
+
+}
+@media all and (max-width: 900px) {
+    .quote{
+        padding: 20px;
+    }
+    .name{
+        padding: 20px;
+    }
+    .napis{
+        font-size: 50px;
+    }
+}
+
+@media all and (max-width: 480px) {
+    .toppage {
+        margin: 0;
+    }
+    .napis{
+        font-size: 60px;
+        text-align: center;
+        background-size: cover;
+    }
+    .quote{
+        padding: 10px;
+    }
+    .name{
+        padding: 10px;
+    }
+}
+
+@media all and (max-width: 408px) {
+    .napis{
+        font-size: 30px;
+    }
+    .neon{
+        font-size: 20px;
+    }
 }
 

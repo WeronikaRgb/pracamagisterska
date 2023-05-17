@@ -93,7 +93,10 @@ class Post
      * @var User
      */
     #[ORM\ManyToOne(targetEntity: User::class)]
-    private $author;
+    #[ORM\JoinColumn(nullable: false)]
+    #[Assert\NotBlank]
+    #[Assert\Type(User::class)]
+    private ?User $author;
 
     /**
      * @return User Author

@@ -4,15 +4,33 @@
     padding:0;
 }
 
+.b{
+    text-align: center
+}
 
-.ksiazka{
-    background-image: url('tlo.jpg');
-    color: white;
+.back{
+    color: #120621;
+    background-color: white;
+    border-style: solid;
+    border-color: #120621;
+    padding: 10px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 12px;
+    margin: 5px;
     text-align: center;
-    font-size: 50px;
-    padding: 60px;
-    border-bottom-style: solid;
-    font-family: Allura, cursive;
+    display: inline-flex;
+}
+
+.back:hover{
+    color: white;
+    background-color: #120621;
+    transition: 1s;
+}
+
+.back:focus{
+    box-shadow: 0 0 1em #120621;
+    transition: 1s;
 }
 
 
@@ -47,4 +65,38 @@
 .button:hover {
     background-color: #89891578;
     color: white;
+}
+
+
+.formularz{
+    text-align: center;
+    font-family: Arial;
+    background: #ffffff;
+    padding: 20px 300px 10px;
+    border: 1px solid #dddddd;
+    margin-bottom: 20px;
+}
+
+.alert-danger{
+    color: red;
+    background-color: whitesmoke ;
+    border: solid 1px red;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+}
+
+.invalid-feedback{
+    color: red;
+    padding: 10px;
+}
+
+.alert-success{
+    color: green;
+    background-color: whitesmoke ;
+    border: solid 1px green;
+    padding: 5px;
+    margin: 10px;
+    text-align: center;
+
 }

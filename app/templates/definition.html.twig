@@ -7,7 +7,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {% block stylesheets %}
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link rel="icon" type="image/x-icon" href="{{ asset('/css/pics/icon.jpg') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('/css/theory.css') }}">
     {% endblock %}
@@ -47,14 +46,14 @@
                 <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
             </li>
         {% endif %}
-        <li style="float:right">
+        <li class="logowanie">
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
             {% else %}
                 <a href="{{ url('app_login') }}">LOGOWANIE</a>
             {% endif %}
         </li>
-        <li style="float:right">
+        <li class="logowanie">
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
             {% else %}
@@ -69,138 +68,294 @@
     <h1> BAZA WIEDZY  </h1>
 </div>
 
+<div>
+    <div class="kontenerek">
+       W tej bazie zawarte są informacje dotyczące Metaverse, podzielone na cztery sekcje: definicja i etymologia, geneza i historia, technologie oraz zastosowania. Nawigację po bazie wspiera wysuwane boczne menu, znajdujące się po prawej stronie.
+    </div>
 
 <div id="panel">
-    <div id="title"> </div>
+    <div id="title"> Nawigacja </div>
     <div id="content">
-        <a class="check" href="#">Definicja Metaverse </a> <br>
-        <a class="check" href="#"> Etymologia Metaverse </a> <br>
-        <a class="check" href="#"> Wirtualna rzeczywistość w dziełach literackich </a> <br>
-        <a class="check" href="#"> Dalsze cele </a>
+
+        <p class="header"> Definicja i etymologia</p>
+        <a class="check" href="#def">Definicja Metaverse </a> <br>
+        <a class="check" href="#etymologia"> Etymologia Metaverse </a> <br>
+<br>
+        <p class="header"> Geneza i historia </p>
+        <a class="check" href="#dziela"> Wirtualna rzeczywistość w dziełach literackich </a> <br>
+        <a class="check" href="#poczatki"> Początki historii Metaverse </a><br>
+        <a class="check" href="#secondlife"> Second Life </a><br>
+        <a class="check" href="#minecraft"> Minecraft </a><br>
+        <a class="check" href="#roblox"> Roblox </a><br>
+        <a class="check" href="#fortnite"> Fortnite </a><br>
+        <a class="check" href="#meta"> Facebook Meta </a><br>
+        <br>
+        <p class="header"> Technologie </p>
+        <a class="check" href="#podzial"> Podział na XR, AR, VR, MR </a><br>
+        <a class="check" href="#xr"> XR - Extended Reality </a><br>
+        <a class="check" href="#vr"> VR - Virtual Reality </a><br>
+        <a class="check" href="#ar"> AR - augmented reality </a><br>
+        <a class="check" href="#mr"> MR - mixed reality </a><br>
+        <a class="check" href="#iot"> Internet rzeczy </a><br>
+        <br>
+        <p class="header"> Zastosowania </p>
+        <a class="check" href="#zastosowania"> Zastosowania metaverse w różnych dziedzinach życia </a><br>
+        <a class="check" href="#rozrywka"> Rozrywka </a><br>
+        <a class="check" href="#opieka"> Opieka zdrowotna </a><br>
+        <a class="check" href="#edu"> Edukacja </a><br>
+        <a class="check" href="#marketing"> Marketing i reklama </a><br>
+        <a class="check" href="#biznes"> Biznes </a><br>
+        <a class="check" href="#blockchain"> Blockchain </a><br>
+        <a class="check" href="#waluta"> Wirtualna waluta </a><br>
+        <a class="check" href="#krypto"> Kryptowaluta </a><br>
+        <a class="check" href="#tokeny"> Tokeny </a><br>
+        <a class="check" href="#nft"> NFT </a><br>
+        <a class="check" href="#korzysci"> Omówienie korzyści i zagrożeń płynących z Metaverse</a><br>
+        <a class="check" href="#kontrola"> Kwestie związane z regulacją i kontrolą metaverse</a><br>
+
     </div>
 </div>
 
 
 <!--------------------------------------- DEFINICJA I ETYMOLOGIA ------------------------------------------------------->
-<p> <a id="definicja" class="zakladka"> DEFINICJA I ETYMOLOGIA </a><p>
+<h3> <a id="definicja" class="zakladka"> DEFINICJA I ETYMOLOGIA </a></h3>
 
-<div class="definition">
-    <p> Definicja </p>
+<div class="kontenerek">
+    <h4 id="def"> Definicja </h4>
     Metaverse to wirtualny świat, który łączy w sobie cechy immersyjności, interaktywności, ciągłości oraz decentralizacji. Jest to przestrzeń cyfrowa, która pozwala użytkownikom na tworzenie, eksplorowanie oraz interakcję z wirtualnymi obiektami i innymi użytkownikami w czasie rzeczywistym. W Metaverse użytkownicy mają możliwość wcielenia się w postacie, komunikowania się za pomocą avatarów oraz realizowania różnorodnych zadań.
     Dzięki ciągłemu rozwojowi technologicznemu i rosnącej popularności, Metaverse staje się coraz bardziej realistyczny, co może zapowiadać rewolucję w sposobie, w jaki ludzie będą korzystać z internetu.
     <br> <br>
-    <p> Etymologia </p>
+        <h4 id="etymologia"> Etymologia </h4>
     Słowo „metaverse ” powstało z połączenia dwóch słów: „meta” oraz „universe”. „Meta” jest prefiksem pochodzącym z języka greckiego, który oznacza "poza" lub "ponad". „Universe” to odnoszące się do wszechświata angielskie słowo, które swoje podstawy ma w łacińskim słowie „universum” (unus „jeden” oraz versus „przekształcać”).
     </div>
 
-<p> <a id="geneza" class="zakladka"> GENEZA I HISTORIA </a></p>
-    <div class="geneza">
-        <p class="naglowek"> Wirtualna rzeczywistość w dziełach literackich </p>
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
-                <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+<h3> <a id="geneza" class="zakladka"> GENEZA I HISTORIA </a></h3>
+    <div class="kontenerek">
+        <h4 id="dziela">   Wirtualna rzeczywistość w dziełach literackich </h4>
+        Termin Metaverse pojawił się pierwszy raz w powieści Snow Crash, jednak sama idea Metaverse, a raczej jej podwaliny powstały dużo wcześniej. Historia Metaverse  jest ściśle związana z wirtualną rzeczywistością, która bardzo często była głównym elementem fabuły wielu dzieł literackich już od lat 40. XX wieku.
+        Za jednego z prekursorów idei Metaverse uwązany jest Stanley G. Weinbaum – pisarz science fiction, który w 1935 napisał opowiadanie zatytułowane „Pygmalion's Spectacles” . Opowiadanie zawiera w sobie wizję wirtualnej rzeczywistości, w której użytkownicy mogli zostać przeniesieni do świata stworzonego przez ich wyobraźnię. Narzędziem pozwalającym użytkownikom na zanurzenie się w wirtualnym świecie były okulary. Doświadczenia użytkowników w tej wirtualnej przestrzeni opierały się na zmysłach, tak jak w świecie rzeczywistym.
+        W 1950 roku Ray Bradbury (pisarz science fiction) napisał opowiadanie pt. „The Veldt” zawarte w jego zbiorze opowieści The Illustrated Man. W dziele autor porusza temat wirtualnych światów i rzeczywistości. Bradbury opisuje wizję przyszłości, w której dzieci mieszkające w zautomatyzowanym domu korzystają z symulacji afrykańskiego veldta (zbiorowisko wysokich traw w Afryce). Wizualizacja jest na tyle realna, że można tam min. poczuć promienie słońca na twarzy, czy usłyszeć ryk lwów. „The Veldt” można traktować jako przestrogę przed niebezpieczeństwami jakie może nieść ze sobą technologia, zwłaszcza gdy zagraża ona relacjom między rodzicami a ich dziećmi.
+        Kolejnym punktem na osi dzieł literackich powiązanych z Metaverse jest rok 1953, w którym ukazało się opowiadanie Philipa K. Dicka pt. „The Trouble with Bubbles" . Historia ta opowiada o przyszłości, w której ludzie poszukują kontaktu z innymi inteligentnymi formami życia w kosmosie, jednak bez powodzenia. Jako rozwiązanie przychodzi im niezwykły produkt – plastikowa bańska, która jest w stanie odtworzyć cały wszechświat i umożliwić jej użytkownikom kontrolę nad wszelkimi zmianami związanymi z jej rozwojem. W tym wszechświecie istnieją formy życia na wzór ludzkich.
+        1957 rok to czas, w którym została opublikowana nowela Isaaca Asimova pt. „The Naked Sun ”, drugie dzieło z serii „Robot”. Główny bohater historii, detektyw Elijah Baley, zostaje wysłany na planetę Solaria, gdzie każdy z mieszkańców żyje w osobnym domu. Komunikacja między ludźmi na Solaris jest prowadzona wyłącznie za pomocą hologramów. W tym świecie ludzie mogą przeżywać wspólne doznania wyłącznie wirtualne, bez kontaktu fizycznego. Asimov przedstawia to jako sposób, w jaki technologia może wpłynąć na komunikację i relacje międzyludzkie.
+        „Neuromancer ” to powieść Williama Gibsona, która została opublikowana w 1984 roku i uznawana jest za jedno z najważniejszych dzieł literatury cyberpunkowej. Stanowi ona pierwszą część tzw. Trylogii Ciągu, której kolejne tomy to Graf Zero i Mona Liza Turbo. Akcja powieści osadzona jest w przyszłości, a jej głównym bohaterem jest Henry Case, haker bez pieniędzy, zatrudniony do swojej ostatniej pracy, która doprowadza go do kontaktu z potężną sztuczną inteligencją. Powieść Gibsona porusza tematykę sztucznej inteligencji, sieci komputerowych, a także wirtualnej rzeczywistości.
+    </div>
 
-            </ol>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text"> Snow Crash (Stephenson N.)</h5>
-                        <p>Słowo „metaverse” zostało po raz pierwszy użyte w powieści pt. „Snow Crash” . Zamieć (inny tyt. Śnieżyca, tytuł oryg. Snow Crash) to powieść fantastyczno-naukowa autorstwa Neala Stephensona, opublikowana po raz pierwszy w 1992 roku w Stanach Zjednoczonych.
-                            Opowiada ona historię Hira Protagonisty, mieszkającego w Los Angeles, dostawcy pizzy i hakera, który spotyka młodą kurierkę D.U. (w angielskiej wersji Y.T. – skrót od Yours Truly), lubującą się w jeździe na deskorolce i nawiązuje z nią współpracę. Hiro otrzymuje w metawersie plik danych o tytułowej nazwie „Snow Crash”. Przyjaciel Hira Da5id, otwiera dostępny w pliku bitmapowy obrazek, który powoduje awarię jego komputera. Okazuje się, że tajemniczy wirus może wpływać nie tylko na sprzęt, ale również na umysły ludzi - w Metaverse, ale też w rzeczywistości, przez co mózg Da5ida zostaje uszkodzony w prawdziwym świecie.
-                        </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                     <div class="carousel-caption d-none d-md-block">
-                    <h5 class="text"> Pygmalion's Spectacles (Weinbaum S. G.) </h5>
-                    <p class="text">Za jednego z prekursorów idei Metaverse uwązany jest Stanley G. Weinbaum – pisarz science fiction, który w 1935 napisał opowiadanie zatytułowane „Pygmalion's Spectacles” . Opowiadanie zawiera w sobie wizję wirtualnej rzeczywistości, w której użytkownicy mogli zostać przeniesieni do świata stworzonego przez ich wyobraźnię. Narzędziem pozwalającym użytkownikom na zanurzenie się w wirtualnym świecie były okulary. Doświadczenia użytkowników w tej wirtualnej przestrzeni opierały się na zmysłach, tak jak w świecie rzeczywistym. </p>
-                </div>
-            </div>
-                <div class="carousel-item">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text">The Veldt (Bradbury R.)</h5>
-                        <p>W 1950 roku Ray Bradbury (pisarz science fiction) napisał opowiadanie pt. „The Veldt” zawarte w jego zbiorze opowieści The Illustrated Man. W dziele autor porusza temat wirtualnych światów i rzeczywistości. Bradbury opisuje wizję przyszłości, w której dzieci mieszkające w zautomatyzowanym domu korzystają z symulacji afrykańskiego veldta (zbiorowisko wysokich traw w Afryce). Wizualizacja jest na tyle realna, że można tam min. poczuć promienie słońca na twarzy, czy usłyszeć ryk lwów. „The Veldt” można traktować jako przestrogę przed niebezpieczeństwami jakie może nieść ze sobą technologia, zwłaszcza gdy zagraża ona relacjom między rodzicami a ich dziećmi.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text">The Trouble with Bubbles(Dick P. K.)</h5>
-                        <p>Kolejnym punktem na osi dzieł literackich powiązanych z Metaverse jest rok 1953, w którym ukazało się opowiadanie Philipa K. Dicka pt. „The Trouble with Bubbles" . Historia ta opowiada o przyszłości, w której ludzie poszukują kontaktu z innymi inteligentnymi formami życia w kosmosie, jednak bez powodzenia. Jako rozwiązanie przychodzi im niezwykły produkt – plastikowa bańska, która jest w stanie odtworzyć cały wszechświat i umożliwić jej użytkownikom kontrolę nad wszelkimi zmianami związanymi z jej rozwojem. W tym wszechświecie istnieją formy życia na wzór ludzkich. </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text">The Naked Sun (Asimov I.)</h5>
-                        <p> 1957 rok to czas, w którym została opublikowana nowela Isaaca Asimova pt. „The Naked Sun ”, drugie dzieło z serii „Robot”. Główny bohater historii, detektyw Elijah Baley, zostaje wysłany na planetę Solaria, gdzie każdy z mieszkańców żyje w osobnym domu. Komunikacja między ludźmi na Solaris jest prowadzona wyłącznie za pomocą hologramów. W tym świecie ludzie mogą przeżywać wspólne doznania wyłącznie wirtualne, bez kontaktu fizycznego. Asimov przedstawia to jako sposób, w jaki technologia może wpłynąć na komunikację i relacje międzyludzkie. </p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text">Neuromancer (Gibson W.)</h5>
-                        <p> „Neuromancer ” to powieść Williama Gibsona, która została opublikowana w 1984 roku i uznawana jest za jedno z najważniejszych dzieł literatury cyberpunkowej. Stanowi ona pierwszą część tzw. Trylogii Ciągu, której kolejne tomy to Graf Zero i Mona Liza Turbo. Akcja powieści osadzona jest w przyszłości, a jej głównym bohaterem jest Henry Case, haker bez pieniędzy, zatrudniony do swojej ostatniej pracy, która doprowadza go do kontaktu z potężną sztuczną inteligencją. Powieść Gibsona porusza tematykę sztucznej inteligencji, sieci komputerowych, a także wirtualnej rzeczywistości.</p>
-                    </div>
-                </div>
-            </div>
-
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-
-<div class="historia">
+<div class="kontenerek">
+    <h4 id="poczatki"> Początki historii Metaverse </h4>
     Początek Metaverse, a raczej protometaverse, część badaczy datuje na lata 50. XX wieku, zgodnie z powstaniem komputerów mainframe, w których za pomocą siedzi różnych urządzeń użytkownicy mogli przesyłać sobie cyfrowe wiadomości.
     Inni natomiast jako początek wskazują lata 70. XX wieku, w których powstały MUD – Multi-User Dungeons, czyli tekstowe światy wirtualne, oparte na grze fabularnej Dungeons&Dragons. Dzięki poleceniom tekstowym użytkownicy mogli eksplorować świat, będący domem dla niegrywalnych magicznych postaci i potworów i podejmować w nim różne interakcje. Rozwinięciem MUD stało się Multi-User Shared Halucinations (MUSHS) oraz Multi-User Experiences (MUXS), które pozwalało użytkownikom na określenie ich ról oraz celów w zdefiniowanym przez nich świecie.
     1986 rok, stał się istotnym w historii metawersów ze względu na pojawienie się gry online Habitat, dostępnej na Commodore 64 (komputer domowy z lat 80. XX wieku). Wirtualne środowisko tej gry w przeciwieństwie do poprzedników było przedstawione graficznie (piksele 2D). Była to też gra, w której jako pierwszej wykorzystano termin „awatar”.
     W latach 90. XX wieku wprowadzono izomeryczne 3D, znane również jako 2.5D, ze względu na to, że sprawiały wrażenie trójwymiarowej przestrzeni wirtualnego świata, jednak umożliwiały poruszanie się w jedynie dwóch wymiarach.
     W 1995 roku pojawiła się gra Activeworlds, w której użytkownicy mieli możliwość wspólnego modyfikowania środowiska w czasie rzeczywistym, a w 1998 roku został uruchomiony pierwszy czat głosowy, za pomocą którego użytkownicy mogli poznać swoje lokalizacje, a ich awatary poruszały ustami wraz ze słowami wypowiadanymi przez użytkowników.
-
 </div>
 
+<div class="kontenerek">
+    <h4 id="secondlife">  Second Life </h4>
+    Kolejnym milowym krokiem na drodze do Metaverse była premiera Second Life  w 2003 roku.
+    Second Life  to jedno z pierwszych wirtualnych środowisk, udostępnione przez amerykańską firmę Linden Research, Inc., działającą jako Linden Lab, której założycielem jak i twórcą Second Life jest Philip Rosedale. Sam twórca uważa siebie za artystę, który zamiast farb, czy gliny używa bitów, a Second Life jest jego największym dziełem.
+    Ideą Second life było utworzenie miejsca, w którym człowiek może poczuć się jak mitologiczny Bóg -  waleczny, stwórczy, mający nadzwyczajne, magiczne zdolności takie jak teleportacja czy latanie.
+    Zgodnie z ideą awatary, czyli wirtualne reprezentacje użytkowników Second Life, mogą posługiwać się tymi wyjątkowymi umiejętnościami, a także mają możliwość tworzenia i rozwijania dostępnych już na platformie obiektów.
+    W świecie Second Life jak przystało na imitację realnego świata, występuje podział geograficzny i administracyjny. Jednostki do tego służące nazwane zostały regionami SL, w których obowiązują przepisy prawne, zmienne w zależności od regionu. Regiony natomiast należą do obszarów zwanych siatkami ( ang. grid), które również różnią się od siebie obowiązującymi tam zasadami. Przykładem takiej siatki jest „Teen Grid” - miejsce przeznaczone tylko dla nastolatków.
+    Rzeczywistość Second Life zaoferowała użytkownikom wiele możliwości, w tym edukacyjne, artystyczne, społeczne i rozrywkowe, co uczyniło ją interesującym narzędziem do eksploracji i interakcji z innymi ludźmi z całego świata.
+    Second Life  wśród swoich użytkowników zgromadził ponad milion osób. Było to miejsce z dużym potencjałem biznesowym, miejsce potencjalnych zysków, co wpłynęło na zainteresowanie platformą wielu rzeczywistych korporacji i firm. Zaczęły one zakładać swoje własne odziały w Second Life, wśród takich firm znalazły się m. in Adidas, BBC i Wells Fargo. Swoje zainteresowanie wirtualnym światem okazywały również organizacje non-profit np. American Cancer Society oraz Save the Children. Dużym zainteresowaniem cieszyły się również wykłady i kursy przeprowadzane w Second Life przez uniwersytety, wśród nich był nawet prestiżowy Harvard. W 2007 roku w grze została uruchomiona giełda, której zadaniem była pomoc platformowym firmom w zarządzaniu tamtejszą walutą – Linden Dollars.
+    Istotną kwestią, mającą znaczenie w odniesieniu do Metaverse, jest fakt, iż Linden Labs stanowiło swego rodzaju rząd w Second Life. Firma nie pośredniczyła w transakcjach, nie zarządzała produkcjami i sprzedażą na platformie, ale zajmowała się kwestiami dotyczącymi prawa, tożsamości użytkowników czy rejestrów własności. Firma udostępniała narzędzia służące do rozwoju platformy, co było równoważne z przyciąganiem nowych twórców, a idąc jeszcze dalej – nowych użytkowników.
+    Second Life okazał się ogromnym sukcesem finansowym, ponieważ w dwa lata od uruchomienia roczne PKB platformy wyniosło ponad 30 milionów dolarów, cztery lata później – ponad pół miliarda dolarów.
+</div>
+
+<div class="kontenerek">
+    <h4 id="minecraft">  Minecraft </h4>
+    Istotny udział w drodze do Metaverse miał również Minecraft , ponieważ oprócz oczywistych ulepszeń technicznych, przyniósł jakże istotną kwestię zwrócenia uwagi na młodszych użytkowników – dzieci i nastolatków.
+    Minecraft  to komputerowa gra, opublikowana w wersji testowej w 2009 roku, a w pełni w 2011 roku przez twórcę Markusa Perssona i Mojang Studios, w której użytkownicy mają możliwość poruszania się po otwartym świecie i budowania w nim konstrukcji z sześciennych brył. Podczas gry użytkownicy mogą napotkać różne istoty, począwszy od zwierząt np. świnie czy owce, aż po stwory takie jak np. creepery czy ghasty. Istoty te funkcjonują w grze jako MOBy  (mobile objects) – czyli poruszające się obiekty, nie będące graczami, stanowiące źródło punktów doświadczenia lub przedmiotów, możliwych do zdobycia przez gracza poprzez zaatakowanie danego MOBa. W grze użytkownicy mogą zbierać różne surowce, a następnie wytwarzać z nich przedmioty.
+    Minecraft może stanowić miejsce różnorakich doświadczeń, w zależności od użytkownika, tym co je jednak łączy jest koncentracja na rozwoju kreatywności.
+    Już od 2010 roku w grze powstawały ogromne miasta, tworzone przez współpracujące ze sobą grupy użytkowników. Słowo „ogromne” nie zostało użyte przypadkowo – miasta te sięgały rozmiarów Los Angeles (500 mil kwadratowych).
+    Minecraft to gra, która rozwija się do tej pory. Jednym z kroków tego rozwoju było dodanie trybu kreatywnego w 2011 roku, który zniwelował wszelakie przeszkody w rozwijaniu kreatywnego budowania i tworzenia.
+    Skala to tylko jedno z wielu osiągnieć Minecrafta. W 2015 roku Verizon (amerykański dostawca usług telekomunikacyjnych) stworzył w Minecrafcie telefon komórkowy, umożliwiający połączenia video na żywo pomiędzy grą a światem rzeczywistym.
+    Jak powszechnie wiadomo, wirus COVID-19 miał wpływ na rozwój technologiczny ze względu na „przeniesienie życia” na tryb zdalny, czego efekty można było zaobserwować również w Minecrafcie. W lutym 2020 roku gracze z Chin odtworzyli w grze szpitale o powierzchni 1,2 miliona stóp kwadratowych zbudowane w Wuhan w ramach oddania hołdu pracownikom medycznym. Nieco później w Minecrafcie powstało również muzeum oraz biblioteki bez cenzury umożliwiające użytkownikom czytanie zakazanej w ich krajach literatury oraz dzieł promujących wolność słowa.
+    W 2021 roku z Minecrafta korzystało już ponad 150 milionów ludzi.
+</div>
+
+<div class="kontenerek">
+    <h4 id="roblox">  Roblox </h4>
+    Pomimo tak wielkiego sukcesu Minecrafta, na rynku pojawił się kolejny gigant tworzący swoją część historii związanej z Metaverse, który stał się liderem, a okazał się nim być Roblox .
+    Roblox  został wydany w 2006 roku przez amerykańskie studio Roblox Corporation. W odróżnieniu od Minecrafta, Roblox to nie gra, a platforma do ich tworzenia, jednak zapytanie „Czy grasz w Robloxa?” nie jest błędem, ze względu na możliwość grania w utworzone na platformie gry.
+    Środowisko w Robloxie jest wykreowane przez jego użytkowników, tworzących własne awatary, mapy oraz zadania. Jest to możliwe za pomocą Roblox Studio – programu, udostępnionego przez producentów. Gry takie jak np. „Adopt me!”, „Jailbreak” czy „Piggy” zostały utworzone właśnie za pomocą Roblox Studio.
+    Gra „Adopt me!” została utworzona w 2016 roku, przez dwóch hobbystów platformy. Gra polega na hodowli i handlu zwierząt domowych przez użytkowników i do 2021 roku została odwiedzona ponad trzydzieści miliardów razy.
+    W Robloksie funkcjonuje waluta „robux”, przed 2016 rokiem nazywana „ticketami”, która pozwala na kupowanie różnych ulepszeń w postaci dodatkowych przedmiotów. Robuxy można zakupić w specjalnych pakietach za prawdziwe pieniądze (przykładowo: pakiet 800 robuxów kosztuje około 10 dolarów, czyli uwzględniając aktualny kurs walut, około 43 PLN.).
+    Do odtwarzania gier przygotowanych na platformie służy Roblox Client. W większości gier dostępnych na platformie używany jest awatar użytkownika, stanowiący cyfrową reprezentację użytkownika i będący jego znakiem rozpoznawczym. Zazwyczaj występuje w towarzystwie nazwy użytkownika wyświetlanej nad jego awatarem.
+    Roblox dostępny jest na komputerach stacjonarnych, urządzeniach mobilnych takich jak tablety czy telefony komórkowe, na konsolach gier wideo oraz na zestawach do wirtualnej rzeczywistości.
+</div>
+
+
+<div class="kontenerek">
+    <h4 id="fortnite">  Fortnite </h4>
+    Fortnite  jest grą wideo, która została opracowana przez firmę Epic Games i wydana w 2017 roku. Gra oferuje trzy różne tryby gry, działające na tym samym silniku i bazujące na tej samej rozgrywce. Są to Fortnite Battle Royale, to darmowa gra typu battle royale, w której do 100 graczy rywalizuje o miano ostatniego ocalałego; Fortnite: Save the World, to gra kooperacyjna, łącząca elementy strzelanek typu tower defense i gry o przetrwanie, w której maksymalnie czterech graczy walczy ze stworzeniami przypominającymi zombie, broniąc obiektów za pomocą pułapek i fortyfikacji; oraz Fortnite Creative, w którym gracze mają pełną swobodę w tworzeniu własnych światów i aren bitewnych.
+    Ostatni tryb został wprowadzony w 2018 roku i był on swego rodzaju odpowiedzą na budowanie świata w Robloksie oraz Minecrafcie.
+    Rozwój Fortnite’a opierał się na przekształcaniu gry w platformę społecznościową, nastawioną na doświadczenia niekoniecznie związane tylko i wyłącznie z grami.
+    Ważnym wydarzeniem w historii Fortnite, mającym związek z Metaverse był pierwszy wirtualny koncert odbywający się w świecie Fortnite w przestrzeni Pleasant Park w 2018 roku. DJ Marshmello , który był gwiazdą tego wydarzenia na żywo, zebrał ponad 10-milionową publiczność graczy. Występ okazał się ogromnym sukcesem i zapoczątkował kolejne tego typu wydarzenia w przestrzeni wirtualnej.
+    Dwa lata później - w 2020 roku – ten imponujący rekord oglądalności został pobity przez Travisa Scotta. Gwiazda hip-hopu, członek celebryckiej rodziny Kardashianów, wykonał swój premierowy utwór przed ponad 12-milionową publicznością graczy podczas wydarzenia pod nazwą „Astronomical” . Raper wystąpił w postaci gigantycznego awatara, na tle charakterystycznych dla niego i występujących w jego teledyskach, surrealistycznych projekcji.
+    Sukcesy koncertów w Fortnite nie skończyły się na wspomnianych wykonawcach. Kolejną gwiazdą, która zaprezentowała swój koncert w przestrzeni tej gry była Ariana Grande , pobijając równocześnie poprzednie rekordy oglądalności i gromadząc na swoich występach trwających łącznie godzinę ponad 76 mln użytkowników.
+    Wszystkie wydarzenia koncertowe wiązały się dla graczy z otrzymaniem dodatkowych ekskluzywnych gadżetów oraz dodatków do awatarów, dostępnych wyłącznie dla tych, którzy wzięli udział w koncercie.
+</div>
+
+<div class="kontenerek">
+    <h4 id="meta">  Facebook Meta </h4>
+    Duże zainteresowanie w przestrzeni Internetowej wzbudził postawiony przez Marka Zuckerberga krok na drodze do Metaverse podczas targów Connect 2021.
+    Głównym celem targów Connect jest gromadzenie osób zajmujących się rzeczywistością wirtualną i rozszerzoną, programistów, twórców internetowych, osób związanych z marketingiem i innych zainteresowanych pokrewnymi tematami. Podczas Connect 2021 omawiane były tematy związane z Metaverse oraz wirtualną rzeczywistością, między innymi prognozy rozwojowe obejmujące kolejną dekadę.
+    Wtedy też, dyrektor generalny firmy Facebook ogłosił zmianę jej nazwy na Meta Platforms, potocznie Meta. Firma Meta jest właścicielem czołowych w środowisku Internetu aplikacji i serwisów społecznościowych takich jak Facebook, Instagram, WhatsApp czy Messenger. Jest ona jedną z największych i najcenniejszych korporacji na świecie.
+    Zmiana nazwy była podyktowana chęcią ogłoszenia, iż firma ta zamierza skupić się na budowaniu Metaverse, rozumianego jako zintegrowane środowisko, łączące wszystkie produkty i usługi tej firmy. Sam twórca podkreśla, iż Metaverse nie zostanie stworzone przez jedną firmę, będzie dziełem wielu twórców i programistów. Za swoją rolę obiera on przyspieszenie procesu powstania Metaverse z pomocą rozwoju podstawowych technologii, platform społecznościowych i kreatywnych narzędzi.
 </div>
 
 <h3> <a id="technologie" class="zakladka">TECHNOLOGIE </a></h3>
 
-<div class="use">
-
-    balblallbla
+<div class="kontenerek">
+    <h4 id="podzial"> Podział na XR, AR, VR, MR</h4>
+    Kluczową kwestią konieczną do omówienia jest XR, AR, VR i MR. Podział na XR (Extended Reality), AR (Augmented Reality), VR (Virtual Reality) i MR (Mixed Reality) w kontekście Metaverse jest znaczący, ponieważ każda z tych technologii wprowadza różne możliwości interakcji z rzeczywistością oraz umożliwia osiąganie różnych celów. W Metaverse, wykorzystanie właściwej technologii może znacznie wpłynąć na doświadczenie użytkownika oraz na efektywność podejmowanych przez niego działań.
 </div>
+
+<div class="kontenerek">
+    <h4 id="xr"> XR - Extended Reality </h4>
+    XR to skrót od „Extended Reality”, czyli - z języka angielskiego - rozszerzona rzeczywistość.  Obejmuje ona technologie wirtualnej rzeczywistości (VR), rzeczywistości rozszerzonej (AR) i rzeczywistości mieszanej (MR), które pozwalają na tworzenie interaktywnych i immersyjnych doświadczeń w cyfrowym świecie. Technologie XR umożliwiają użytkownikom wejście w interakcję z wirtualnymi obiektami i przestrzeniami, a także łączenie ich z rzeczywistym światem, co otwiera szeroki zakres zastosowań w różnych dziedzinach.
+</div>
+
+<div class="kontenerek">
+    <h4 id="vr"> VR - Virtual Reality </h4>
+    VR  to skrót od „Virtual Reality” (wirtualna rzeczywistość), czyli technologia, która umożliwia użytkownikom przeniesienie się do całkowicie wirtualnego świata za pomocą zestawu urządzeń VR, takiego jak np. gogle VR. Dzięki VR użytkownik może eksplorować wirtualne przestrzenie, oddziaływać z obiektami i innymi użytkownikami w czasie rzeczywistym, a także doświadczyć immersyjnych wrażeń związanych z dźwiękiem, grafiką i innymi bodźcami sensorycznymi.
+    Wirtualna rzeczywistość jest wykorzystywana w przemyśle rozrywkowym.  Gry oparte na wirtualnej rzeczywistości zyskały dużą popularność,  na co wpływ miały między innymi udostępniane przez użytkowników w mediach społecznościowych nagrania z rozgrywek. Flagową pozycją wśród gier wirtualnej rzeczywistości jest Beat Saber.
+    Gra ta została opublikowana w 2018 roku przez Beat Games i można w nią zagrać za pomocą większości gogli wirtualnej rzeczywistości. W BeatSaber zadaniem gracza jest krojenie sześciennych bloków za pomocą dwóch szabli w rytm muzyki. Broń ta sterowana jest za pomocą kontrolerów, które gracz trzyma w rękach.
+    Istnieje wiele różnych urządzeń i akcesoriów, które mogą być wykorzystywane do wirtualnej rzeczywistości (VR). Pierwszym z koniecznych narzędzi są gogle VR, są to specjalne okulary, które wyświetlają wirtualny świat na ekranie umieszczonym wewnątrz okularów. Gogle te można podłączyć do komputera bądź konsoli przy pomocy np. kabla USB lub łącza Bluetooth. Podczas korzystania z VR można używać kontrolerów, czyli urządzeń, które pozwalają użytkownikom na interakcję z wirtualnym światem. Mogą to być kontrolery ruchowe, które rejestrują ruchy rąk i ciała, lub kontrolery z przyciskami, które umożliwiają sterowanie postacią lub innymi elementami w wirtualnej rzeczywistości. Istnieją również systemy śledzenia ruchu - są to specjalne kamery lub czujniki, które umożliwiają śledzenie ruchów użytkownika w trójwymiarowej przestrzeni, dzięki czemu urządzenia VR mogą reagować na ruchy użytkownika w czasie rzeczywistym. Sprzętem, który z pewnością podnosi jakość użytkowania wirtualnej rzeczywistości są komputery VR-ready. Są to specjalne komputery, które służą do obsługi wirtualnej rzeczywistości. Mają zazwyczaj wysokiej klasy procesory, karty graficzne i dużą ilość pamięci RAM, co pozwala na płynne działanie aplikacji VR. Analogicznie do komputerów VR-ready funkcjonują konsole VR - urządzenia, które łączą funkcje konsoli do gier z technologią wirtualnej rzeczywistości. Dodatkiem ulepszającym doznania podczas użytkowania wirtualnej rzeczywistości są symulatory VR, takie jak np. fotel wyposażony w głośniki i efekty wibracji, które pozwalają użytkownikowi na odczucie na przykład wirtualnej jazdy samochodem lub lotu samolotem.
+</div>
+
+<div class="kontenerek">
+    <h4 id="ar">   AR - augmented reality</h4>
+    AR to skrót od „Augmented Reality” (rzeczywistość poszerzona), czyli technologia, która umożliwia nakładanie wirtualnych obiektów na rzeczywiste otoczenie za pomocą urządzeń mobilnych, okularów AR lub innych specjalistycznych narzędzi. W przeciwieństwie do wirtualnej rzeczywistości (VR), która przenosi użytkownika do całkowicie wirtualnego świata, AR pozwala użytkownikom zachować połączenie z rzeczywistością i jednocześnie wzbogacić ją o dodatkowe elementy.
+    W dostępnych na urządzeniach mobilnych sklepach z aplikacjami np. Google Play lub App Store można odnaleźć mnóstwo aplikacji wykorzystujących technologię AR.
+    Przykładem wykorzystania AR jest opublikowana przez firmę Niantic w 2016 roku gra Pokemon Go, dostępna na urządzeniach mobilnych, w której gracze mogą łapać, kolekcjonować i trenować wirtualne stwory, nazywane Pokemonami. Gra korzysta z systemu GPS, który pozwala graczom poruszać się po prawdziwym świecie w celu znalezienia Pokemonów. Gracz może zobaczyć Pokemona naniesionego na swoje otoczenie na ekranie swojego urządzenia mobilnego, co jest możliwe dzięki AR. Po odnalezieniu Pokemona gracz może złapać go za pomocą specjalnych „pokeballi”, co sprawia, że gracz otrzymuje punkty w grze, pomocne w awansie do wyższego poziomu.
+    Gra spotkała się z ogromnym sukcesem i przyciągnęła miliony graczy na całym świecie. W ciągu pierwszego roku po premierze w lipcu 2016 roku, Pokemon Go został pobrany około 260 milionów razy i wygenerował 0,83 miliarda dolarów przychodów. W 2016 roku gracze Pokémon Go przeszli razem łącznie 8,7 miliona km.
+</div>
+
+<div class="kontenerek">
+    <h4 id="mr"> MR - mixed reality </h4>
+    MR to skrót od „Mixed Reality” (rzeczywistość mieszana), czyli technologia, która łączy elementy wirtualnej rzeczywistości (VR) i rzeczywistości rozszerzonej (AR), pozwalając użytkownikom na interakcję z wirtualnymi obiektami i jednoczesne zachowanie kontaktu z rzeczywistym światem. W MR użytkownik może obserwować wirtualne obiekty, które są widoczne w rzeczywistym środowisku, a także wpływać na nie i poruszać się między nimi, a wirtualne obiekty mogą reagować na obecność użytkownika i na elementy rzeczywistego środowiska. MR ma wiele zastosowań, w tym w dziedzinie projektowania, szkoleniach, gier, reklamie, turystyce i wielu innych dziedzinach.
+</div>
+
+<div class="kontenerek">
+    <h4 id="iot"> Internet rzeczy </h4>
+Internet rzeczy  (IoT, z ang. Internet of Things) to koncepcja, która opisuje połączenie urządzeń, przedmiotów codziennego użytku oraz maszyn z Internetem. W ramach Internetu rzeczy, urządzenia mogą komunikować się między sobą oraz wymieniać informacje bez udziału człowieka.
+Internet rzeczy pozwala na tworzenie inteligentnych systemów, które w czasie rzeczywistym zbierają dane, analizują je i podejmują decyzje bez potrzeby ludzkiej ingerencji. Przykłady zastosowań IoT to m.in. inteligentne domy, w których systemy takie jak oświetlenie, ogrzewanie, klimatyzacja oraz urządzenia jak lodówki, czy telewizory są ze sobą połączone i mogą być kontrolowane za pomocą smartfona lub asystenta głosowego. Innym przykładem są inteligentne miasta, w których systemy monitoringu, oświetlenie uliczne czy transport publiczny są połączone w jedną sieć, co pozwala na zoptymalizowanie zarządzania miastem oraz poprawę jakości życia mieszkańców.
+Termin ten po raz pierwszy został użyty podczas prezentacji dla Procter & Gamble przez Kevina Ashtona - brytyjskiego przedsiębiorcę i założyciela startupów w 1999 roku.
+Internet rzeczy (IoT) i metaverse to dwa różne pojęcia, jednak mają ze sobą pewne powiązania. Metaverse odnosi się do rozwoju wirtualnych środowisk 3D, w których ludzie mogą spędzać czas i za pomocą których mogą się komunikować. Z kolei Internet rzeczy dotyczy połączenia urządzeń z Internetem, co umożliwia im odziaływanie między sobą oraz wymianę informacji bez udziału człowieka.
+Kompresja tych dwóch koncepcji może zrodzić wiele możliwości takich jak na przykład połączenie wirtualnych przedmiotów w metaverse z fizycznymi urządzeniami IoT. Takie połączenie umożliwiłoby sterowanie nimi za pomocą wirtualnych interfejsów - w wirtualnym biurze w metaverse, użytkownik mógłby sterować rzeczywistym systemem klimatyzacji, oświetleniem czy systemem alarmowym.
+Z drugiej strony, zastosowanie technologii IoT w metaverse może pozwolić na lepszą interakcję z wirtualnymi obiektami, dzięki sensorom i urządzeniom, które będą w stanie wychwytywać ruchy, gesty i dźwięki użytkowników, a także na dostosowanie wirtualnego świata do ich preferencji i potrzeb.
+</div>
+
 
 <h3> <a id="zastosowania" class="zakladka"> ZASTOSOWANIA </a> </h3>
 
-<div class="use">
-    <p> Innowacyjna technologia związana z Metaverse może zmienić sposób, w jaki ludzie żyją, pracują i podejmują interakcję ze swoim otoczeniem. Metaverse oferuje szerokie możliwości wykorzystania, począwszy od przemysłu rozrywki, przez medycynę, po rozwój nowych narzędzi biznesowych i edukacyjnych. </p>
-
-    Rozrywka
-    Opieka zdrowtona
-    Edukacja
-    Marketing i reklama
-    Biznes
-
-
+<div class="kontenerek">
+   <h4 id="zastosowania"> Zastosowania metaverse w różnych dziedzinach życia </h4>
+    Innowacyjna technologia związana z Metaverse może zmienić sposób, w jaki ludzie żyją, pracują i podejmują interakcję ze swoim otoczeniem. Metaverse oferuje szerokie możliwości wykorzystania, począwszy od przemysłu rozrywki, przez medycynę, po rozwój nowych narzędzi biznesowych i edukacyjnych.
 </div>
 
+<div class="kontenerek">
+    <h4 id="rozrywka"> Rozrywka </h4>
+Nie da się ukryć, że dla wielu osób mających styczność z tematyką Metaverse pierwszym skojarzeniem z tą ideą jest rozrywka. W dzisiejszych czasach, kiedy technologia rozwija się w zawrotnym tempie, coraz więcej osób szuka sposobów na zaspokojenie swoich potrzeb związanych z rozrywką w wirtualnym świecie.
+Metaverse otwiera drogę do licznych możliwości spędzenia czasu wolnego. Można zwiedzać wirtualne miasta, uczestniczyć w koncertach, festiwalach muzycznych, oglądać filmy czy grać w gry.
+Jednym z najważniejszych aspektów Metaverse jest społeczność. Dzięki niemu, użytkownicy mają możliwość poznawania nowych ludzi i nawiązywania przyjaźni na całym świecie. Wirtualne środowisko pozwala na prowadzenie rozmów, wymianę doświadczeń oraz uczestnictwo w projektach grupowych. To świetna okazja do poznania ludzi o podobnych zainteresowaniach i zdobycia nowych przyjaciół.
+Technologie związane z Metaverse otwierają przestrzeń dla artystów i osób kreatywnych. W tej przestrzeni można tworzyć i eksponować swoje dzieła, występować na wirtualnych scenach, organizować wystawy czy pokazy mody. Wirtualny świat pozwala na swobodne wyrażanie siebie i rozwijanie swojego talentu, bez ograniczeń czasowych i przestrzennych.
+Wirtualna rzeczywistość pozwala na oderwanie się od rzeczywistości i przeniesienie się w świat pełen przygód, emocji i możliwości. Nic dziwnego, że coraz więcej ludzi wybiera właśnie taki rodzaj rozrywki.
+</div>
 
+<div class="kontenerek">
+    <h4 id="opieka"> Opieka zdrowotna </h4>
+Branża opieki zdrowotnej i medycyny może wykorzystywać immersyjne technologie metaverse na wielu płaszczyznach . Takie wykorzystanie może objawiać się między innymi w edukacji, w zdalnych konsultacjach medycznych i diagnozach, czy w badaniach klinicznych.
+Wykorzystanie technologii VR i AR może być stosowane podczas szkoleń dla studentów medycyny oraz doświadczonych już lekarzy. Mogą oni korzystać z przestrzeni wirtualnej, aby symulować i powtarzać różne scenariusze medyczne, przeprowadzać symulacje operacji i innych procedur medycznych w bezpiecznych warunkach. Wiąże się to ze zwiększeniem efektywności czasowej i kosztowej edukacji oraz ze zwiększeniem zaangażowania osób uczących się.
+W czasach pandemii powszechnym zjawiskiem stały się teleporady. Teoretycznie do tego typu konsultacji wystarczy komunikacja za pomocą urządzeń mobilnych, jednak zdarzają się nagłe przypadki, w których technologie VR mogą stanowić narzędzie do przekazywania informacji o chorobach lub koniecznych procesach medycznych. 	Technologie oraz sprzęt wirtualnej rzeczywistości mogą być pomocne w diagnostyce chorób związanych z obserwacjami ruchów ciała. Przykładem takiej choroby jest Alzheimer , w którego diagnostyce pomaga śledzenie ruchu gałek ocznych i tworzenie na ich podstawie neurologicznych markerów.
+</div>
 
+<div class="kontenerek">
+    <h4 id="edu">  Edukacja </h4>
+W dzisiejszych czasach edukacja nie musi odbywać się tylko w szkole czy na uniwersytecie. Coraz więcej osób poszukuje alternatywnych form kształcenia, które pozwolą na zdobycie wiedzy i umiejętności w sposób łatwiej dostępny i bardziej atrakcyjny. Wirtualna rzeczywistość może pomóc w procesie edukacji, tak aby była ona zarówno interesująca, jak i skuteczna.
+Istnieją liczne możliwości związane z edukacją w Metaverse. Można uczestniczyć w wykładach, kursach i szkoleniach, korzystając z wirtualnych platform edukacyjnych. Przykładem takiej platformy jest Axon Park. Platforma pozwala użytkownikom tworzyć wirtualne kursy, a nawet całe kampusy. Wirtualne zajęcia prowadzone są przez ekspertów z różnych dziedzin, a uczestnicy mają możliwość zadawania pytań i dyskutowania z prowadzącymi oraz innymi uczestnikami.
+Technologie Metaverse mogą być też wykorzystywane w celach szkoleniowych pracowników. Koncern Honeywell używa technologii Immersive Field Simulator (IFS) w celu szkolenia swoich pracowników zajmujących się produkcją. Przygotowanie pracowników w ten sposób, pomaga w rozwiązywaniu potencjalnych trudności i awarii pojawiających się podczas procesu produkcyjnego.
+Jednym z najważniejszych aspektów edukacji w metaverse jest interaktywność. Dzięki niemu, uczestnicy mają możliwość wzięcia udziału w symulacjach, eksperymentach czy projektach grupowych. To świetna okazja do zdobycia praktycznych umiejętności i doświadczeń, które można wykorzystać w życiu codziennym.
+Wirtualna rzeczywistość pozwala na zdobycie wiedzy i umiejętności w sposób przystępny i ciekawy, a interaktywność i kreatywność dodają uczestnikom motywacji do nauki.
+</div>
+
+<div class="kontenerek">
+    <h4 id="marketing">Marketing i reklama </h4>
+Metaverse z pewnością otwiera przestrzeń również dla działań marketingowych i reklamowych. Już teraz wiele firm zaczyna eksplorować wirtualną przestrzeń, aby dotrzeć do swoich klientów na nowy sposób.
+Jednym z największych potencjałów marketingu w wirtualnej rzeczywistości jest możliwość tworzenia wirtualnych sklepów i salonów sprzedaży. Wirtualne sklepy pozwalają na zaprezentowanie produktów w innowacyjny sposób , a także na stworzenie interaktywnej przestrzeni, w której klienci mogą łatwo i przyjemnie dokonać zakupów. Możliwość dokładnego obejrzenia produktu z różnych stron, zmiany kolorów i wzorów czy przetestowania go w wirtualnym środowisku to tylko niektóre z rozwiązań, które oferuje metaverse w dziedzinie e-commerce.
+Kolejnym obszarem, w którym stosuje się wirtualną rzeczywistość do celów marketingowych i reklamowych są wirtualne eventy i konferencje. Dzięki organizacji eventów w wirtualnej rzeczywistości, firmy mogą dotrzeć do swoich klientów na całym świecie, bez konieczności organizowania spotkań na żywo. Przykładem sprzedażowego wydarzenia było Electricity, będące wynikiem współpracy pomiędzy Selfridges i Charli Cohenem, w ramach uczczenia 25 rocznicy Pokémon. Podczas tego wydarzenia uczestnicy mieli możliwość zakupienia przedmiotów w świecie wirtualnym, jak i rzeczywistym.
+Wirtualna rzeczywistość oferuje także wiele innych możliwości, takich jak interaktywne reklamy czy wirtualne kampanie promocyjne. Dzięki zaawansowanej technologii i możliwościom personalizacji, reklamy w metaverse mogą być bardziej skuteczne i przyjazne dla klientów.
+Jednym z największych wyzwań w marketingu w metaverse jest jednak jego nowość i niedostateczna znajomość tej przestrzeni. Firmy muszą nauczyć się, jak działać w metaverse i jak dostosować swoje działania marketingowe do specyfiki tej przestrzeni. Jednakże, gdy już to osiągną, marketing w metaverse może stać się nie tylko nowoczesnym, ale również skutecznym narzędziem promocji produktów i usług.
+</div>
+
+<div class="kontenerek">
+    <h4 id="biznes">Biznes </h4>
+Zastosowanie biznesu w Metaverse może nawiązywać do wszystkich wspomnianych powyżej zastosowań, ponieważ może czerpać z branży edukacyjnej, medycznej, marketingowej i wielu innych. Wiele firm traktuje przestrzeń metaverse jako potencjalne miejsce rozwoju i nową ścieżkę uzyskania zainteresowania klientów.
+Zastosowanie biznesu w odniesieniu do wirtualnej rzeczywistości otwiera drogę do rozważania ogromnego obszaru kwestii ekonomicznych związanych z Metaverse.
+</div>
+
+<div class="kontenerek">
+    <h4 id="blockchain">Blockchain </h4>
+Blockchain   to technologia, która umożliwia przechowywanie i udostępnianie informacji (rekordów) w sposób bezpieczny i przejrzysty. Blockchain składa się z ciągu bloków, z których każdy zawiera informacje o transakcjach, które zostały przeprowadzone w sieci. Kiedy nowa transakcja zostaje przeprowadzona, jest ona dodawana do najnowszego bloku w łańcuchu. Każdy blok zawiera oznaczenie czasu, w którym powstał, zawiera również informację o swoim poprzedniku, co tworzy stałą strukturę łańcucha bloków.
+Jedną z kluczowych cech blockchain jest jego decentralizacja. W przeciwieństwie do tradycyjnych systemów, w których dane przechowywane są na serwerach centralnych, blockchain działa w sieci, gdzie każdy węzeł ma kopię bazy danych. Decentralizacja ma wiele korzyści, w tym większą odporność na awarie oraz ataki zewnętrzne, co sprawia, że jest to jedna z najbezpieczniejszych technologii na świecie. Dzięki temu, że nie ma centralnego organu zarządzającego, blockchain może być stosowany w każdej dziedzinie, w której potrzebna jest bezpieczna i niezawodna baza danych.
+Kolejną ważną cechą blockchain jest jego bezpieczeństwo. Każdy blok w łańcuchu jest chroniony za pomocą kryptografii, co oznacza, że dane w bloku są niemal niemożliwe do zmodyfikowania. Ponadto, każdy węzeł w sieci musi potwierdzić transakcję, zanim zostanie dodana do łańcucha, co zapewnia bezpieczeństwo transakcji. Ochrona prywatności jest kolejnym atutem blockchain. Użytkownicy są identyfikowani za pomocą kluczy publicznych i prywatnych, co zapewnia anonimowość i ochronę prywatności.
+Blockchain cechuje również brak konieczności obecności pośredników, brak możliwości usuwania danych oraz skalowalność. Brak pośredników oznacza, że użytkownicy mogą bezpośrednio wymieniać dane i wartości między sobą. Podczas wykonywania transakcji nie ma konieczności obecności pośredników, takich jak banki lub instytucje finansowe. Dane w blockchainie raz dodane do łańcucha są trwałe i nie mogą być usunięte, co jest szczególnie ważne w przypadku danych wrażliwych. Skalowalność to kolejna ważna cecha blockchain, dzięki której jest on w stanie obsługiwać duże ilości transakcji jednocześnie, co czyni go przydatnym w przypadku dużych sieci.
+Dostępność to kolejna cecha blockchain, która czyni go atrakcyjnym dla wielu użytkowników. Blockchain jest technologią open source, co oznacza, że kod źródłowy jest dostępny dla każdego, kto chce z niego skorzystać lub w jakiś sposób go poprawić. Dostępność oznacza również, że każdy może korzystać z tej technologii.
+Blockchain można podzielić na trzy rodzaje, publiczny, prywatny oraz hybrydowy. Publiczny polega na tym, iż każdy ma możliwość pobrania dowolnego fragmentu lub nawet całości bazy, a swoją kopię może udsotępniać innym. Drugi rodzaj, czyli prywatny, może być pobierany i udostępniany wyłącznie przez wybraną grupę podmiotów, a używany jest przeważnie wtedy, gdy sieć zawiera poufne dane. Blockchain hybrydowy, zwany również mieszanym, stanowi połączenie pomiędzy dwoma powyższymi.
+Blockchain dąży do utworzenia systemu, który nie ma centralnego organu zarządzającego, który ma większą odporność na ataki zewnętrzne, który oferuje bezpieczne i niezawodne rozwiązania i który jest otwarty dla wszystkich użytkowników. Wszystkie te cechy sprawiają, że blockchain jest jedną z najbardziej innowacyjnych technologii ostatnich lat i ma duży potencjał, aby zmienić sposób, w jaki funkcjonują różne dziedziny.
+Technologia ta znalazła swoje zastosowanie po raz pierwszy w kryptowalucie Bitcoin w 2009 roku. Była ona wykorzystana do księgowania transakcji dokonywanych z wykorzystaniem tej kryptowaluty i uniemożliwiała opcję podwójnego wydania tych samych środków.
+Blockchain jest często kojarzony z kryptowalutami, takimi jak Bitcoin czy Ethereum, ponieważ są one najpopularniejszym i najpowszechniejszym sposobem zastosowania tej technologii, ale może być również wykorzystywany do przechowywania innych rodzajów informacji. Wraz z rozwojem technologii blockchain, coraz więcej firm i instytucji zaczyna z niej korzystać, aby zwiększyć swoją efektywność i bezpieczeństwo. Blockchain może być stosowany w dziedzinach, takich jak finanse, opieka zdrowotna, edukacja, transport, logistyka i wiele innych.
+Blockchain może zapewnić podstawową infrastrukturę, taką jak cyfrowe identyfikatory i dowody własności, które są niezbędne do funkcjonowania Metaverse. Blockchain może również zapewnić bezpieczne i niezawodne mechanizmy płatności i transakcji w Metaverse.
+W przestrzeni internetowej funkcjonuje serwis internetowy blockchain (blockchain.com), dawniej blockchain.info, uruchomiony w 2011 roku. Serwis oferuje usługi związane z eksploracją bloków Bitcoin, a także portfel kryptowalut i kryptogiełda obsługująca Bitcoin, Bitcoin Gotówka i Ethereum. Serwis zapewnia również wykresy danych Bitcoin, statystyki i informacje rynkowe.
+</div>
+
+<div class="kontenerek">
+    <h4 id="waluta">  Wirtualna waluta </h4>
+Wirtualna waluta  to forma cyfrowej waluty, która jest emitowana i kontrolowana przez jedną organizację. Przykładem wirtualnej waluty jest Liberty Reserve, który był wykorzystywany do przeprowadzania transakcji w Internecie.
+</div>
+
+    <div class="kontenerek">
+        <h4 id="krypto">  Kryptowaluta </h4>
+        Kryptowaluty  to innowacyjne i dynamicznie rozwijające się narzędzie finansowe, które w ostatnich latach zyskało ogromną popularność na całym świecie. Kryptowaluta to rodzaj wirtualnej waluty, która jest zdecentralizowana i działa na bazie technologii blockchain. Jest to forma cyfrowej waluty, która jest bezpieczna i niezależna od centralnych instytucji finansowych, takich jak banki. Przykładami kryptowalut są Bitcoin, Ethereum czy Litecoin.
+</div>
+
+<div class="kontenerek">
+    <h4 id="tokeny">Tokeny </h4>
+Tokeny  to cyfrowe znaki, które reprezentują wartość lub własność w sieci blockchain. Tokeny mogą reprezentować prawa własności, udziały w spółkach lub uprawnienia do dostępu do określonych zasobów. Przykłady tokenów to ERC-20, ERC-721 lub NFT (Non-Fungible Token). Tokeny mogą być emitowane na blockchainie kryptowalut, takim jak Ethereum.
+</div>
+
+<div class="kontenerek">
+    <h4 id="nft">  NFT </h4>
+NFT  (non-fungible token) to unikalny, niemodyfikowalny i niepowtarzalny token cyfrowy, który jest wykorzystywany do reprezentowania własności cyfrowych aktywów, takich jak sztuka, muzyka, filmy, gry komputerowe, a nawet tweetów. Oznacza to, że każdy NFT jest jedyny w swoim rodzaju i posiada unikalny kod identyfikacyjny, który jest zapisany na blockchainie, co umożliwia jego autentyczność i pochodzenie.
+NFT zapewniają sposobność wirtualnej własności rzeczywistych aktywów, co umożliwia artystom i innym twórcom cyfrowym na zarabianie na swoich dziełach i daje kolekcjonerom cyfrowych aktywów możliwość ich posiadania i wymianę na rynku cyfrowym.
+</div>
+
+<div class="kontenerek">
+    <h4 id="korzysci"> Omówienie korzyści i zagrożeń płynących z Metaverse </h4>
+Metaverse to koncepcja, która może mieć zarówno pozytywne, jak i negatywne skutki dla ludzi i społeczeństwa. W ostatnim czasie metaverse staje się coraz bardziej popularny, a jego możliwości wykorzystania są coraz bardziej rozbudowane. Wśród korzyści, jakie może przynieść metaverse, należy wymienić przede wszystkim możliwość tworzenia nowych doświadczeń i interakcji między ludźmi z całego świata. Dzięki metaverse ludzie będą mogli rozwijać swoje umiejętności. Poszerzanie własnych horyzontów stanie się dużo łatwiejsze, ludzie mogą odbywać wirtualne podróże, poznawać nowe miejsca, kultury i nawiązywać znajomości bez wychodzenia z domu.
+Jednakże metaverse może również nieść ze sobą pewne zagrożenia. Dystopijna wizja ludzkości, przedstawiana w dziełach literackich w pewnym stopniu może okazać się prawdziwa. Wirtualna rzeczywistość może stać się uzależniająca i prowadzić do odizolowania od rzeczywistości realnej, a także negatywnie wpływać na zachowania społeczne i relacje międzyludzkie.
+Zagrożenia związane z Metaverse obejmują również kwestie udostępniania dużej ilości danych osobowych, co może prowadzić do naruszenia prywatności użytkowników. Takie dane mogą być wykorzystane do celów nieetycznych lub przestępczych, takich jak kradzież tożsamości, oszustwa finansowe czy cyberprzemoc.
+Metaverse może przynosić wiele korzyści, ale także może nieść ze sobą pewne zagrożenia. W celu uniknięcia negatywnych skutków tej technologii, konieczne jest jej uważne monitorowanie i regulacja rozwoju, a także edukacja użytkowników w zakresie bezpieczeństwa i prywatności.
+</div>
+
+<div class="kontenerek">
+    <h4  id="kontrola">  Kwestie związane z regulacją i kontrolą metaverse </h4>
+Wraz z rozwojem technologii metaverse, pojawiają się nowe wyzwania związane z ochroną prywatności, bezpieczeństwem i etyką. Dlatego też konieczne są regulacje prawne dotyczące tej technologii. Takie regulacje powinny zapewniać ochronę użytkowników i społeczeństwa, a także zapobiegać nadużyciom i przestępstwom.
+Wśród kwestii, które powinny być regulowane prawem dotyczącym metaverse, znajdują się między innymi kwestie związane z NFT i prawem własności intelektualnej. NFT stanowią sposób na zabezpieczenie i ochronę cyfrowych treści, takich jak obrazy, muzyka czy filmy. W metaverse, NFT mogą stać się ważnym elementem handlu wirtualnymi przedmiotami oraz tworzenia i dystrybucji cyfrowych treści. Regulacje prawne dotyczące NFT i praw własności intelektualnej są istotne, aby zapewnić ochronę cyfrowych treści i ich właścicieli, a także zapobiegać nieetycznym praktykom i oszustwom.
+Istotne są również kwestie dotyczące przetwarzania danych osobowych w Metaverse, ponieważ obecność w wirtualnej rzeczywistości związana jest ze zbieraniem i przetwarzaniem danych osobowych użytkowników. Regulacje prawne dotyczące przetwarzania danych osobowych w Metaverse są istotne, aby zapewnić prywatność i odpowiednią ochronę danych użytkowników oraz określić zasady dotyczące ich wykorzystania.
+W Metaverse, jak i w wirtualnych światach, użytkownicy są narażeni na ryzyko różnych cyberataków. Regulacje prawne dotyczące cyberbezpieczeństwa są istotne, aby zapobiegać takim zagrożeniom i chronić prywatność oraz bezpieczeństwo użytkowników.
+Metaverse może spowodować problemy związane z prawem własności i prawem cywilnym, takie jak odpowiedzialność za działania w przestrzeni wirtualnej, czy nienaruszanie praw własności intelektualnej. Regulacje prawne w tych dziedzinach są istotne, aby określić zasady i prawa dotyczące działań wirtualnych użytkowników Metaverse.
+Regulacje prawne powiązane z  Metaverse odgrywają istotną rolę w procesie zapewnienia bezpieczeństwa i ochrony użytkowników, określenia zasad dotyczących działań wirtualnych użytkowników, a także ochrony prywatności i własności intelektualnej. 	Bez odpowiednich regulacji prawnych, Metaverse może stać się miejscem, w którym łatwo o przestępstwa i nadużycia. Ważne jest zatem, aby rządy i organizacje zainteresowane rozwojem Metaverse podjęły działania w celu opracowania i wdrożenia odpowiednich regulacji prawnych, które będą chronić użytkowników i zapobiegać potencjalnym nieetycznym praktykom.
+</div>
 
 <div class="footer">
     <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
     <p class="info"> PROJEKT JEST CZĘŚCIĄ PRACY MAGISTERSKIEJ </p>
-    <p class="copyright">  © 2022 Weronika Paterek </p>
+    <p class="copyright">  © 2023 Weronika Paterek </p>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+</div>
 </body>
 </html>

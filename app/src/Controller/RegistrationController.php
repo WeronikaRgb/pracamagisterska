@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\User;
+use App\Repository\UserRepository;
 use App\Form\Type\RegistrationFormType;
 use App\Security\LoginFormAuthenticator;
 use DateTime;
@@ -24,6 +25,7 @@ class RegistrationController extends AbstractController
      * @param UserPasswordHasherInterface $userPasswordHarsher
      * @param UserAuthenticatorInterface  $userAuthenticator
      * @param LoginFormAuthenticator      $authenticator
+     * @param EntityManagerInterface      $entityManager
      *
      * @return Response
      */
@@ -38,13 +40,13 @@ class RegistrationController extends AbstractController
             $user->setPassword(
                 $userPasswordHarsher->hashPassword(
                     $user,
-                    $form->get('plainPassword')->getData()
+                    $form->get('password')->getData()
                 )
             );
-            $user->setCreatedAt(new DateTime('now'));
-            $user->setUpdatedAt(new DateTime('now'));
 
-
+            // save the user to the database
+            $entityManager->persist($user);
+            $entityManager->flush();
 
             return $userAuthenticator->authenticateUser(
                 $user,

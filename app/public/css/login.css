@@ -91,7 +91,6 @@ button[type=submit]:focus{
 button[type=submit]:hover{
     color: white;
     background-color: #120621;
-    linear-gradient(red, blue);
     transition: 1s;
 }
 
@@ -127,4 +126,25 @@ button[type=submit]:hover{
 .copyright{
     padding: 5px;
     font-family: Arial;
+}
+
+.alert-danger{
+    color: red;
+    background-color: whitesmoke ;
+    border: solid 1px red;
+    padding: 5px;
+    margin: 10px;
+}
+
+.invalid-feedback{
+    color: red;
+    padding: 10px;
+}
+
+.alert-success{
+    color: green;
+    background-color: whitesmoke ;
+    border: solid 1px green;
+    padding: 5px;
+    margin: 10px;
 }

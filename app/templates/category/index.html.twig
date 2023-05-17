@@ -1,15 +1,85 @@
-{% extends 'base.html.twig' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+         Kategorie - serwis informacyjny Metaverse
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {% block stylesheets %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('/css/pics/icon.jpg') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('/css/post/post.css') }}">
+    {% endblock %}
+</head>
+<body>
 
-{% block title %}
-    {{ 'title.category_list'|trans }}
-{% endblock %}
+<!---------------------------------------MENU------------------------------------------------------->
+<div class="menu">
+    <ul>
+        <li>
+            <a href="{{ url('start_index') }}">
+                METAVERSE - SERWIS INFORMACYJNY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('main_index') }}" >
+                STRONA GŁÓWNA
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('theory_index') }}" >
+                BAZA WIEDZY
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('post_index') }}">
+                FORUM
+            </a>
+        </li>
+        <li>
+            <a href="{{ url('kids_index') }}">
+                STREFA DZIECKA
+            </a>
+        </li>
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <li>
+                <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
+            </li>
+        {% endif %}
+        <li style="float:right">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
+            {% else %}
+                <a href="{{ url('app_login') }}">LOGOWANIE</a>
+            {% endif %}
+        </li>
+        <li style="float:right">
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+
+            {% else %}
+                <a href="{{ url('registration_register') }}">REJESTRACJA</a>
+            {% endif %}
+        </li>
+    </ul>
+</div>
+
+<!-------------------------------------------NAGŁÓWEK----------------------------------------------->
+<div class="hi">
+    <h1>  KATEGORIE </h1>
+</div>
+
+{% for type, messages in app.session.flashBag.all %}
+    {% for message in messages %}
+        {% include 'default/_single_alert_message.html.twig' %}
+    {% endfor %}
+{% endfor %}
+
 
 {% block body %}
-    <h1>{{ 'title.category_list'|trans }}</h1>
 
     {% if is_granted('ROLE_ADMIN') %}
-        <div class="form-group row float-sm-left">
-            <a href="{{ url('category_create') }}" class="button">
+        <div class="c">
+            <a href="{{ url('category_create') }}" class="create">
                 {{ 'action.create_category'|trans }}
             </a>
         </div>
@@ -66,3 +136,13 @@
 
 
 {% endblock %}
+
+<!---------------------------------------------STOPKA------------------------------------------------->
+<div class="footer">
+    <p class="footernav"> <a href="{{ url('main_index') }}"> {{ 'main_page'|trans }} </a> | <a href="{{ url('info_index') }}"> {{ 'info'|trans }} </a> | <a href="{{ url('biblio_index') }}"> {{ 'biblio'|trans }} </a> </p>
+    <p class="info"> PROJEKT JEST CZĘŚCIĄ PRACY MAGISTERSKIEJ </p>
+    <p class="copyright">  © 2023 Weronika Paterek </p>
+</div>
+
+</body>
+</html>

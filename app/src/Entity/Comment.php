@@ -32,13 +32,13 @@ class Comment
     #[Assert\Length(min: 3, max: 255)]
     private ?string $content;
 
-    /**
-     * Email.
-     */
-    #[ORM\Column(type: 'string', length: 255)]
-    #[Assert\NotBlank]
-    #[Assert\Email]
-    private ?string $email;
+//    /**
+//     * Email.
+//     */
+//    #[ORM\Column(type: 'string', length: 255)]
+//    #[Assert\NotBlank]
+//    #[Assert\Email]
+//    private ?string $email;
 
     /**
      * Nick.
@@ -54,6 +54,20 @@ class Comment
     #[ORM\ManyToOne(targetEntity: Post::class, inversedBy: 'comments')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Post $post = null;
+
+    /**
+     * Writer.
+     *
+     * @var User
+     */
+    #[ORM\ManyToOne(targetEntity: User::class)]
+    #[ORM\JoinColumn(nullable: false)]
+    #[Assert\NotBlank]
+    #[Assert\Type(User::class)]
+    private ?User $writer;
+
+
+
 
     /**
      * Getter for id.
@@ -89,30 +103,7 @@ class Comment
         return $this;
     }
 
-    /**
-     * Getter for email.
-     *
-     * @return string|null Email
-     */
-    public function getEmail(): ?string
-    {
-        return $this->email;
-    }
-
-    /**
-     * Setter for email.
-     *
-     * @param string|null $email Email
-     *
-     * @return $this
-     */
-    public function setEmail(?string $email): self
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
+//
     /**
      * Getter for nick.
      *
@@ -160,4 +151,22 @@ class Comment
 
         return $this;
     }
+
+    /**
+     * @return User Writer
+     */
+    public function getWriter(): ?User
+    {
+        return $this->writer;
+    }
+
+    /**
+     * @param User $writer Writer
+     */
+    public function setWriter(?User $writer): void
+    {
+        $this->writer = $writer;
+    }
 }
+
+
