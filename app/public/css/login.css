@@ -36,6 +36,9 @@ li a {
     text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
 }
 
+.logowanie{
+    float: right;
+}
 /*.................................... NAZWA PODSTRONY .........................................*/
 .hi{
     background-color: #120621;
@@ -147,4 +150,36 @@ button[type=submit]:hover{
     border: solid 1px green;
     padding: 5px;
     margin: 10px;
+}
+
+@media screen and (max-width: 900px) {
+    ul {
+        position: relative;
+    }
+
+    li {
+        float: none;
+    }
+
+    li a {
+        padding: 8px 12px;
+        border: 1px solid whitesmoke;
+    }
+
+    .logowanie {
+        position: relative;
+        text-align: center;
+        float: none;
+    }
+    .hi{
+        padding: 5px;
+    }
+    .logo{
+        padding: 0;
+        text-align: center;
+    }
+    .logo > form {
+        padding: 0;
+    }
+
 }

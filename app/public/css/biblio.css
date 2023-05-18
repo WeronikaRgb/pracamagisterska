@@ -100,6 +100,7 @@ li a {
         text-align: center;
         float: none;
     }
+    .hi{padding: 5px}
 }
 
 @media (max-width: 600px) {

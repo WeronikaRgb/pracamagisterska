@@ -46,14 +46,14 @@
                 <a href="{{ url('user_edit') }}">{{ 'title.change_data'|trans }}</a>
             </li>
         {% endif %}
-        <li style="float:right">
+        <li class="logowanie" >
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                 <a href="{{ url('app_logout') }}">{{ 'action.logout'|trans }}</a>
             {% else %}
                 <a href="{{ url('app_login') }}">LOGOWANIE</a>
             {% endif %}
         </li>
-        <li style="float:right">
+        <li class="logowanie">
             {% if is_granted('IS_AUTHENTICATED_FULLY') %}
 
             {% else %}

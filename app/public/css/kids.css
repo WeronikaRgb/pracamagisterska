@@ -36,7 +36,9 @@ li a:hover {
     text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
 }
 
-
+.logowanie{
+    float: right;
+}
 /*.............................. GRAFIKA Z NAZWĄ STRONY ...............................*/
 .toppage{
     height: 400px;
@@ -389,4 +391,130 @@ button {
 
 
 
+@media screen and (max-width: 900px) {
+    ul {
+        position: relative;
+    }
 
+    li {
+        float: none;
+    }
+
+    li a {
+        padding: 8px 12px;
+        border: 1px solid black;
+        color: black;
+    }
+    .neon{
+        padding: 5px;
+        text-align: center;
+    }
+    .strefa{
+        padding: 0;
+        text-align: center;
+    }
+    .welcome2{
+        padding: 5px;
+    }
+    .second{
+        padding: 0;
+    }
+    .second > h3{
+        padding: 0;
+    }
+    .toppage{
+        width: 100%;
+        padding: 0;
+    }
+
+    .logowanie {
+        position: relative;
+        text-align: center;
+        float: none;
+    }
+
+    .hi{
+        padding: 5px;
+    }
+    .ciekawostki{
+        width: 100%;
+    }
+    .metaverse{
+        padding: 5px;
+        display: block;
+    }
+    .end{
+        padding: 0;
+    }
+    .quiz > .container{
+        height: 100%;
+        padding-bottom: 30px;
+    }
+
+    .remember{
+        text-align: center;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #obrazek1 {
+        width: 100px;
+        height: 150px;
+    }
+    .obrazki{
+        height: 100%;
+        display: block;
+    }
+    .ciekawostki{
+        height: 100%;
+    }
+}
+
+
+/* Styl dla małych ekranów */
+@media (max-width: 480px) {
+    .first{
+        line-height: 1.5;
+        padding: 10px 5px 10px 5px;
+        background-image: none;
+        background-color: white;
+        height: 100%;
+    }
+    .second {
+        line-height: 1.5;
+        padding: 10px 5px 10px 5px;
+        background-image: none;
+        background-color: whitesmoke;
+        height: 100%;
+    }
+    .remember{
+        text-align: center;
+        padding: 0;
+    }
+    .tihrd{
+        padding: 10px 5px 10px 5px;
+    }
+    .safety{
+        font-size: 20px;
+    }
+    .welcome{
+        font-size: 20px;
+    }
+    .remember{
+        font-size: 20px;
+    }
+    .metaverse-header{
+        font-size: 20px;
+    }
+    .ciekawostki{
+        height: 100%;
+    }
+    .obrazki{
+        height: 100%;
+        display: block;
+    }
+    .quiz{
+        height: 100%;
+    }
+}

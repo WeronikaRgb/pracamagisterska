@@ -47,7 +47,9 @@
     text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
 }
 
-
+.menu > ul > .logowanie {
+    float: right;
+}
 
 /*............................................ FOOTER .........................................*/
 .footer{
@@ -77,3 +79,52 @@
 
 
 
+
+/* Styl dla szerokich ekranów */
+@media (min-width: 1200px) {
+    body {
+    }
+}
+
+/* Styl dla średnich ekranów */
+@media screen and (max-width: 900px) {
+    ul {
+        position: relative;
+    }
+
+    .menu > ul > li {
+        float: none;
+    }
+
+    .menu > ul > li a {
+        padding: 8px 12px;
+        border: 1px solid whitesmoke;
+    }
+    .menu > ul > .logowanie{
+        position: relative;
+        text-align: center;
+        float: none;
+    }
+    .formularz{
+        padding: 5px;
+    }
+
+    .kontenerek {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .hi {
+        width: 100%;
+        height: 100%;
+        padding: 300px 0 10px 0 ;
+
+    }
+}
+
+/* Styl dla małych ekranów */
+@media (max-width: 480px) {
+    .hi {
+        padding-top: 300px;
+    }
+}

@@ -45,7 +45,9 @@ li a {
     transition: 0.4s background-color, text-shadow;
     text-shadow: 0 0 0.2em #8c39a8, 0 0 0.2em #9439a8, 0 0 0.2em #e83bee;
 }
-
+.logowanie{
+    float: right;
+}
 /*.............................................. PAGINACJA ............................................*/
 
 .navigation{
@@ -255,4 +257,34 @@ table th {
     /*padding-left: 5px;*/
     /*padding-right: 5px;*/
     text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    ul {
+        position: relative;
+    }
+
+    li {
+        float: none;
+    }
+
+    li a {
+        padding: 8px 12px;
+        border: 1px solid whitesmoke;
+    }
+
+    .logowanie {
+        position: relative;
+        text-align: center;
+        float: none;
+    }
+
+    .kontenerek {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .hi {
+        padding: 5px;
+    }
 }
